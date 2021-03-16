@@ -1,0 +1,8 @@
+Versión 01
+	
+	By Miguel and Raúl
+	16/03/2021
+
+1º. Crear la clase Usuario con sus atributos, constructores, métodos setters y getters y ToString
+2º. Crear MapaUsuarios con constructores, get y set.
+3º. Generar método listarUsuarios()
