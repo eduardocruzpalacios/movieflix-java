@@ -1,3 +1,10 @@
+/*
+ * @author Andrei y Maria
+ * 
+ * @version 1.0
+ */
+
+
 package control;
 
 public class Main {
