@@ -39,7 +39,7 @@ public class Usuario {
 		this.mes = mes;
 		this.dia = dia;
 		this.ciudadResidencia = ciudadResidencia;
-		this.fechaNacimiento = LocalDate.of(year, mes, dia);
+		this.generarFechaNac();
 	}
 
 
@@ -53,6 +53,8 @@ public class Usuario {
 		this.password = password;
 	}*/
 
+	
+	
 	public String getNombre() {
 		return nombre;
 	}
@@ -75,7 +77,10 @@ public class Usuario {
 
 	public void setCiudadResidencia(String ciudadResidencia) {
 		this.ciudadResidencia = ciudadResidencia;
+		
 	}
+	
+	
 
 	/*public String getEmail() {
 		return email;
@@ -93,11 +98,55 @@ public class Usuario {
 		this.password = password;
 	}*/
 
+	public int getYear() {
+		return year;
+	}
+
+
+
+	public void setYear(int year) {
+		this.year = year;
+	}
+
+
+
+	public int getMes() {
+		return mes;
+	}
+
+
+
+	public void setMes(int mes) {
+		this.mes = mes;
+	}
+
+
+
+	public int getDia() {
+		return dia;
+	}
+
+
+
+	public void setDia(int dia) {
+		this.dia = dia;
+	}
+
+	
+	public void generarFechaNac() {
+		this.fechaNacimiento = LocalDate.of(this.year, this.mes, this.dia);
+	}
+
+
 	@Override
 	public String toString() {
-		return "Usuario [nombre=" + nombre + ", fechaNacimiento=" + fechaNacimiento + ", ciudadResidencia="
-				+ ciudadResidencia + "]";
+		return "Usuario [nombre=" + nombre + ", fechaNacimiento=" + fechaNacimiento + ", year=" + year + ", mes=" + mes
+				+ ", dia=" + dia + ", ciudadResidencia=" + ciudadResidencia + "]";
 	}
+
+
+
+	
 	
 	
 	
