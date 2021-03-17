@@ -4,27 +4,27 @@
  * @version 1.0
  */
 
-import datos.MapaUsuarios;
-
 package servicios;
+import datos.MapaUsuarios;
 
 public class GestorUsuarios implements Gestor {
 	
 	private MapaUsuarios usuarios = new MapaUsuarios();
 	
-	listarUsuarios() {
+	public void listarUsuarios() {
 		this.usuarios.listarUsuarios();
 	}
 	
-	addUsuarios() {
+	public void addUsuarios() {
+		
 		this.usuarios.addUsuarios();
 	}
 	
-	eliminarUsuarios() {
+	public void eliminarUsuarios() {
 		this.usuarios.eliminarUsuarios();
 	}
 	
-	modificarUsuarios() {
+	public void modificarUsuarios() {
 		this.usuarios.modificarUsuarios();
 	}
 	

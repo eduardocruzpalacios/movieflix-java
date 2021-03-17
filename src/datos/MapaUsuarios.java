@@ -8,31 +8,32 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-import model.Usuario;
+import gui.Menu;
+
+import Excepciones.UsuarioExistente;
 
 public class MapaUsuarios {
-//Posteriormente implementar interfaz 
 
 	// Código y Usuario
-	private Map<Integer, Usuario> MapaUsuarios;
+	private Map<String, Usuario> MapaUsuarios;
 
 	public MapaUsuarios() {
 		MapaUsuarios = new HashMap<>();
 	}
 
-	public Map<Integer, Usuario> getMapaUsuarios() {
+	public Map<String, Usuario> getMapaUsuarios() {
 		return MapaUsuarios;
 	}
 
-	public void setMapaUsuarios(Map<Integer, Usuario> MapaUsuario) {
+	public void setMapaUsuarios(Map<String, Usuario> MapaUsuario) {
 		this.MapaUsuarios = MapaUsuarios;
 	}
 
 	// Métodos
 
 	public void listarUsuarios() {
-		Integer key;
-		Iterator<Integer> usuarios = MapaUsuarios.keySet().iterator();
+		String key;
+		Iterator<String> usuarios = MapaUsuarios.keySet().iterator();
 		System.out.println("Listado de Usuarios");
 		while (usuarios.hasNext()) {
 			key = usuarios.next();
@@ -41,25 +42,40 @@ public class MapaUsuarios {
 
 	}
 
-	public boolean addUsuarios(int codigo, Usuario u) {
-		if (MapaUsuarios.containsKey(codigo)) {
-			System.out.println("u1");
+	public void addUsuarios() {
+		
+		try {
+			Usuario u = Usuario.crearYRellenarUsuario();
+			
+			if (MapaUsuarios.containsValue(u)) {
+				Escritor.str("Ese usuario ya existía");
 
-			return false;
+				throw new Excepciones.UsuarioExistente();
 
-		} else {
-			MapaUsuarios.put(codigo, u);
-			return true;
+			} else {
+				MapaUsuarios.put(u.getNombre(), u);
+				Escritor.str("Usuario creado correctamente");
+			}
 		}
+		catch(UsuarioExistente e) {
+			e.getStackTrace();
+		}
+		finally {
+			
+		}
+		
 
 	}
-	public void eliminarUsuarios(int codigo) {
+	
+	public void eliminarUsuarios() {
+		String codigo = Lector.str("dime el nombre de usuario a borrar");
 		MapaUsuarios.remove(codigo);
 		
 	}
-	public void modificarUsuarios(Map<Integer,Usuario>MapaUsuarios) {
+	
+	public void modificarUsuarios() {
 		
-		int codigo = Lector.pedirInt("Dame el código del usuario");
+		String codigo = Lector.str("Dame el código del usuario");
 		Menu.modificarUsuario();
 		int opcion = Lector.pedirIntEntre(1, 3);
 		switch(opcion) {
@@ -78,7 +94,5 @@ public class MapaUsuarios {
 				break;
 		}
 		Escritor.str("Este usuario ha sido modificado");
-		
-		
 	}
 }

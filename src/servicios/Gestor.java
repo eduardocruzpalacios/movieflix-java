@@ -8,7 +8,7 @@ package servicios;
 
 public interface Gestor {
 	public void listarUsuarios();
-	public boolean addUsuarios();
-	public boolean eliminarUsuarios();
-	public boolean modificarUsuarios();
+	public void addUsuarios();
+	public void eliminarUsuarios();
+	public void modificarUsuarios();
 }

@@ -33,11 +33,11 @@ public class Test {
 		Usuario u1 = new Usuario();
 		u1.setNombre("Trump");
 		u1.setCiudadResidencia("Cartagena");
-		/*u1.setDia(1);
+		u1.setDia(1);
 		u1.setMes(5);
-		u1.setYeaar(2010);
-		u1.setFechaNacimiento();
-		u1.setEmail("ejemplo@ejemplo.com");
+		u1.setYear(2010);
+		u1.generarFechaNac();
+		/*u1.setEmail("ejemplo@ejemplo.com");
 		u1.setPassword("X/kO*mn76//dJJK");*/
 		
 		Usuario u2 = new Usuario("Cardasian",1971,5,1,"Elche");
@@ -60,6 +60,8 @@ public class Test {
 		mu.getMapaUsuarios().put(3, u3);
 		
 		System.out.println(mu);
+		
+		mu.listarUsuarios();
 	}
 	
 	

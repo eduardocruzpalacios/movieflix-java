@@ -17,6 +17,9 @@ package model;
 
 import java.time.LocalDate;
 
+import utilidades.Escritor;
+import utilidades.Lector;
+
 public class Usuario {
 
 	private String nombre;
@@ -53,7 +56,23 @@ public class Usuario {
 		this.password = password;
 	}*/
 
+	// arreglar crearYRellenarUsuario()
 	
+	public static Usuario crearYRellenarUsuario() {
+		
+		Usuario u = new Usuario();
+		
+		Escritor.str("vamos a crear un nuevo usuario, voy a pedirte sus datos");
+		u.setNombre(Lector.str("dame nombre"));
+		u.setCiudadResidencia(Lector.str("dame ciudad de residencia"));
+		u.setYear(Lector.pedirInt("dame año de nacimiento"));
+		u.setMes(Lector.pedirInt("dame mes de nacimiento"));
+		u.setDia(Lector.pedirInt("dame día de nacimiento"));
+		u.generarFechaNac();
+		
+		return u;
+	}
+			
 	
 	public String getNombre() {
 		return nombre;
