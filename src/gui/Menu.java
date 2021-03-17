@@ -1,3 +1,8 @@
+/*
+ * @author Edu
+ * 
+ * @version 1.0
+ */
 package gui;
 
 public class Menu {

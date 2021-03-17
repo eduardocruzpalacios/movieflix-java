@@ -7,10 +7,15 @@
 
 package control;
 
+import pruebas.Test;
+
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		Test._01_clase_Usuario();
+
+		Test._02_clase_MapaUsuarios();
 
 	}
 
