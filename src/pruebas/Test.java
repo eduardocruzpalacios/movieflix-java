@@ -6,27 +6,11 @@
 
 package pruebas;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import datos.MapaUsuarios;
 import model.Usuario;
+import servicios.GestorUsuarios;
 
 public class Test {
-	
-	private static Logger logger;
-	
-	static
-	{
-		try
-		{
-			logger = LogManager.getLogger(Test.class);
-		}
-		catch (Throwable e)
-		{
-			System.out.println("Logger Don't work");
-		}
-	}
 	
 	public static void _01_clase_Usuario() {
 		
@@ -42,28 +26,52 @@ public class Test {
 		
 		Usuario u2 = new Usuario("Cardasian",1971,5,1,"Elche");
 		
+		Usuario u3 = Usuario.crearYRellenarUsuario();
+		
 		System.out.println(u1);
 		System.out.println(u2);
+		System.out.println(u3);
+		
+		System.out.println(u1.getNombre());
+		System.out.println(u1.getCiudadResidencia());
+		System.out.println(u1.getDia());
+		System.out.println(u1.getMes());
+		System.out.println(u1.getYear());
+		System.out.println(u1.getFechaNacimiento());
 		
 	}
 	
 	public static void _02_clase_MapaUsuarios() {
 		
 		MapaUsuarios mu = new MapaUsuarios();
-		
-		Usuario u1 = new Usuario("Cardasian",1971,10,5,"Elche");
-		Usuario u2 = new Usuario("FDFDDFGn",2010,4,1,"Mostoles");
-		Usuario u3 = new Usuario("bbbbbbbbb",1024,11,20,"Gijón");
-		
-		mu.getMapaUsuarios().put(1, u1);
-		mu.getMapaUsuarios().put(2, u2);
-		mu.getMapaUsuarios().put(3, u3);
-		
 		System.out.println(mu);
+		
+		mu.addUsuarios();
+		mu.addUsuarios();
+		
+		mu.listarUsuarios();
+		
+		mu.modificarUsuarios();
+		
+		mu.eliminarUsuarios();
 		
 		mu.listarUsuarios();
 	}
 	
-	
+	public static void _03_clase_GestorUsuarios() {
+		
+		GestorUsuarios g = new GestorUsuarios();
+		
+		g.addUsuarios();
+		g.addUsuarios();
+		
+		g.listarUsuarios();
+		
+		g.modificarUsuarios();
+		
+		g.eliminarUsuarios();
+		
+		g.listarUsuarios();
+	}
 
 }

@@ -23,7 +23,6 @@ public class Menu {
 		System.out.println("3. Eliminar un usuario");
 		System.out.println("4. Modificar un usuario");
 		System.out.println("5. Volver al menú principal");
-		System.out.println("6. Salir del programa");
 	}
 	
 	public static void modificarUsuario() {
