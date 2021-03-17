@@ -1,4 +1,17 @@
-package Excepciones;
+/**
+ * Fecha: 17/03/2021
+ * 
+ * @author Edu
+ * 
+ * @version 1.0
+ * 
+ *          Clase UsuarioExistente
+ * 
+ *          Clase que recoge excepción de duplicidad de usuario
+ * 
+ */
+
+package excepciones;
 
 public class UsuarioExistente extends Exception {
 	private static final long serialVersionUID = 1L;

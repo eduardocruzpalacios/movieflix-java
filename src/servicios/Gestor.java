@@ -1,7 +1,15 @@
-/*
- * @author Andrei y Maria
+/**
+ * 
+ * Fecha: 16/03/2021
+ * 
+ * @author Andrei y María
  * 
  * @version 1.0
+ * 
+ *          Interface Gestor
+ * 
+ * 			Introduce los métodos que luego se van a implementar
+ * 
  */
 
 package servicios;
