@@ -1,10 +1,18 @@
-/*
+/**
+ * 
+ * Fecha: 16/03/2021
+ * 
  * @author Edu
  * 
  * @version 1.0
+ * 
+ *          Clase ListadoVacío
+ * 
+ * 			No está actualmente en uso
+ * 
  */
 
-package Excepciones;
+package excepciones;
 
 public class ListadoVacio extends Exception {
 	private static final long serialVersionUID = 1L;

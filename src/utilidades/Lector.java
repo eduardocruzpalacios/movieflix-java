@@ -1,8 +1,16 @@
-/*
- * @author Andrei y Maria
+/**
  * 
- * @version 1.0
- */
+ * Fecha: 16/03/2021
+* 
+* @author Andrei y María
+* 
+* @version 1.0
+* 
+* Clase Lector
+* 
+* Método de lectura de datos
+* 
+*/
 
 package utilidades;
 
