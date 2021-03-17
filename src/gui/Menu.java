@@ -26,4 +26,12 @@ public class Menu {
 		System.out.println("6. Salir del programa");
 	}
 	
+	public static void modificarUsuario() {
+		System.out.println("\n********** MODIFICAR USUARIO **********\n");
+		System.out.println("¿Qué quieres modificar del usuario?");
+		System.out.println("1. Nombre");
+		System.out.println("2. Ciudad de residencia");
+		System.out.println("3. Fecha de nacimiento");
+	}
+	
 }

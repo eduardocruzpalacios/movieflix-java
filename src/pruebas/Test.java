@@ -40,7 +40,7 @@ public class Test {
 		u1.setEmail("ejemplo@ejemplo.com");
 		u1.setPassword("X/kO*mn76//dJJK");*/
 		
-		Usuario u2 = new Usuario("Cardasian",10,5,1971,"Elche");
+		Usuario u2 = new Usuario("Cardasian",1971,5,1,"Elche");
 		
 		System.out.println(u1);
 		System.out.println(u2);
