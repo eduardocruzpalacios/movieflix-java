@@ -1,3 +1,8 @@
+
+
+// hay que hacer loggin de los métodos
+
+
 package datos;
 
 import model.Usuario;
