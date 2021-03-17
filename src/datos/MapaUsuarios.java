@@ -1,3 +1,14 @@
+/**
+* Fecha: 17/03/2021
+* 
+* @author Miguel, Raúl y Edu
+* 
+* @version 1.0
+* 
+* Clase MapaUsuarios
+* 
+* Clase que recoge todos los métodos para la gestión de los usuarios(añadir usuarios, listado, eliminar y modificar)
+*/
 
 
 // hay que hacer loggin de los métodos
@@ -15,7 +26,7 @@ import java.util.Map;
 
 import gui.Menu;
 
-import Excepciones.UsuarioExistente;
+import excepciones.UsuarioExistente;
 
 public class MapaUsuarios {
 
@@ -55,7 +66,7 @@ public class MapaUsuarios {
 			if (MapaUsuarios.containsValue(u)) {
 				Escritor.str("Ese usuario ya existía");
 
-				throw new Excepciones.UsuarioExistente();
+				throw new excepciones.UsuarioExistente();
 
 			} else {
 				MapaUsuarios.put(u.getNombre(), u);
