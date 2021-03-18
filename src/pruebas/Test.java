@@ -55,6 +55,8 @@ public class Test {
 		MapaUsuarios mu = new MapaUsuarios();
 		System.out.println(mu);
 		
+		mu.listarUsuarios();
+		
 		mu.addUsuarios();
 		mu.addUsuarios();
 		
