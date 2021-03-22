@@ -2,7 +2,7 @@
  * 
  * Fecha: 16/03/2021
 * 
-* @author Andrei y María
+* @author Andrei, María y Edu
 * 
 * @version 1.0
 * 
@@ -18,8 +18,8 @@ import java.util.Scanner;
 
 public class Lector {
 
-	static Scanner sn = new Scanner(System.in,"ISO-8859-1");
-	
+	static Scanner sn = new Scanner(System.in, "ISO-8859-1");
+
 	@SuppressWarnings("resource")
 	public static String str(String msg) {
 		Escritor.str(msg);
@@ -33,7 +33,7 @@ public class Lector {
 		}
 		return sn.nextInt();
 	}
-	
+
 	public static double pedirDouble() {
 		while (sn.hasNextDouble() == false) {
 			Escritor.str("debes introducir un número, vuelve a intentarlo");
@@ -50,7 +50,7 @@ public class Lector {
 		}
 		return sn.nextInt();
 	}
-	
+
 	public static double pedirDouble(String msg) {
 		Escritor.str(msg);
 		while (sn.hasNextDouble() == false) {
@@ -75,7 +75,7 @@ public class Lector {
 		}
 		return x;
 	}
-	
+
 	public static int pedirIntEntre(int a, int b, String msg) {
 		boolean salir = false;
 		int x = 0;
@@ -91,7 +91,7 @@ public class Lector {
 		}
 		return x;
 	}
-	
+
 	public static double pedirDoubleEntre(int a, int b) {
 		boolean salir = false;
 		double x = 0;

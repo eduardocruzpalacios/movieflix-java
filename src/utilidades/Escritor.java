@@ -15,7 +15,7 @@
 package utilidades;
 
 public class Escritor {
-	
+
 	public static void str(String msg) {
 		System.out.println(msg);
 	}
