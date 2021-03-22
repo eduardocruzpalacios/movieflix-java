@@ -1,4 +1,4 @@
-o package utilidades;
+package utilidades;
 
 import java.util.ArrayList;
 import java.util.List;
