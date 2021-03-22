@@ -1,0 +1,25 @@
+
+COnclusiones
+
+como conclusión: (mejora) usar email como key del mapa, y excepciónExistente para email repetido (y no nombre)
+
+Una posible mejora es que al crear un nuevo usuario acepte dos con el mismo nombre, pero con ciudades y fechas diferentes
+
+
+22/03
+
+a) Creada Interface "GestorP" para las peliculas
+b) Creados métodos dentro de esta interface (listar, add, eliminar, modificar peliculas
+	peliculas mas valoradas, por encima de la media, peor valoradas, mas vistar e importar peliculas)
+c) Comprobadas pruebas de calidad dentro de esta interface
+
+d) Creada Clase "Gestor Peliculas"que implementa la interface "GestorP"
+e) Creados métodos dentro de esta clase (listar, add, eliminar, modificar peliculas
+	peliculas mas valoradas, por encima de la media, peor valoradas, mas vistar e importar peliculas)
+	para gestionar la Clase "ListaPeliculas"
+f) Comprobadas pruebas de calidad dentro de esta clase.
+
+g) Comprobadas pruebas de calidad dentro de las clases del paquete "servicios",
+	"pruebas", y clases "Usuario" y "Menu".
+
+

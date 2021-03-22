@@ -40,24 +40,21 @@ public class GestorPeliculas implements GestorP {
 
 	}
 
-	/*public void peliculasMasValoradas() {
-		this.p.peliculasMasValoradas();
-	}
-
-	public void peliculasEncimaMedia() {
-		this.p.peliculasEncimaMedia();
-
-	}
-
-	public void peliculasPeorValoradas() {
-		this.p.peliculasPeorValoradas();
-
-	}
-
-	public void peliculasMasVistas() {
-		this.p.peliculasMasVistas();
-
-	}*/
+	/*
+	 * public void peliculasMasValoradas() { this.p.peliculasMasValoradas(); }
+	 * 
+	 * public void peliculasEncimaMedia() { this.p.peliculasEncimaMedia();
+	 * 
+	 * }
+	 * 
+	 * public void peliculasPeorValoradas() { this.p.peliculasPeorValoradas();
+	 * 
+	 * }
+	 * 
+	 * public void peliculasMasVistas() { this.p.peliculasMasVistas();
+	 * 
+	 * }
+	 */
 
 	public void importarPeliculas() {
 		this.p.importarPeliculas();

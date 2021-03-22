@@ -23,15 +23,17 @@ public interface GestorP {
 	public void eliminarPeliculas();
 
 	public void modificarPeliculas();
-	
-	/*public void peliculasMasValoradas();
-	
-	public void peliculasEncimaMedia();
-	
-	public void peliculasPeorValoradas();
-	
-	public void peliculasMasVistas();*/
-	
+
+	/*
+	 * public void peliculasMasValoradas();
+	 * 
+	 * public void peliculasEncimaMedia();
+	 * 
+	 * public void peliculasPeorValoradas();
+	 * 
+	 * public void peliculasMasVistas();
+	 */
+
 	public void importarPeliculas();
-	
+
 }
