@@ -1,4 +1,10 @@
-//@Author Andrei
+/*@Author Andrei
+ * Fecha 22 03 
+ * Crear la classe con los setters getters y to string
+ * Crear los metodos
+ * Realizar la prueba de calidad
+ *
+ */
 package model;
 
 import utilidades.Escritor;
