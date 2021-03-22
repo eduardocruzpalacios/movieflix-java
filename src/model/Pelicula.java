@@ -1,89 +1,67 @@
- //@Author Andrei
+//@Author Andrei
+package model;
 
- package model;
+import utilidades.Escritor;
+import utilidades.Lector;
 
 public class Pelicula {
 
-
 	private String titulo;
-	private LocalDate anyoEstreno;
-	private int year = -1;
-	private String categoria;
-	
-	
+	private Short anyoEstreno;
+	private Short categoria;
 
+	public Pelicula() {
 
-	public Pelicula(String titulo, int year, String categoria) {
-		
-		this.titulo = titulo;
-		this.year = year;
-		this.categoria = categoria;
-		
 	}
-public static PeliculacrearYRellenarPelicula() {
-		
-		Pelicula P = new Pelicula();
-		
+
+	public Pelicula(String titulo, short anyoEstreno, short categoria) {
+
+		this.titulo = titulo;
+		this.anyoEstreno = anyoEstreno;
+		this.categoria = categoria;
+
+	}
+
+	public static Pelicula crearYRellenarPelicula() {
+
+		Pelicula p = new Pelicula();
+
 		Escritor.str("vamos a añadir una nueva pelicula, voy a pedirte los datos");
 		p.setTitulo(Lector.str("dime el titulo"));
-		p.setanyoEstreno(Lector.str("dime el año de estreno"));
-		p.setCategoria(Lector.pedirInt("dime que categoria es")); 
-		
-		
+		p.setAnyoEstreno((short)Lector.pedirInt("dime el año de estreno"));
+		p.setCategoria((short)Lector.pedirInt("dime que categoria es"));
+
 		return p;
+	}
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	public short getAnyoEstreno() {
+		return anyoEstreno;
+	}
+
+	public void setAnyoEstreno(short anyoEstreno) {
+		this.anyoEstreno = anyoEstreno;
+	}
+
+	public short getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(short categoria) {
+		this.categoria = categoria;
+	}
+
+	@Override
+	public String toString() {
+		return "Pelicula [titulo=" + titulo + ", anyoEstreno=" + anyoEstreno + ", categoria=" + categoria + "]";
+	}
 }
 
-
-
-public String getTitulo() {
-	return titulo;
-}
-
-
-
-public void setTitulo(String titulo) {
-	this.titulo = titulo;
-}
-
-
-
-public LocalDate getAnyoEstreno() {
-	return anyoEstreno;
-}
-
-
-
-public void setAnyoEstreno(LocalDate anyoEstreno) {
-	this.anyoEstreno = anyoEstreno;
-}
-
-
-
-public int getYear() {
-	return year;
-}
-
-
-
-public void setYear(int year) {
-	this.year = year;
-}
-
-
-
-public String getCategoria() {
-	return categoria;
-}
-
-
-
-public void setCategoria(String categoria) {
-	this.categoria = categoria;
-}
-
-
-@Override
-public String toString() {
-	return "peliculas [titulo=" + titulo + ", year=" + year + ", categoria=" + categoria + "]";
-}
-}
+	
