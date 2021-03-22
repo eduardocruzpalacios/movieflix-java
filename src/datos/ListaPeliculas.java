@@ -1,7 +1,13 @@
 /*
+*Fecha: 22/03/2021
 *
+*@author Raúl y María
 *
-*@Author Raúl y María
+*@version: 1.0
+*
+*Clase ListaPeliculas
+*
+*Clase que recoge todos los métodos para la gestión de los películas (añadir películas, listado, eliminar y modificar)
 *
 */
 
@@ -97,15 +103,15 @@ public class ListaPeliculas {
 		}
 		Escritor.str("Esta película ha sido modificada");
 	}
-	
+
 	public void importarPeliculas() {
-		
+
 		File fichero = new File("peliculas.txt");
-		
+
 		ArrayList<String> pelisRaw = Files.exportarAList(fichero);
-		
+
 		ArrayList<Pelicula> pelisTodas = Colecciones.leerListCadenasDevolverListObjetos(pelisRaw);
-		
+
 		ListaPeliculas = pelisTodas;
 	}
 }

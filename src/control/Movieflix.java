@@ -1,3 +1,16 @@
+/*
+*Fecha: 22/03/2021
+*
+*@author Edu y María
+*
+*@version: 1.0
+*
+*Clase Movieflix
+*
+*Clase que se encarga de desplegar el menú, permite seleccionar las distintas opciones y ejecutarlas.
+*
+*/
+
 package control;
 
 import gui.Menu;
@@ -6,10 +19,10 @@ import servicios.GestorUsuarios;
 import utilidades.Lector;
 
 public class Movieflix {
-	
+
 	private GestorUsuarios gestorUsuarios = new GestorUsuarios();
 	private GestorPeliculas gestorPeliculas = new GestorPeliculas();
-	
+
 	public void abrirMovieflix() {
 		gestorPeliculas.importarPeliculas();
 		gui.Ventana.presentacion();
@@ -30,7 +43,7 @@ public class Movieflix {
 	public void seleccionarOpciones(int opcion) {
 
 		switch (opcion) {
-		
+
 		// Gestionar usuarios
 		case 1:
 			boolean seguir = true;
@@ -45,7 +58,7 @@ public class Movieflix {
 				}
 			} while (seguir);
 			break;
-		
+
 		// Gestionar películas
 		case 2:
 			boolean seguir2 = true;
@@ -67,48 +80,42 @@ public class Movieflix {
 	// Switch para elegir opciones dentro de la gestión de usuarios
 	public void gestionarUsuarios(int opcionUser) {
 		switch (opcionUser) {
-			case 1:
-				gestorUsuarios.listarUsuarios();
-				break;
-			case 2:
-				gestorUsuarios.addUsuarios();
-				break;
-			case 3:
-				gestorUsuarios.eliminarUsuarios();
-				break;
-			case 4:
-				gestorUsuarios.modificarUsuarios();
-				break;
+		case 1:
+			gestorUsuarios.listarUsuarios();
+			break;
+		case 2:
+			gestorUsuarios.addUsuarios();
+			break;
+		case 3:
+			gestorUsuarios.eliminarUsuarios();
+			break;
+		case 4:
+			gestorUsuarios.modificarUsuarios();
+			break;
 		}
 	}
-	
+
 	// Switch para elegir opciones dentro de la gestión de usuarios
-		public void gestionarPeliculas(int opcionUser2) {
-			switch (opcionUser2) {
-				case 1:
-					gestorPeliculas.listarPeliculas();
-					break;
-				case 2:
-					gestorPeliculas.addPeliculas();
-					break;
-				case 3:
-					gestorPeliculas.eliminarPeliculas();
-					break;
-				case 4:
-					gestorPeliculas.modificarPeliculas();
-					break;
-				/*case 5:
-					gestorPeliculas.peliculasMasValoradas();
-					break;
-				case 6:
-					gestorPeliculas.peliculasEncimaMedia();
-					break;
-				case 7:
-					gestorPeliculas.peliculasPeorValoradas();
-					break;
-				case 8:
-					gestorPeliculas.peliculasMasVistas();
-					break;*/
-			}
+	public void gestionarPeliculas(int opcionUser2) {
+		switch (opcionUser2) {
+		case 1:
+			gestorPeliculas.listarPeliculas();
+			break;
+		case 2:
+			gestorPeliculas.addPeliculas();
+			break;
+		case 3:
+			gestorPeliculas.eliminarPeliculas();
+			break;
+		case 4:
+			gestorPeliculas.modificarPeliculas();
+			break;
+		/*
+		 * case 5: gestorPeliculas.peliculasMasValoradas(); break; case 6:
+		 * gestorPeliculas.peliculasEncimaMedia(); break; case 7:
+		 * gestorPeliculas.peliculasPeorValoradas(); break; case 8:
+		 * gestorPeliculas.peliculasMasVistas(); break;
+		 */
 		}
+	}
 }
