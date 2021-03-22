@@ -27,14 +27,13 @@ public class Usuario {
 	private LocalDate fechaNacimiento;
 	private int year = -1, mes = -1, dia = -1;
 	private String ciudadResidencia;
-	/*private String email;
-	private String password;*/
+	/*
+	 * private String email; private String password;
+	 */
 
 	public Usuario() {
 		super();
 	}
-
-	
 
 	public Usuario(String nombre, int year, int mes, int dia, String ciudadResidencia) {
 		super();
@@ -46,35 +45,30 @@ public class Usuario {
 		this.generarFechaNac();
 	}
 
-
-
-	/*public Usuario(String nombre, Date fechaNacimiento, String ciudadResidencia, String email, String password) {
-		super();
-		this.nombre = nombre;
-		this.fechaNacimiento = fechaNacimiento;
-		this.ciudadResidencia = ciudadResidencia;
-		this.email = email;
-		this.password = password;
-	}*/
+	/*
+	 * public Usuario(String nombre, Date fechaNacimiento, String ciudadResidencia,
+	 * String email, String password) { super(); this.nombre = nombre;
+	 * this.fechaNacimiento = fechaNacimiento; this.ciudadResidencia =
+	 * ciudadResidencia; this.email = email; this.password = password; }
+	 */
 
 	// arreglar crearYRellenarUsuario()
-	
+
 	public static Usuario crearYRellenarUsuario() {
-		
+
 		Usuario u = new Usuario();
-		
+
 		Escritor.str("vamos a crear un nuevo usuario, voy a pedirte sus datos");
 		u.setNombre(Lector.str("dame nombre"));
 		u.setCiudadResidencia(Lector.str("dame ciudad de residencia"));
-		u.setYear(Lector.pedirInt("dame año de nacimiento")); //hay que controlar lo que mete el usuario
-		u.setMes(Lector.pedirInt("dame mes de nacimiento")); //hay que controlar lo que mete el usuario
-		u.setDia(Lector.pedirInt("dame día de nacimiento")); //hay que controlar lo que mete el usuario
+		u.setYear(Lector.pedirInt("dame año de nacimiento")); // hay que controlar lo que mete el usuario
+		u.setMes(Lector.pedirInt("dame mes de nacimiento")); // hay que controlar lo que mete el usuario
+		u.setDia(Lector.pedirInt("dame día de nacimiento")); // hay que controlar lo que mete el usuario
 		u.generarFechaNac();
-		
+
 		return u;
 	}
-			
-	
+
 	public String getNombre() {
 		return nombre;
 	}
@@ -97,79 +91,51 @@ public class Usuario {
 
 	public void setCiudadResidencia(String ciudadResidencia) {
 		this.ciudadResidencia = ciudadResidencia;
-		
-	}
-	
-	
 
-	/*public String getEmail() {
-		return email;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}*/
+	/*
+	 * public String getEmail() { return email; }
+	 * 
+	 * public void setEmail(String email) { this.email = email; }
+	 * 
+	 * public String getPassword() { return password; }
+	 * 
+	 * public void setPassword(String password) { this.password = password; }
+	 */
 
 	public int getYear() {
 		return year;
 	}
 
-
-
 	public void setYear(int year) {
 		this.year = year;
 	}
-
-
 
 	public int getMes() {
 		return mes;
 	}
 
-
-
 	public void setMes(int mes) {
 		this.mes = mes;
 	}
-
-
 
 	public int getDia() {
 		return dia;
 	}
 
-
-
 	public void setDia(int dia) {
 		this.dia = dia;
 	}
 
-	
 	public void generarFechaNac() {
 		this.fechaNacimiento = LocalDate.of(this.year, this.mes, this.dia);
 	}
-
 
 	@Override
 	public String toString() {
 		return "Usuario [nombre=" + nombre + ", fechaNacimiento=" + fechaNacimiento + ", year=" + year + ", mes=" + mes
 				+ ", dia=" + dia + ", ciudadResidencia=" + ciudadResidencia + "]";
 	}
-
-
-
-	
-	
-	
-	
-	
 
 }
