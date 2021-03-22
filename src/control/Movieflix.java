@@ -1,16 +1,17 @@
 package control;
 
 import gui.Menu;
-import servicios.Gestor;
+import servicios.GestorPeliculas;
 import servicios.GestorUsuarios;
 import utilidades.Lector;
 
 public class Movieflix {
-	private Gestor gestorUsuarios = new GestorUsuarios();
-	private Gestor gestorPeliculas = new GestorPeliculas();
-	gestorPeliculas.importarPeliculas();
+	
+	private GestorUsuarios gestorUsuarios = new GestorUsuarios();
+	private GestorPeliculas gestorPeliculas = new GestorPeliculas();
 	
 	public void abrirMovieflix() {
+		gestorPeliculas.importarPeliculas();
 		gui.Ventana.presentacion();
 		boolean seguir = true;
 		int opcion = 0;
@@ -57,7 +58,7 @@ public class Movieflix {
 				} else {
 					gestionarPeliculas(opcionUser2);
 				}
-			} while (seguir);
+			} while (seguir2);
 			break;
 		}
 
@@ -96,7 +97,7 @@ public class Movieflix {
 				case 4:
 					gestorPeliculas.modificarPeliculas();
 					break;
-				case 5:
+				/*case 5:
 					gestorPeliculas.peliculasMasValoradas();
 					break;
 				case 6:
@@ -107,7 +108,7 @@ public class Movieflix {
 					break;
 				case 8:
 					gestorPeliculas.peliculasMasVistas();
-					break;
+					break;*/
 			}
 		}
 }

@@ -57,9 +57,9 @@ public class GestorPeliculas implements GestorP {
 	public void peliculasMasVistas() {
 		this.p.peliculasMasVistas();
 
-	}
+	}*/
 
 	public void importarPeliculas() {
 		this.p.importarPeliculas();
-	}*/
+	}
 }

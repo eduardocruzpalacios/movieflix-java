@@ -7,10 +7,13 @@
 
 package datos;
 
+import java.io.File;
 import java.util.ArrayList;
 import model.Pelicula;
 import utilidades.Escritor;
+import utilidades.Files;
 import utilidades.Lector;
+import utilidades.Colecciones;
 import gui.Menu;
 
 import java.util.List;
@@ -93,5 +96,16 @@ public class ListaPeliculas {
 			break;
 		}
 		Escritor.str("Esta película ha sido modificada");
+	}
+	
+	public void importarPeliculas() {
+		
+		File fichero = new File("peliculas.txt");
+		
+		ArrayList<String> pelisRaw = Files.exportarAList(fichero);
+		
+		ArrayList<Pelicula> pelisTodas = Colecciones.leerListCadenasDevolverListObjetos(pelisRaw);
+		
+		ListaPeliculas = pelisTodas;
 	}
 }

@@ -30,8 +30,8 @@ public interface GestorP {
 	
 	public void peliculasPeorValoradas();
 	
-	public void peliculasMasVistas();
+	public void peliculasMasVistas();*/
 	
-	public void importarPeliculas();*/
+	public void importarPeliculas();
 	
 }
