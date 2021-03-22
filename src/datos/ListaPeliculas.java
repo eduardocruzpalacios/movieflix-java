@@ -14,7 +14,7 @@
 package datos;
 
 import excepciones.ListadoVacio;
-
+import excepciones.PeliculaExistente;
 import java.io.File;
 import java.util.ArrayList;
 import model.Pelicula;
@@ -82,9 +82,21 @@ public class ListaPeliculas {
 	}
 
 	public void addPeliculas() {
-		Pelicula p = Pelicula.crearYRellenarPelicula();
-		ListaPeliculas.add(p);
-		Escritor.str("Película creada correctamente");
+		try {
+			Pelicula p1 = Pelicula.crearYRellenarPelicula();
+
+			for (int i = 0; i < ListaPeliculas.size(); i++) {
+				if (ListaPeliculas.get(i).getTitulo().equals(p1.getTitulo())) {
+
+					throw new excepciones.PeliculaExistente();
+				}
+			}
+			ListaPeliculas.add(p1);
+			Escritor.str("Película creada correctamente");
+		} catch (PeliculaExistente e) {
+
+			logger.error(e.toString());
+		}
 	}
 
 	public void eliminarPeliculas() {
