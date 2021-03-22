@@ -18,48 +18,48 @@ import datos.ListaPeliculas;
 
 public class GestorPeliculas implements GestorP {
 
-	private ListaPeliculas peliculas = new ListaPeliculas();
+	private ListaPeliculas p = new ListaPeliculas();
 
 	public void listarPeliculas() {
-		this.peliculas.listarPeliculas();
+		this.p.listarPeliculas();
 
 	}
 
 	public void addPeliculas() {
-		this.peliculas.addPeliculas();
+		this.p.addPeliculas();
 
 	}
 
 	public void eliminarPeliculas() {
-		this.peliculas.eliminarPeliculas();
+		this.p.eliminarPeliculas();
 
 	}
 
-	public void modificarUsuarios() {
-		this.peliculas.modificarUsuarios();
+	public void modificarPeliculas() {
+		this.p.modificarPeliculas();
 
 	}
 
-	public void peliculasMasValoradas() {
-		this.peliculas.peliculasMasValoradas();
+	/*public void peliculasMasValoradas() {
+		this.p.peliculasMasValoradas();
 	}
 
 	public void peliculasEncimaMedia() {
-		this.peliculas.peliculasEncimaMedia();
+		this.p.peliculasEncimaMedia();
 
 	}
 
 	public void peliculasPeorValoradas() {
-		this.peliculas.peliculasPeorValoradas();
+		this.p.peliculasPeorValoradas();
 
 	}
 
 	public void peliculasMasVistas() {
-		this.peliculas.peliculasMasVistas();
+		this.p.peliculasMasVistas();
 
 	}
 
 	public void importarPeliculas() {
-		this.peliculas.importarPeliculas();
-	}
+		this.p.importarPeliculas();
+	}*/
 }
