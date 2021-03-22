@@ -76,6 +76,22 @@ public class Lector {
 		return x;
 	}
 	
+	public static int pedirIntEntre(int a, int b, String msg) {
+		boolean salir = false;
+		int x = 0;
+
+		while (!salir) {
+			Escritor.str(msg);
+			x = Lector.pedirInt();
+
+			if (x >= a && x <= b) {
+				salir = true;
+			}
+
+		}
+		return x;
+	}
+	
 	public static double pedirDoubleEntre(int a, int b) {
 		boolean salir = false;
 		double x = 0;
