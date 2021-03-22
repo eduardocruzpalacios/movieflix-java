@@ -59,20 +59,24 @@ public class Movieflix {
 			// Listar todos los usuarios
 
 			gestor.listarUsuarios();
+			break;
 
 		case 2:
 			// Añadir usuario
 
 			gestor.addUsuarios();
+			break;
 
 		case 3:
 			// Eliminar usuario
 			gestor.eliminarUsuarios();
+			break;
 
 		case 4:
 			// Modificar usuario
 
 			gestor.modificarUsuarios();
+			break;
 
 		}
 

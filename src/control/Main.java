@@ -12,6 +12,7 @@
 package control;
 
 import pruebas.Test;
+import servicios.Gestor;
 
 public class Main {
 
@@ -19,9 +20,13 @@ public class Main {
 		
 		//Test._01_clase_Usuario();
 
-		Test._02_clase_MapaUsuarios();
+		//Test._02_clase_MapaUsuarios();
 		
 		//Test._03_clase_GestorUsuarios();
+		
+		new Movieflix().abrirMovieflix();
+		
+		
 
 	}
 
