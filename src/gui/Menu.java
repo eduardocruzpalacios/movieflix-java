@@ -1,4 +1,4 @@
-/**
+/*
  * 
  * Fecha: 22/03/2021
  * 
@@ -8,7 +8,7 @@
  * 
  *          Clase Menu
  * 
- *          Clase que establece el menú gráfico de la aplicación
+ *          Clase que establece los menús gráfico de la aplicación
  * 
  * 
  */

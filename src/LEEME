@@ -1,6 +1,0 @@
-VERSION 1:
-Equipo 1 (Andrei y Maria) 16/03/2021
-Las tareas que hemos realizado son:
-- Crear interfaaz de gestor, clase GestorUsuarios, método listarUsuarios() en interfaz Gestor y en clase GestorUsuarios
-- Hemos hecho prueba de calidad
-Pendiente: pruebas unitarias.
