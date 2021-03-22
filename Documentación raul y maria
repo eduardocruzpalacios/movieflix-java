@@ -9,6 +9,10 @@
 			-eliminarPeliculas();
 			-modificarPeliculas();
 	
+	-Realizadas pruebas de calidad:
+		-Clase ListaPeliculas
+		-Clase Movieflix
+	
 
 	
 	
