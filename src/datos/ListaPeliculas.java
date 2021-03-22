@@ -13,6 +13,8 @@
 
 package datos;
 
+import excepciones.ListadoVacio;
+
 import java.io.File;
 import java.util.ArrayList;
 import model.Pelicula;
@@ -24,7 +26,19 @@ import gui.Menu;
 
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class ListaPeliculas {
+
+	private static Logger logger;
+	static {
+		try {
+			logger = LogManager.getLogger(MapaUsuarios.class);
+		} catch (Throwable e) {
+			System.out.println("Logger Don't work");
+		}
+	}
 
 	private List<Pelicula> ListaPeliculas = new ArrayList<Pelicula>();
 
@@ -33,12 +47,8 @@ public class ListaPeliculas {
 
 	}
 
-	public ListaPeliculas(List<Pelicula> listaPeliculas) {
-		super();
-		ListaPeliculas = listaPeliculas;
-	}
-
 	// getteres y setters
+
 	public List<Pelicula> getListaPeliculas() {
 		return ListaPeliculas;
 	}
@@ -50,9 +60,23 @@ public class ListaPeliculas {
 	// Metodos
 
 	public void listarPeliculas() {
-		System.out.println("Listado de Peliculas");
-		for (int i = 0; i < ListaPeliculas.size(); i++) {
-			System.out.println(ListaPeliculas.get(i));
+		try {
+			if (ListaPeliculas.size() == 0) {
+				Escritor.str("El listado está vacío");
+
+				throw new excepciones.ListadoVacio();
+			} else {
+				System.out.println("Listado de Peliculas");
+				for (int i = 0; i < ListaPeliculas.size(); i++) {
+					System.out.println(ListaPeliculas.get(i));
+				}
+
+			}
+
+		} catch (ListadoVacio e) {
+			logger.error(e.toString());
+		} finally {
+
 		}
 
 	}
