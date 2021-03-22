@@ -11,9 +11,6 @@
 
 package control;
 
-import pruebas.Test;
-import servicios.Gestor;
-
 public class Main {
 
 	public static void main(String[] args) {
