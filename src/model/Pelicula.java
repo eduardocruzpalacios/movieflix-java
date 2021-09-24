@@ -17,7 +17,7 @@ public class Pelicula {
 	private Short categoria;
 
 	public Pelicula() {
-
+		////////////////////
 	}
 
 	public Pelicula(String titulo, short anyoEstreno, short categoria) {
