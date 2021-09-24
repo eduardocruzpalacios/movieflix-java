@@ -32,11 +32,9 @@ public class Usuario {
 	 */
 
 	public Usuario() {
-		super();
 	}
 
 	public Usuario(String nombre, int year, int mes, int dia, String ciudadResidencia) {
-		super();
 		this.nombre = nombre;
 		this.year = year;
 		this.mes = mes;
