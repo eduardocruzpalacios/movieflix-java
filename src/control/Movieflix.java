@@ -19,6 +19,7 @@ import servicios.GestorUsuarios;
 import utilidades.Lector;
 
 //HOLA
+//ADIOS
 public class Movieflix {
 
 	private GestorUsuarios gestorUsuarios = new GestorUsuarios();
