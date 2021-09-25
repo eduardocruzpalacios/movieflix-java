@@ -22,12 +22,12 @@ import model.Usuario;
 import utilidades.Escritor;
 import utilidades.Lector;
 
-public class MapaUsuarios {
+public class UsuarioDao {
 
 	private static Logger logger;
 	static {
 		try {
-			logger = LogManager.getLogger(MapaUsuarios.class);
+			logger = LogManager.getLogger(UsuarioDao.class);
 		} catch (Throwable e) {
 			System.out.println("Logger Don't work");
 		}
@@ -35,7 +35,7 @@ public class MapaUsuarios {
 
 	private Map<String, Usuario> MapaUsuarios;
 
-	public MapaUsuarios() {
+	public UsuarioDao() {
 		MapaUsuarios = new HashMap<>();
 	}
 

@@ -29,7 +29,7 @@ public class ListaPeliculas {
 	private static Logger logger;
 	static {
 		try {
-			logger = LogManager.getLogger(MapaUsuarios.class);
+			logger = LogManager.getLogger(UsuarioDao.class);
 		} catch (Throwable e) {
 			System.out.println("Logger Don't work");
 		}

@@ -8,7 +8,7 @@
 
 package pruebas;
 
-import dao.MapaUsuarios;
+import dao.UsuarioDao;
 import model.Usuario;
 import servicios.GestorUsuarios;
 
@@ -43,7 +43,7 @@ public class Test {
 
 	public static void _02_clase_MapaUsuarios() {
 
-		MapaUsuarios mu = new MapaUsuarios();
+		UsuarioDao mu = new UsuarioDao();
 		System.out.println(mu);
 
 		mu.listarUsuarios();

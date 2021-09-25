@@ -8,11 +8,11 @@
 
 package servicios;
 
-import dao.MapaUsuarios;
+import dao.UsuarioDao;
 
 public class GestorUsuarios implements Gestor {
 
-	private MapaUsuarios usuarios = new MapaUsuarios();
+	private UsuarioDao usuarios = new UsuarioDao();
 
 	@Override
 	public void listarUsuarios() {
