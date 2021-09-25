@@ -1,16 +1,11 @@
 /*
- * 
  * Fecha: 22/03/2021
  * 
  * @author Edu
  * 
  * @version 1.0
- * 
- * Clase Files
- * 
- * Clase para transformar un fichero de texto a ArrayList
- * Cada línea de fichero sería una posición de ArrayList
  */
+
 package utilidades;
 
 import java.io.BufferedReader;
@@ -37,4 +32,5 @@ public class Files {
 		}
 		return lineas;
 	}
+
 }

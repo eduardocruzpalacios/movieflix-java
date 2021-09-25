@@ -1,16 +1,10 @@
-/**
- * 
+/*
  * Fecha: 16/03/2021
-* 
-* @author Andrei y María
-* 
-* @version 1.0
-* 
-* Clase GestorUsuarios
-* 
-* Se implementan los métodos del gestor
-* 
-*/
+ * 
+ * @author Andrei y María
+ * 
+ * @version 1.0
+ */
 
 package servicios;
 

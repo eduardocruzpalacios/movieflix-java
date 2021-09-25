@@ -1,15 +1,10 @@
 /*
-*Fecha: 22/03/2021
-*
-*@author Raúl y María
-*
-*@version: 1.0
-*
-*Clase ListaPeliculas
-*
-*Clase que recoge todos los métodos para la gestión de los películas (añadir películas, listado, eliminar y modificar)
-*
-*/
+ * Fecha: 22/03/2021
+ *
+ * @author Raúl y María
+ *
+ * @version: 1.0
+ */
 
 package datos;
 
@@ -145,4 +140,5 @@ public class ListaPeliculas {
 
 		ListaPeliculas = pelisTodas;
 	}
+
 }

@@ -1,18 +1,10 @@
-/**
- * 
+/* 
  * Fecha: 17/03/2021
  * 
  * @author Raúl y Miguel
  * 
  * @version 1.0
- * 
- * Clase Usuario
- * Clase con atributos y métodos principales de la clase Usuario.
- * 
- * Además de los atributos especificados hemos añadido dos más(email y password) los cuales están comentados por
- * si en el futuro hubiera que descartarlos
- * 
- * */
+ */
 
 package model;
 

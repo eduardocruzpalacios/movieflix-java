@@ -1,13 +1,10 @@
-/**Fecha: 16/03/2021
-* 
-* @author Andrei y Maria
-* 
-* @version 1.0
-* 
-* Clase Main 
-* 
-* Ejecución de la aplicación
-*/
+/*
+ * Fecha: 16/03/2021
+ * 
+ * @author Andrei y Maria
+ * 
+ * @version 1.0
+ */
 
 package control;
 

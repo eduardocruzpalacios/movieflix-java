@@ -1,16 +1,10 @@
-/**
- * 
+/*
  * Fecha: 22/03/2021
-* 
-* @author Miguel
-* 
-* @version 1.0
-* 
-* Clase GestoPeliculas
-* 
-* Se implementan los métodos del gestor
-* 
-*/
+ * 
+ * @author Miguel
+ * 
+ * @version 1.0
+ */
 
 package servicios;
 
@@ -44,4 +38,5 @@ public class GestorPeliculas implements GestorP {
 	public void importarPeliculas() {
 		this.p.importarPeliculas();
 	}
+
 }

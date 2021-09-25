@@ -1,16 +1,10 @@
-/**
- * 
+/*
  * Fecha: 16/03/2021 y 22/03/2021
-* 
-* @author Andrei, María y Edu
-* 
-* @version 1.0
-* 
-* Clase Lector
-* 
-* Método de lectura de datos
-* 
-*/
+ * 
+ * @author Andrei, María y Edu
+ * 
+ * @version 1.0
+ */
 
 package utilidades;
 

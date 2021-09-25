@@ -1,15 +1,9 @@
-/**
- * 
+/*
  * Fecha: 16/03/2021
  * 
  * @author Andrei y María
  * 
  * @version 1.0
- * 
- *          Clase Escritor
- * 
- *          Método de escritura de datos
- * 
  */
 
 package utilidades;

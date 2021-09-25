@@ -1,10 +1,11 @@
-/*@Author Andrei
- * Fecha 22 03 
- * Crear la classe con los setters getters y to string
- * Crear los metodos
- * Realizar la prueba de calidad
- *
+/*
+ * Fecha: 22/03/2021
+ * 
+ * @Author Andrei
+ * 
+ * @version 1.0
  */
+
 package model;
 
 import utilidades.Escritor;
@@ -67,4 +68,5 @@ public class Pelicula {
 	public String toString() {
 		return "Pelicula [titulo=" + titulo + ", anyoEstreno=" + anyoEstreno + ", categoria=" + categoria + "]";
 	}
+
 }

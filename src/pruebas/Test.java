@@ -1,17 +1,10 @@
-/**
- * 
+/*
  * Fecha: 16/03/2021
-* 
-* @author Edu
-* 
-* @version 1.0
-* 
-* Clase Test
-* 
-* Clase de pruebas de métodos ya existentes
-* 
-* 
-*/
+ * 
+ * @author Edu
+ * 
+ * @version 1.0
+ */
 
 package pruebas;
 

@@ -1,15 +1,10 @@
 /*
-*Fecha: 22/03/2021
-*
-*@author Edu y María
-*
-*@version: 1.0
-*
-*Clase Movieflix
-*
-*Clase que se encarga de desplegar el menú, permite seleccionar las distintas opciones y ejecutarlas.
-*
-*/
+ * Fecha: 22/03/2021
+ *
+ * @author Edu y María
+ *
+ * @version: 1.0
+ */
 
 package control;
 
@@ -108,4 +103,5 @@ public class Movieflix {
 			break;
 		}
 	}
+
 }

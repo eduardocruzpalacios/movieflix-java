@@ -1,15 +1,9 @@
-/**
- * 
+/*
  * Fecha: 22/03/2021
  * 
  * @author Miguel
  * 
  * @version 1.0
- * 
- *          Interface GestorP
- * 
- * 			Introduce los métodos que luego se van a implementar
- * 
  */
 
 package servicios;

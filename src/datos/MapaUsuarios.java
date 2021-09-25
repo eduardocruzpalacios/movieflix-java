@@ -1,16 +1,10 @@
-/**
-* Fecha: 17/03/2021 y 18/03/2021
-* 
-* @author Miguel, Raúl y Edu
-* 
-* @version 1.0
-* 
-* Clase MapaUsuarios
-* 
-* Clase que recoge todos los métodos para la gestión de los usuarios(añadir usuarios, listado, eliminar y modificar)
-*/
-
-// hay que hacer loggin de los métodos
+/*
+ * Fecha: 17/03/2021 y 18/03/2021
+ * 
+ * @author Miguel, Raúl y Edu
+ * 
+ * @version 1.0
+ */
 
 package datos;
 
@@ -126,4 +120,5 @@ public class MapaUsuarios {
 		}
 		Escritor.str("Este usuario ha sido modificado");
 	}
+
 }

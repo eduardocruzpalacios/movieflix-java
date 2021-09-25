@@ -1,3 +1,11 @@
+/*
+ * Fecha: 17/03/2021
+ * 
+ * @author Edu
+ * 
+ * @version 1.0
+ */
+
 package excepciones;
 
 public class PeliculaExistente extends Exception {
@@ -16,4 +24,5 @@ public class PeliculaExistente extends Exception {
 	public String toString() {
 		return "PeliculaExistente []";
 	}
+
 }

@@ -1,15 +1,9 @@
 /*
- * 
  * Fecha: 17/03/2021
  * 
  * @author Edu
  * 
  * @version 1.0
- * 
- *          Clase ListadoVacío
- * 
- * 			No está actualmente en uso
- * 
  */
 
 package excepciones;
