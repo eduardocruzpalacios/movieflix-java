@@ -8,11 +8,11 @@
 
 package servicios;
 
-import dao.ListaPeliculas;
+import dao.PeliculaDao;
 
 public class GestorPeliculas implements GestorP {
 
-	private ListaPeliculas p = new ListaPeliculas();
+	private PeliculaDao p = new PeliculaDao();
 
 	@Override
 	public void listarPeliculas() {

@@ -24,7 +24,7 @@ import utilidades.Escritor;
 import utilidades.Files;
 import utilidades.Lector;
 
-public class ListaPeliculas {
+public class PeliculaDao {
 
 	private static Logger logger;
 	static {
@@ -37,7 +37,7 @@ public class ListaPeliculas {
 
 	private List<Pelicula> ListaPeliculas = new ArrayList<Pelicula>();
 
-	public ListaPeliculas() {
+	public PeliculaDao() {
 
 	}
 
