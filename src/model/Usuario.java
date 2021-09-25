@@ -45,9 +45,9 @@ public class Usuario {
 
 	/*
 	 * public Usuario(String nombre, Date fechaNacimiento, String ciudadResidencia,
-	 * String email, String password) { super(); this.nombre = nombre;
-	 * this.fechaNacimiento = fechaNacimiento; this.ciudadResidencia =
-	 * ciudadResidencia; this.email = email; this.password = password; }
+	 * String email, String password) { this.nombre = nombre; this.fechaNacimiento =
+	 * fechaNacimiento; this.ciudadResidencia = ciudadResidencia; this.email =
+	 * email; this.password = password; }
 	 */
 
 	// arreglar crearYRellenarUsuario()
