@@ -8,7 +8,7 @@
 
 package pruebas;
 
-import datos.MapaUsuarios;
+import dao.MapaUsuarios;
 import model.Usuario;
 import servicios.GestorUsuarios;
 

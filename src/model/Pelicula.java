@@ -32,7 +32,7 @@ public class Pelicula {
 
 		Pelicula p = new Pelicula();
 
-		Escritor.str("vamos a añadir una nueva pelicula, voy a pedirte los datos");
+		Escritor.str("vamos a añadir una nueva pelicula, voy a pedirte los dao");
 		p.setTitulo(Lector.str("dime el titulo"));
 		p.setAnyoEstreno((short) Lector.pedirInt("dime el año de estreno"));
 		p.setCategoria((short) Lector.pedirInt("dime que categoria es"));

@@ -8,7 +8,7 @@
 
 package servicios;
 
-import datos.ListaPeliculas;
+import dao.ListaPeliculas;
 
 public class GestorPeliculas implements GestorP {
 

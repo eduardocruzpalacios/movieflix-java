@@ -8,7 +8,7 @@
 
 package servicios;
 
-import datos.MapaUsuarios;
+import dao.MapaUsuarios;
 
 public class GestorUsuarios implements Gestor {
 

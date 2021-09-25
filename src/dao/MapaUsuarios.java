@@ -6,7 +6,7 @@
  * @version 1.0
  */
 
-package datos;
+package dao;
 
 import java.util.HashMap;
 import java.util.Iterator;

@@ -28,7 +28,7 @@ public class Files {
 			}
 			lector.close();
 		} catch (IOException e) {
-			System.out.println("Error al leer los datos");
+			System.out.println("Error al leer los dao");
 		}
 		return lineas;
 	}

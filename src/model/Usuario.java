@@ -36,7 +36,7 @@ public class Usuario {
 
 		Usuario u = new Usuario();
 
-		Escritor.str("vamos a crear un nuevo usuario, voy a pedirte sus datos");
+		Escritor.str("vamos a crear un nuevo usuario, voy a pedirte sus dao");
 		u.setNombre(Lector.str("dame nombre"));
 		u.setCiudadResidencia(Lector.str("dame ciudad de residencia"));
 		u.setYear(Lector.pedirInt("dame año de nacimiento")); // hay que controlar lo que mete el usuario
