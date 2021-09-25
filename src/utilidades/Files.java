@@ -19,10 +19,10 @@ public class Files {
 	public static ArrayList<String> exportarAList(File a) {
 
 		ArrayList<String> lineas = new ArrayList<String>();
+
 		try {
 			BufferedReader lector = new BufferedReader(new FileReader(a));
 			String linea;
-
 			while ((linea = lector.readLine()) != null) {
 				lineas.add(linea);
 			}

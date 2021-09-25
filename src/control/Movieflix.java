@@ -36,42 +36,36 @@ public class Movieflix {
 	}
 
 	public void seleccionarOpciones(int opcion) {
-
+		boolean seguir = true;
+		int opcion2 = 0;
 		switch (opcion) {
-
 		case 1:
-			boolean seguir = true;
-			int opcionUser = 0;
 			do {
 				gui.Menu.usuarios();
-				opcionUser = Lector.pedirIntEntre(1, 5, "Elije una opción del menú");
-				if (opcionUser == 5) {
+				opcion2 = Lector.pedirIntEntre(1, 5, "Elije una opción del menú");
+				if (opcion2 == 5) {
 					seguir = false;
 				} else {
-					gestionarUsuarios(opcionUser);
+					gestionarUsuarios(opcion2);
 				}
 			} while (seguir);
 			break;
-
 		case 2:
-			boolean seguir2 = true;
-			int opcionUser2 = 0;
 			do {
 				gui.Menu.peliculas();
-				opcionUser2 = Lector.pedirIntEntre(1, 9, "Elije una opción del menú");
-				if (opcionUser2 == 9) {
-					seguir2 = false;
+				opcion2 = Lector.pedirIntEntre(1, 9, "Elije una opción del menú");
+				if (opcion2 == 9) {
+					seguir = false;
 				} else {
-					gestionarPeliculas(opcionUser2);
+					gestionarPeliculas(opcion2);
 				}
-			} while (seguir2);
+			} while (seguir);
 			break;
 		}
-
 	}
 
-	public void gestionarUsuarios(int opcionUser) {
-		switch (opcionUser) {
+	public void gestionarUsuarios(int opcion) {
+		switch (opcion) {
 		case 1:
 			usuarioServiceImpl.findAll();
 			break;
@@ -87,8 +81,8 @@ public class Movieflix {
 		}
 	}
 
-	public void gestionarPeliculas(int opcionUser2) {
-		switch (opcionUser2) {
+	public void gestionarPeliculas(int opcion) {
+		switch (opcion) {
 		case 1:
 			peliculaServiceImpl.listarPeliculas();
 			break;

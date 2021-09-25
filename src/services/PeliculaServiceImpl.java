@@ -12,31 +12,31 @@ import dao.PeliculaDao;
 
 public class PeliculaServiceImpl implements PeliculaService {
 
-	private PeliculaDao p = new PeliculaDao();
+	private PeliculaDao peliculaDao = new PeliculaDao();
 
 	@Override
 	public void listarPeliculas() {
-		this.p.listarPeliculas();
+		this.peliculaDao.listarPeliculas();
 	}
 
 	@Override
 	public void addPeliculas() {
-		this.p.addPeliculas();
+		this.peliculaDao.addPeliculas();
 	}
 
 	@Override
 	public void eliminarPeliculas() {
-		this.p.eliminarPeliculas();
+		this.peliculaDao.eliminarPeliculas();
 	}
 
 	@Override
 	public void modificarPeliculas() {
-		this.p.modificarPeliculas();
+		this.peliculaDao.modificarPeliculas();
 	}
 
 	@Override
 	public void importarPeliculas() {
-		this.p.importarPeliculas();
+		this.peliculaDao.importarPeliculas();
 	}
 
 }

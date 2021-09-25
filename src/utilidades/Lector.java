@@ -57,15 +57,12 @@ public class Lector {
 	public static int pedirIntEntre(int a, int b) {
 		boolean salir = false;
 		int x = 0;
-
 		while (!salir) {
 			System.out.println("Dame un entero entre " + a + " y " + b);
 			x = Lector.pedirInt();
-
 			if (x >= a && x <= b) {
 				salir = true;
 			}
-
 		}
 		return x;
 	}
@@ -73,15 +70,12 @@ public class Lector {
 	public static int pedirIntEntre(int a, int b, String msg) {
 		boolean salir = false;
 		int x = 0;
-
 		while (!salir) {
 			Escritor.str(msg);
 			x = Lector.pedirInt();
-
 			if (x >= a && x <= b) {
 				salir = true;
 			}
-
 		}
 		return x;
 	}
@@ -89,16 +83,14 @@ public class Lector {
 	public static double pedirDoubleEntre(int a, int b) {
 		boolean salir = false;
 		double x = 0;
-
 		while (!salir) {
 			System.out.println("Dame un número entre " + a + " y " + b);
 			x = Lector.pedirDouble();
-
 			if (x >= a && x <= b) {
 				salir = true;
 			}
-
 		}
 		return x;
 	}
+
 }

@@ -14,25 +14,23 @@ import model.Pelicula;
 
 public class Colecciones {
 
-	public static ArrayList<Pelicula> leerListCadenasDevolverListObjetos(ArrayList<String> listado) {
+	public static ArrayList<Pelicula> leerListCadenasDevolverListObjetos(ArrayList<String> arrayString) {
 
-		String cadena;
+		String linea;
 		String[] partes = new String[3];
 
-		ArrayList<Pelicula> bbdd = new ArrayList<Pelicula>();
+		ArrayList<Pelicula> arrayPelicula = new ArrayList<Pelicula>();
 
-		for (int i = 0; i < listado.size(); i++) {
-			Pelicula p = new Pelicula();
-			cadena = listado.get(i);
-			partes = cadena.split(",");
-
-			p.setTitulo(partes[0]);
-			p.setAnyoEstreno(Short.parseShort(partes[1]));
-			p.setCategoria(Short.parseShort(partes[2]));
-
-			bbdd.add(p);
+		for (int i = 0; i < arrayString.size(); i++) {
+			Pelicula pelicula = new Pelicula();
+			linea = arrayString.get(i);
+			partes = linea.split(",");
+			pelicula.setTitulo(partes[0]);
+			pelicula.setAnyoEstreno(Short.parseShort(partes[1]));
+			pelicula.setCategoria(Short.parseShort(partes[2]));
+			arrayPelicula.add(pelicula);
 		}
-		return bbdd;
+		return arrayPelicula;
 	}
 
 }

@@ -12,26 +12,26 @@ import dao.UsuarioDao;
 
 public class UsuarioServiceImpl implements UsuarioService {
 
-	private UsuarioDao usuarios = new UsuarioDao();
+	private UsuarioDao usuarioDao = new UsuarioDao();
 
 	@Override
 	public void findAll() {
-		this.usuarios.listarUsuarios();
+		this.usuarioDao.listarUsuarios();
 	}
 
 	@Override
 	public void add() {
-		this.usuarios.addUsuarios();
+		this.usuarioDao.addUsuarios();
 	}
 
 	@Override
 	public void delete() {
-		this.usuarios.eliminarUsuarios();
+		this.usuarioDao.eliminarUsuarios();
 	}
 
 	@Override
 	public void update() {
-		this.usuarios.modificarUsuarios();
+		this.usuarioDao.modificarUsuarios();
 	}
 
 }

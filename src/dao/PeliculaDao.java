@@ -35,94 +35,69 @@ public class PeliculaDao {
 		}
 	}
 
-	private List<Pelicula> ListaPeliculas = new ArrayList<Pelicula>();
-
-	public PeliculaDao() {
-
-	}
-
-	public List<Pelicula> getListaPeliculas() {
-		return ListaPeliculas;
-	}
-
-	public void setListaPeliculas(List<Pelicula> ListaPeliculas) {
-		this.ListaPeliculas = ListaPeliculas;
-	}
+	private List<Pelicula> peliculaDao = new ArrayList<Pelicula>();
 
 	public void listarPeliculas() {
 		try {
-			if (ListaPeliculas.size() == 0) {
+			if (peliculaDao.size() == 0) {
 				Escritor.str("El listado está vacío");
-
 				throw new excepciones.ListadoVacioException();
 			} else {
 				System.out.println("Listado de Peliculas");
-				for (int i = 0; i < ListaPeliculas.size(); i++) {
-					System.out.println(ListaPeliculas.get(i));
-				}
-
+				peliculaDao.forEach(pelicula -> System.out.println(pelicula));
 			}
-
 		} catch (ListadoVacioException e) {
 			logger.error(e.toString());
-		} finally {
-
 		}
-
 	}
 
 	public void addPeliculas() {
 		try {
-			Pelicula p1 = Pelicula.crearYRellenarPelicula();
-
-			for (int i = 0; i < ListaPeliculas.size(); i++) {
-				if (ListaPeliculas.get(i).getTitulo().equals(p1.getTitulo())) {
-
+			Pelicula pelicula = Pelicula.crearYRellenarPelicula();
+			for (int i = 0; i < peliculaDao.size(); i++) {
+				if (peliculaDao.get(i).getTitulo().equals(pelicula.getTitulo())) {
 					throw new excepciones.PeliculaExistenteException();
 				}
 			}
-			ListaPeliculas.add(p1);
+			peliculaDao.add(pelicula);
 			Escritor.str("Película creada correctamente");
 		} catch (PeliculaExistenteException e) {
-
 			logger.error(e.toString());
 		}
 	}
 
 	public void eliminarPeliculas() {
-		String s = Lector.str("Dime el título de la película a borrar");
-		for (int i = 0; i < ListaPeliculas.size(); i++) {
-			if (s.equals(ListaPeliculas.get(i).getTitulo())) {
-				ListaPeliculas.remove(ListaPeliculas.get(i));
+		String tituloPelicula = Lector.str("Dime el título de la película a borrar");
+		for (int i = 0; i < peliculaDao.size(); i++) {
+			if (tituloPelicula.equals(peliculaDao.get(i).getTitulo())) {
+				peliculaDao.remove(peliculaDao.get(i));
 			}
 		}
-
 	}
 
 	public void modificarPeliculas() {
-		String s = Lector.str("Dime el título de la película a modificar");
+		String tituloPelicula = Lector.str("Dime el título de la película a modificar");
 		Menu.modificarPelicula();
 		int opcion = Lector.pedirIntEntre(1, 3);
 		switch (opcion) {
 		case 1:
-			for (int i = 0; i < ListaPeliculas.size(); i++) {
-				if (s.equals(ListaPeliculas.get(i).getTitulo())) {
-					ListaPeliculas.get(i).setTitulo(Lector.str("¿Cual es el nuevo título?"));
+			for (int i = 0; i < peliculaDao.size(); i++) {
+				if (tituloPelicula.equals(peliculaDao.get(i).getTitulo())) {
+					peliculaDao.get(i).setTitulo(Lector.str("¿Cual es el nuevo título?"));
 				}
 			}
 			break;
 		case 2:
-			for (int i = 0; i < ListaPeliculas.size(); i++) {
-				if (s.equals(ListaPeliculas.get(i).getTitulo())) {
-					ListaPeliculas.get(i).setAnyoEstreno((short) Lector.pedirInt("¿Cual es el nuevo año de estreno?"));
+			for (int i = 0; i < peliculaDao.size(); i++) {
+				if (tituloPelicula.equals(peliculaDao.get(i).getTitulo())) {
+					peliculaDao.get(i).setAnyoEstreno((short) Lector.pedirInt("¿Cual es el nuevo año de estreno?"));
 				}
 			}
 			break;
-
 		case 3:
-			for (int i = 0; i < ListaPeliculas.size(); i++) {
-				if (s.equals(ListaPeliculas.get(i).getTitulo())) {
-					ListaPeliculas.get(i).setCategoria((short) Lector.pedirInt("Digame la nueva categoría"));
+			for (int i = 0; i < peliculaDao.size(); i++) {
+				if (tituloPelicula.equals(peliculaDao.get(i).getTitulo())) {
+					peliculaDao.get(i).setCategoria((short) Lector.pedirInt("Digame la nueva categoría"));
 				}
 			}
 			break;
@@ -131,14 +106,10 @@ public class PeliculaDao {
 	}
 
 	public void importarPeliculas() {
-
-		File fichero = new File("peliculas.txt");
-
-		ArrayList<String> pelisRaw = Files.exportarAList(fichero);
-
-		ArrayList<Pelicula> pelisTodas = Colecciones.leerListCadenasDevolverListObjetos(pelisRaw);
-
-		ListaPeliculas = pelisTodas;
+		File file = new File("peliculas.txt");
+		ArrayList<String> arrayString = Files.exportarAList(file);
+		ArrayList<Pelicula> arrayPeliculas = Colecciones.leerListCadenasDevolverListObjetos(arrayString);
+		peliculaDao = arrayPeliculas;
 	}
 
 }
