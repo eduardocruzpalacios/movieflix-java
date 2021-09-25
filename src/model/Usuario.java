@@ -22,8 +22,9 @@ public class Usuario {
 	public Usuario() {
 	}
 
-	public Usuario(String nombre, String ciudadResidencia) {
+	public Usuario(String nombre, LocalDate fechaNacimiento, String ciudadResidencia) {
 		this.nombre = nombre;
+		this.fechaNacimiento = fechaNacimiento;
 		this.ciudadResidencia = ciudadResidencia;
 	}
 
