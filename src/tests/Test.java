@@ -6,7 +6,7 @@
  * @version 1.0
  */
 
-package pruebas;
+package tests;
 
 public class Test {
 
