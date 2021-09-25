@@ -14,19 +14,19 @@
 
 package datos;
 
-import model.Usuario;
-import utilidades.Escritor;
-import utilidades.Lector;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import excepciones.ListadoVacio;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-import gui.Menu;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
+import excepciones.ListadoVacio;
 import excepciones.UsuarioExistente;
+import gui.Menu;
+import model.Usuario;
+import utilidades.Escritor;
+import utilidades.Lector;
 
 public class MapaUsuarios {
 
@@ -39,7 +39,6 @@ public class MapaUsuarios {
 		}
 	}
 
-	// Código y Usuario
 	private Map<String, Usuario> MapaUsuarios;
 
 	public MapaUsuarios() {
@@ -54,15 +53,12 @@ public class MapaUsuarios {
 		this.MapaUsuarios = MapaUsuarios;
 	}
 
-	// Métodos
-
 	public void listarUsuarios() {
+
 		try {
 			if (MapaUsuarios.size() == 0) {
 				Escritor.str("El listado está vacío");
-
 				throw new excepciones.ListadoVacio();
-
 			} else {
 				String key;
 				Iterator<String> usuarios = MapaUsuarios.keySet().iterator();
@@ -106,7 +102,6 @@ public class MapaUsuarios {
 	public void eliminarUsuarios() {
 		String codigo = Lector.str("dime el nombre de usuario a borrar");
 		MapaUsuarios.remove(codigo);
-
 	}
 
 	public void modificarUsuarios() {

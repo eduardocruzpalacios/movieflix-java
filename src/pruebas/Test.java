@@ -30,9 +30,6 @@ public class Test {
 		u1.setMes(5);
 		u1.setYear(2010);
 		u1.generarFechaNac();
-		/*
-		 * u1.setEmail("ejemplo@ejemplo.com"); u1.setPassword("X/kO*mn76//dJJK");
-		 */
 
 		Usuario u2 = new Usuario("Cardasian", 1971, 5, 1, "Elche");
 

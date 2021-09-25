@@ -27,9 +27,6 @@ public class Usuario {
 	private LocalDate fechaNacimiento;
 	private int year = -1, mes = -1, dia = -1;
 	private String ciudadResidencia;
-	/*
-	 * private String email; private String password;
-	 */
 
 	public Usuario() {
 	}
@@ -42,15 +39,6 @@ public class Usuario {
 		this.ciudadResidencia = ciudadResidencia;
 		this.generarFechaNac();
 	}
-
-	/*
-	 * public Usuario(String nombre, Date fechaNacimiento, String ciudadResidencia,
-	 * String email, String password) { this.nombre = nombre; this.fechaNacimiento =
-	 * fechaNacimiento; this.ciudadResidencia = ciudadResidencia; this.email =
-	 * email; this.password = password; }
-	 */
-
-	// arreglar crearYRellenarUsuario()
 
 	public static Usuario crearYRellenarUsuario() {
 
@@ -91,16 +79,6 @@ public class Usuario {
 		this.ciudadResidencia = ciudadResidencia;
 
 	}
-
-	/*
-	 * public String getEmail() { return email; }
-	 * 
-	 * public void setEmail(String email) { this.email = email; }
-	 * 
-	 * public String getPassword() { return password; }
-	 * 
-	 * public void setPassword(String password) { this.password = password; }
-	 */
 
 	public int getYear() {
 		return year;

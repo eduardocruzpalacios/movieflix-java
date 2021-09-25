@@ -15,13 +15,13 @@
 package excepciones;
 
 public class ListadoVacio extends Exception {
+
 	private static final long serialVersionUID = 1L;
-	
-	// constructor
+
 	public ListadoVacio() {
 		super();
 	}
-	
+
 	public ListadoVacio(String msg) {
 		super(msg);
 	}
@@ -30,5 +30,5 @@ public class ListadoVacio extends Exception {
 	public String toString() {
 		return "ListadoVacio []";
 	}
-	
+
 }

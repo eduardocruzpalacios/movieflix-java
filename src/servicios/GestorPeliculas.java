@@ -20,42 +20,27 @@ public class GestorPeliculas implements GestorP {
 
 	private ListaPeliculas p = new ListaPeliculas();
 
+	@Override
 	public void listarPeliculas() {
 		this.p.listarPeliculas();
-
 	}
 
+	@Override
 	public void addPeliculas() {
 		this.p.addPeliculas();
-
 	}
 
+	@Override
 	public void eliminarPeliculas() {
 		this.p.eliminarPeliculas();
-
 	}
 
+	@Override
 	public void modificarPeliculas() {
 		this.p.modificarPeliculas();
-
 	}
 
-	/*
-	 * public void peliculasMasValoradas() { this.p.peliculasMasValoradas(); }
-	 * 
-	 * public void peliculasEncimaMedia() { this.p.peliculasEncimaMedia();
-	 * 
-	 * }
-	 * 
-	 * public void peliculasPeorValoradas() { this.p.peliculasPeorValoradas();
-	 * 
-	 * }
-	 * 
-	 * public void peliculasMasVistas() { this.p.peliculasMasVistas();
-	 * 
-	 * }
-	 */
-
+	@Override
 	public void importarPeliculas() {
 		this.p.importarPeliculas();
 	}

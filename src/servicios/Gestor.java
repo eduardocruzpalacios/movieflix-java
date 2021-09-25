@@ -15,6 +15,7 @@
 package servicios;
 
 public interface Gestor {
+
 	public void listarUsuarios();
 
 	public void addUsuarios();

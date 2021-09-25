@@ -13,9 +13,9 @@
  */
 package utilidades;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -24,7 +24,6 @@ public class Files {
 	public static ArrayList<String> exportarAList(File a) {
 
 		ArrayList<String> lineas = new ArrayList<String>();
-		// int numeroLineas = calcularNumeroLineas(a);
 		try {
 			BufferedReader lector = new BufferedReader(new FileReader(a));
 			String linea;

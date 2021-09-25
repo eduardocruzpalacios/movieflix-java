@@ -13,21 +13,21 @@
 
 package datos;
 
-import excepciones.ListadoVacio;
-import excepciones.PeliculaExistente;
 import java.io.File;
 import java.util.ArrayList;
-import model.Pelicula;
-import utilidades.Escritor;
-import utilidades.Files;
-import utilidades.Lector;
-import utilidades.Colecciones;
-import gui.Menu;
-
 import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import excepciones.ListadoVacio;
+import excepciones.PeliculaExistente;
+import gui.Menu;
+import model.Pelicula;
+import utilidades.Colecciones;
+import utilidades.Escritor;
+import utilidades.Files;
+import utilidades.Lector;
 
 public class ListaPeliculas {
 
@@ -42,12 +42,9 @@ public class ListaPeliculas {
 
 	private List<Pelicula> ListaPeliculas = new ArrayList<Pelicula>();
 
-	// constructores
 	public ListaPeliculas() {
 
 	}
-
-	// getteres y setters
 
 	public List<Pelicula> getListaPeliculas() {
 		return ListaPeliculas;
@@ -56,8 +53,6 @@ public class ListaPeliculas {
 	public void setListaPeliculas(List<Pelicula> ListaPeliculas) {
 		this.ListaPeliculas = ListaPeliculas;
 	}
-
-	// Metodos
 
 	public void listarPeliculas() {
 		try {

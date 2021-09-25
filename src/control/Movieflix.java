@@ -18,8 +18,6 @@ import servicios.GestorPeliculas;
 import servicios.GestorUsuarios;
 import utilidades.Lector;
 
-//HOLA
-//ADIOS
 public class Movieflix {
 
 	private GestorUsuarios gestorUsuarios = new GestorUsuarios();
@@ -46,7 +44,6 @@ public class Movieflix {
 
 		switch (opcion) {
 
-		// Gestionar usuarios
 		case 1:
 			boolean seguir = true;
 			int opcionUser = 0;
@@ -61,7 +58,6 @@ public class Movieflix {
 			} while (seguir);
 			break;
 
-		// Gestionar películas
 		case 2:
 			boolean seguir2 = true;
 			int opcionUser2 = 0;
@@ -79,7 +75,6 @@ public class Movieflix {
 
 	}
 
-	// Switch para elegir opciones dentro de la gestión de usuarios
 	public void gestionarUsuarios(int opcionUser) {
 		switch (opcionUser) {
 		case 1:
@@ -97,7 +92,6 @@ public class Movieflix {
 		}
 	}
 
-	// Switch para elegir opciones dentro de la gestión de usuarios
 	public void gestionarPeliculas(int opcionUser2) {
 		switch (opcionUser2) {
 		case 1:
@@ -112,12 +106,6 @@ public class Movieflix {
 		case 4:
 			gestorPeliculas.modificarPeliculas();
 			break;
-		/*
-		 * case 5: gestorPeliculas.peliculasMasValoradas(); break; case 6:
-		 * gestorPeliculas.peliculasEncimaMedia(); break; case 7:
-		 * gestorPeliculas.peliculasPeorValoradas(); break; case 8:
-		 * gestorPeliculas.peliculasMasVistas(); break;
-		 */
 		}
 	}
 }

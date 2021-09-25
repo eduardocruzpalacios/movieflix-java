@@ -17,7 +17,6 @@ public class Pelicula {
 	private Short categoria;
 
 	public Pelicula() {
-		////////////////////
 	}
 
 	public Pelicula(String titulo, short anyoEstreno, short categoria) {
@@ -34,8 +33,8 @@ public class Pelicula {
 
 		Escritor.str("vamos a añadir una nueva pelicula, voy a pedirte los datos");
 		p.setTitulo(Lector.str("dime el titulo"));
-		p.setAnyoEstreno((short)Lector.pedirInt("dime el año de estreno"));
-		p.setCategoria((short)Lector.pedirInt("dime que categoria es"));
+		p.setAnyoEstreno((short) Lector.pedirInt("dime el año de estreno"));
+		p.setCategoria((short) Lector.pedirInt("dime que categoria es"));
 
 		return p;
 	}
@@ -69,5 +68,3 @@ public class Pelicula {
 		return "Pelicula [titulo=" + titulo + ", anyoEstreno=" + anyoEstreno + ", categoria=" + categoria + "]";
 	}
 }
-
-	

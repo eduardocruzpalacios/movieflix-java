@@ -24,16 +24,6 @@ public interface GestorP {
 
 	public void modificarPeliculas();
 
-	/*
-	 * public void peliculasMasValoradas();
-	 * 
-	 * public void peliculasEncimaMedia();
-	 * 
-	 * public void peliculasPeorValoradas();
-	 * 
-	 * public void peliculasMasVistas();
-	 */
-
 	public void importarPeliculas();
 
 }
