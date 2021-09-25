@@ -8,21 +8,21 @@
 
 package excepciones;
 
-public class ListadoVacio extends Exception {
+public class PeliculaExistenteException extends Exception {
 
 	private static final long serialVersionUID = 1L;
 
-	public ListadoVacio() {
+	public PeliculaExistenteException() {
 		super();
 	}
 
-	public ListadoVacio(String msg) {
+	public PeliculaExistenteException(String msg) {
 		super(msg);
 	}
 
 	@Override
 	public String toString() {
-		return "ListadoVacio []";
+		return "PeliculaExistenteException []";
 	}
 
 }

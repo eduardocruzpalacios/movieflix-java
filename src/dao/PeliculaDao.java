@@ -15,8 +15,8 @@ import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import excepciones.ListadoVacio;
-import excepciones.PeliculaExistente;
+import excepciones.ListadoVacioException;
+import excepciones.PeliculaExistenteException;
 import gui.Menu;
 import model.Pelicula;
 import utilidades.Colecciones;
@@ -54,7 +54,7 @@ public class PeliculaDao {
 			if (ListaPeliculas.size() == 0) {
 				Escritor.str("El listado está vacío");
 
-				throw new excepciones.ListadoVacio();
+				throw new excepciones.ListadoVacioException();
 			} else {
 				System.out.println("Listado de Peliculas");
 				for (int i = 0; i < ListaPeliculas.size(); i++) {
@@ -63,7 +63,7 @@ public class PeliculaDao {
 
 			}
 
-		} catch (ListadoVacio e) {
+		} catch (ListadoVacioException e) {
 			logger.error(e.toString());
 		} finally {
 
@@ -78,12 +78,12 @@ public class PeliculaDao {
 			for (int i = 0; i < ListaPeliculas.size(); i++) {
 				if (ListaPeliculas.get(i).getTitulo().equals(p1.getTitulo())) {
 
-					throw new excepciones.PeliculaExistente();
+					throw new excepciones.PeliculaExistenteException();
 				}
 			}
 			ListaPeliculas.add(p1);
 			Escritor.str("Película creada correctamente");
-		} catch (PeliculaExistente e) {
+		} catch (PeliculaExistenteException e) {
 
 			logger.error(e.toString());
 		}

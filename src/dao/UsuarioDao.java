@@ -15,8 +15,8 @@ import java.util.Map;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import excepciones.ListadoVacio;
-import excepciones.UsuarioExistente;
+import excepciones.ListadoVacioException;
+import excepciones.UsuarioExistenteException;
 import gui.Menu;
 import model.Usuario;
 import utilidades.Escritor;
@@ -52,7 +52,7 @@ public class UsuarioDao {
 		try {
 			if (MapaUsuarios.size() == 0) {
 				Escritor.str("El listado está vacío");
-				throw new excepciones.ListadoVacio();
+				throw new excepciones.ListadoVacioException();
 			} else {
 				String key;
 				Iterator<String> usuarios = MapaUsuarios.keySet().iterator();
@@ -63,7 +63,7 @@ public class UsuarioDao {
 				}
 			}
 
-		} catch (ListadoVacio e) {
+		} catch (ListadoVacioException e) {
 			logger.error(e.toString());
 		} finally {
 
@@ -79,13 +79,13 @@ public class UsuarioDao {
 			if (MapaUsuarios.containsKey(u.getNombre())) {
 				Escritor.str("Ese usuario ya existía");
 
-				throw new excepciones.UsuarioExistente();
+				throw new excepciones.UsuarioExistenteException();
 
 			} else {
 				MapaUsuarios.put(u.getNombre(), u);
 				Escritor.str("Usuario creado correctamente");
 			}
-		} catch (UsuarioExistente e) {
+		} catch (UsuarioExistenteException e) {
 			logger.error(e.toString());
 		} finally {
 

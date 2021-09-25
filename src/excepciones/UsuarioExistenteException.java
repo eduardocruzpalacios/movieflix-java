@@ -8,21 +8,21 @@
 
 package excepciones;
 
-public class UsuarioExistente extends Exception {
+public class UsuarioExistenteException extends Exception {
 
 	private static final long serialVersionUID = 1L;
 
-	public UsuarioExistente() {
+	public UsuarioExistenteException() {
 		super();
 	}
 
-	public UsuarioExistente(String msg) {
+	public UsuarioExistenteException(String msg) {
 		super(msg);
 	}
 
 	@Override
 	public String toString() {
-		return "UsuarioExistente []";
+		return "UsuarioExistenteException []";
 	}
 
 }
