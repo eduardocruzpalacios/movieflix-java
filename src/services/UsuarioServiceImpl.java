@@ -6,31 +6,31 @@
  * @version 1.0
  */
 
-package servicios;
+package services;
 
 import dao.UsuarioDao;
 
-public class GestorUsuarios implements Gestor {
+public class UsuarioServiceImpl implements UsuarioService {
 
 	private UsuarioDao usuarios = new UsuarioDao();
 
 	@Override
-	public void listarUsuarios() {
+	public void findAll() {
 		this.usuarios.listarUsuarios();
 	}
 
 	@Override
-	public void addUsuarios() {
+	public void add() {
 		this.usuarios.addUsuarios();
 	}
 
 	@Override
-	public void eliminarUsuarios() {
+	public void delete() {
 		this.usuarios.eliminarUsuarios();
 	}
 
 	@Override
-	public void modificarUsuarios() {
+	public void update() {
 		this.usuarios.modificarUsuarios();
 	}
 

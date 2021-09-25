@@ -6,11 +6,11 @@
  * @version 1.0
  */
 
-package servicios;
+package services;
 
 import dao.PeliculaDao;
 
-public class GestorPeliculas implements GestorP {
+public class PeliculaServiceImpl implements PeliculaService {
 
 	private PeliculaDao p = new PeliculaDao();
 

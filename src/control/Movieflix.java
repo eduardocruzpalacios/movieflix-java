@@ -9,17 +9,17 @@
 package control;
 
 import gui.Menu;
-import servicios.GestorPeliculas;
-import servicios.GestorUsuarios;
+import services.PeliculaServiceImpl;
+import services.UsuarioServiceImpl;
 import utilidades.Lector;
 
 public class Movieflix {
 
-	private GestorUsuarios gestorUsuarios = new GestorUsuarios();
-	private GestorPeliculas gestorPeliculas = new GestorPeliculas();
+	private UsuarioServiceImpl usuarioServiceImpl = new UsuarioServiceImpl();
+	private PeliculaServiceImpl peliculaServiceImpl = new PeliculaServiceImpl();
 
 	public void abrirMovieflix() {
-		gestorPeliculas.importarPeliculas();
+		peliculaServiceImpl.importarPeliculas();
 		gui.Ventana.presentacion();
 		boolean seguir = true;
 		int opcion = 0;
@@ -73,16 +73,16 @@ public class Movieflix {
 	public void gestionarUsuarios(int opcionUser) {
 		switch (opcionUser) {
 		case 1:
-			gestorUsuarios.listarUsuarios();
+			usuarioServiceImpl.findAll();
 			break;
 		case 2:
-			gestorUsuarios.addUsuarios();
+			usuarioServiceImpl.add();
 			break;
 		case 3:
-			gestorUsuarios.eliminarUsuarios();
+			usuarioServiceImpl.delete();
 			break;
 		case 4:
-			gestorUsuarios.modificarUsuarios();
+			usuarioServiceImpl.update();
 			break;
 		}
 	}
@@ -90,16 +90,16 @@ public class Movieflix {
 	public void gestionarPeliculas(int opcionUser2) {
 		switch (opcionUser2) {
 		case 1:
-			gestorPeliculas.listarPeliculas();
+			peliculaServiceImpl.listarPeliculas();
 			break;
 		case 2:
-			gestorPeliculas.addPeliculas();
+			peliculaServiceImpl.addPeliculas();
 			break;
 		case 3:
-			gestorPeliculas.eliminarPeliculas();
+			peliculaServiceImpl.eliminarPeliculas();
 			break;
 		case 4:
-			gestorPeliculas.modificarPeliculas();
+			peliculaServiceImpl.modificarPeliculas();
 			break;
 		}
 	}

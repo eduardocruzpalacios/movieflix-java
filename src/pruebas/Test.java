@@ -10,7 +10,7 @@ package pruebas;
 
 import dao.UsuarioDao;
 import model.Usuario;
-import servicios.GestorUsuarios;
+import services.UsuarioServiceImpl;
 
 public class Test {
 
@@ -62,18 +62,18 @@ public class Test {
 
 	public static void _03_clase_GestorUsuarios() {
 
-		GestorUsuarios g = new GestorUsuarios();
+		UsuarioServiceImpl g = new UsuarioServiceImpl();
 
-		g.addUsuarios();
-		g.addUsuarios();
+		g.add();
+		g.add();
 
-		g.listarUsuarios();
+		g.findAll();
 
-		g.modificarUsuarios();
+		g.update();
 
-		g.eliminarUsuarios();
+		g.delete();
 
-		g.listarUsuarios();
+		g.findAll();
 	}
 
 }

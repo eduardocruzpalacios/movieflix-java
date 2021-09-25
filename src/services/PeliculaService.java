@@ -6,9 +6,9 @@
  * @version 1.0
  */
 
-package servicios;
+package services;
 
-public interface GestorP {
+public interface PeliculaService {
 
 	public void listarPeliculas();
 
