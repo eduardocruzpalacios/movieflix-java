@@ -10,7 +10,11 @@ package model;
 
 import java.time.LocalDate;
 
-public class Usuario {
+import factory.UsuarioProduct;
+import utilidades.Escritor;
+import utilidades.Lector;
+
+public class Usuario implements UsuarioProduct {
 
 	private String nombre;
 	private LocalDate fechaNacimiento;
@@ -55,4 +59,16 @@ public class Usuario {
 				+ ciudadResidencia + "]";
 	}
 
+	@Override
+	public UsuarioProduct crear() {
+		Usuario usuario = new Usuario();
+		Escritor.str("vamos a crear un nuevo usuario, voy a pedirte sus datos");
+		usuario.setNombre(Lector.str("dame nombre"));
+		int year = Lector.pedirInt("dame año de nacimiento");
+		int mes = Lector.pedirInt("dame mes de nacimiento");
+		int dia = Lector.pedirInt("dame día de nacimiento");
+		usuario.setFechaNacimiento(LocalDate.of(year, mes, dia));
+		usuario.setCiudadResidencia(Lector.str("dame ciudad de residencia"));
+		return usuario;
+	}
 }

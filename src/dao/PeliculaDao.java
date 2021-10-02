@@ -17,6 +17,8 @@ import org.apache.logging.log4j.Logger;
 
 import excepciones.ListadoVacioException;
 import excepciones.PeliculaExistenteException;
+import factory.AbstractFactory;
+import factory.FactoryProvider;
 import gui.Menu;
 import model.Pelicula;
 import utilidades.Colecciones;
@@ -53,7 +55,8 @@ public class PeliculaDao {
 
 	public void addPeliculas() {
 		try {
-			Pelicula pelicula = Pelicula.crearYRellenarPelicula();
+			AbstractFactory<?> abstractFactory = FactoryProvider.getFactory("pelicula");
+			Pelicula pelicula = (Pelicula) abstractFactory.create("pelicula");
 			for (int i = 0; i < peliculaDao.size(); i++) {
 				if (peliculaDao.get(i).getTitulo().equals(pelicula.getTitulo())) {
 					throw new excepciones.PeliculaExistenteException();

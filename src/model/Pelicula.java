@@ -8,7 +8,11 @@
 
 package model;
 
-public class Pelicula {
+import factory.VideoProduct;
+import utilidades.Escritor;
+import utilidades.Lector;
+
+public class Pelicula implements VideoProduct {
 
 	private String titulo;
 	private Short anyoEstreno;
@@ -50,6 +54,16 @@ public class Pelicula {
 	@Override
 	public String toString() {
 		return "Pelicula [titulo=" + titulo + ", anyoEstreno=" + anyoEstreno + ", categoria=" + categoria + "]";
+	}
+
+	@Override
+	public VideoProduct crear() {
+		Pelicula pelicula = new Pelicula();
+		Escritor.str("vamos a añadir una nueva pelicula, voy a pedirte los dao");
+		pelicula.setTitulo(Lector.str("dime el titulo"));
+		pelicula.setAnyoEstreno((short) Lector.pedirInt("dime el año de estreno"));
+		pelicula.setCategoria((short) Lector.pedirInt("dime que categoria es"));
+		return pelicula;
 	}
 
 }
