@@ -17,8 +17,6 @@ import org.apache.logging.log4j.Logger;
 
 import excepciones.ListadoVacioException;
 import excepciones.PeliculaExistenteException;
-import factory.AbstractFactory;
-import factory.FactoryProvider;
 import gui.Menu;
 import model.Pelicula;
 import utilidades.Colecciones;
@@ -53,10 +51,9 @@ public class PeliculaDao {
 		}
 	}
 
-	public void addPeliculas() {
+	public void addPelicula() {
 		try {
-			AbstractFactory<?> abstractFactory = FactoryProvider.getFactory("pelicula");
-			Pelicula pelicula = (Pelicula) abstractFactory.create("pelicula");
+			Pelicula pelicula = Pelicula.crear();
 			for (int i = 0; i < peliculaDao.size(); i++) {
 				if (peliculaDao.get(i).getTitulo().equals(pelicula.getTitulo())) {
 					throw new excepciones.PeliculaExistenteException();
@@ -69,7 +66,7 @@ public class PeliculaDao {
 		}
 	}
 
-	public void eliminarPeliculas() {
+	public void eliminarPelicula() {
 		String tituloPelicula = Lector.str("Dime el título de la película a borrar");
 		for (int i = 0; i < peliculaDao.size(); i++) {
 			if (tituloPelicula.equals(peliculaDao.get(i).getTitulo())) {
@@ -78,7 +75,7 @@ public class PeliculaDao {
 		}
 	}
 
-	public void modificarPeliculas() {
+	public void modificarPelicula() {
 		String tituloPelicula = Lector.str("Dime el título de la película a modificar");
 		Menu.modificarPelicula();
 		int opcion = Lector.pedirIntEntre(1, 3);

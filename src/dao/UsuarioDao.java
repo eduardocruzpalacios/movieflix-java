@@ -18,8 +18,6 @@ import org.apache.logging.log4j.Logger;
 
 import excepciones.ListadoVacioException;
 import excepciones.UsuarioExistenteException;
-import factory.AbstractFactory;
-import factory.FactoryProvider;
 import gui.Menu;
 import model.Usuario;
 import utilidades.Escritor;
@@ -57,10 +55,9 @@ public class UsuarioDao {
 		}
 	}
 
-	public void addUsuarios() {
+	public void addUsuario() {
 		try {
-			AbstractFactory<?> abstractFactory = FactoryProvider.getFactory("usuario");
-			Usuario usuario = (Usuario) abstractFactory.create("usuario");
+			Usuario usuario = Usuario.crear();
 			if (usuarioDao.containsKey(usuario.getNombre())) {
 				Escritor.str("Ese usuario ya existía");
 				throw new excepciones.UsuarioExistenteException();
@@ -73,12 +70,12 @@ public class UsuarioDao {
 		}
 	}
 
-	public void eliminarUsuarios() {
+	public void eliminarUsuario() {
 		String nombreUsuario = Lector.str("dime el nombre de usuario a borrar");
 		usuarioDao.remove(nombreUsuario);
 	}
 
-	public void modificarUsuarios() {
+	public void modificarUsuario() {
 		String nombreUsuario = Lector.str("Dame el nombre del usuario");
 		Menu.modificarUsuario();
 		int opcion = Lector.pedirIntEntre(1, 3);

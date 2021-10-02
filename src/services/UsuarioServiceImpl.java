@@ -21,17 +21,17 @@ public class UsuarioServiceImpl implements UsuarioService {
 
 	@Override
 	public void add() {
-		this.usuarioDao.addUsuarios();
+		this.usuarioDao.addUsuario();
 	}
 
 	@Override
 	public void delete() {
-		this.usuarioDao.eliminarUsuarios();
+		this.usuarioDao.eliminarUsuario();
 	}
 
 	@Override
 	public void update() {
-		this.usuarioDao.modificarUsuarios();
+		this.usuarioDao.modificarUsuario();
 	}
 
 }

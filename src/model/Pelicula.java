@@ -8,11 +8,10 @@
 
 package model;
 
-import factory.VideoProduct;
 import utilidades.Escritor;
 import utilidades.Lector;
 
-public class Pelicula implements VideoProduct {
+public class Pelicula {
 
 	private String titulo;
 	private Short anyoEstreno;
@@ -56,8 +55,7 @@ public class Pelicula implements VideoProduct {
 		return "Pelicula [titulo=" + titulo + ", anyoEstreno=" + anyoEstreno + ", categoria=" + categoria + "]";
 	}
 
-	@Override
-	public VideoProduct crear() {
+	public static Pelicula crear() {
 		Pelicula pelicula = new Pelicula();
 		Escritor.str("vamos a añadir una nueva pelicula, voy a pedirte los dao");
 		pelicula.setTitulo(Lector.str("dime el titulo"));

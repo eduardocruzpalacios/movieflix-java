@@ -21,17 +21,17 @@ public class PeliculaServiceImpl implements PeliculaService {
 
 	@Override
 	public void addPeliculas() {
-		this.peliculaDao.addPeliculas();
+		this.peliculaDao.addPelicula();
 	}
 
 	@Override
 	public void eliminarPeliculas() {
-		this.peliculaDao.eliminarPeliculas();
+		this.peliculaDao.eliminarPelicula();
 	}
 
 	@Override
 	public void modificarPeliculas() {
-		this.peliculaDao.modificarPeliculas();
+		this.peliculaDao.modificarPelicula();
 	}
 
 	@Override

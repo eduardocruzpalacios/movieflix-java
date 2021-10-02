@@ -10,11 +10,10 @@ package model;
 
 import java.time.LocalDate;
 
-import factory.UsuarioProduct;
 import utilidades.Escritor;
 import utilidades.Lector;
 
-public class Usuario implements UsuarioProduct {
+public class Usuario {
 
 	private String nombre;
 	private LocalDate fechaNacimiento;
@@ -59,8 +58,7 @@ public class Usuario implements UsuarioProduct {
 				+ ciudadResidencia + "]";
 	}
 
-	@Override
-	public UsuarioProduct crear() {
+	public static Usuario crear() {
 		Usuario usuario = new Usuario();
 		Escritor.str("vamos a crear un nuevo usuario, voy a pedirte sus datos");
 		usuario.setNombre(Lector.str("dame nombre"));
@@ -71,4 +69,5 @@ public class Usuario implements UsuarioProduct {
 		usuario.setCiudadResidencia(Lector.str("dame ciudad de residencia"));
 		return usuario;
 	}
+
 }
