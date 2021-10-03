@@ -8,7 +8,6 @@
 
 package dao;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -106,9 +105,8 @@ public class PeliculaDao {
 	}
 
 	public void importarPeliculas() {
-		File file = new File("peliculas.txt");
-		ArrayList<String> arrayString = Files.exportarAList(file);
-		ArrayList<Pelicula> arrayPeliculas = Colecciones.leerListCadenasDevolverListObjetos(arrayString);
+		ArrayList<String> arrayString = Files.leerRutaFicheroDevolverArrayString("peliculas.txt");
+		ArrayList<Pelicula> arrayPeliculas = Colecciones.leerArrayStringDevolverArrayPelicula(arrayString);
 		peliculaDao = arrayPeliculas;
 	}
 

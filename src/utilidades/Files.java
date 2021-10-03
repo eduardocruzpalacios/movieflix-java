@@ -16,21 +16,23 @@ import java.util.ArrayList;
 
 public class Files {
 
-	public static ArrayList<String> exportarAList(File a) {
+	public static ArrayList<String> leerRutaFicheroDevolverArrayString(String filePath) {
 
-		ArrayList<String> lineas = new ArrayList<String>();
+		File file = new File(filePath);
+		ArrayList<String> arrayString = new ArrayList<String>();
 
 		try {
-			BufferedReader lector = new BufferedReader(new FileReader(a));
+			BufferedReader lector = new BufferedReader(new FileReader(file));
 			String linea;
 			while ((linea = lector.readLine()) != null) {
-				lineas.add(linea);
+				arrayString.add(linea);
 			}
 			lector.close();
 		} catch (IOException e) {
 			System.out.println("Error al leer los dao");
 		}
-		return lineas;
+
+		return arrayString;
 	}
 
 }

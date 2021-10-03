@@ -14,7 +14,7 @@ import model.Pelicula;
 
 public class Colecciones {
 
-	public static ArrayList<Pelicula> leerListCadenasDevolverListObjetos(ArrayList<String> arrayString) {
+	public static ArrayList<Pelicula> leerArrayStringDevolverArrayPelicula(ArrayList<String> arrayString) {
 
 		String linea;
 		String[] partes = new String[3];
