@@ -18,7 +18,7 @@ public class Movieflix {
 	private UsuarioServiceImpl usuarioServiceImpl = new UsuarioServiceImpl();
 	private PeliculaServiceImpl peliculaServiceImpl = new PeliculaServiceImpl();
 
-	public void abrirMovieflix() {
+	public void ejecutar() {
 		peliculaServiceImpl.importarPeliculas();
 		gui.Ventana.presentacion();
 		boolean seguir = true;
