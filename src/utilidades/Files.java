@@ -1,41 +1,38 @@
 /*
- * 
  * Fecha: 22/03/2021
  * 
  * @author Edu
  * 
  * @version 1.0
- * 
- * Clase Files
- * 
- * Clase para transformar un fichero de texto a ArrayList
- * Cada línea de fichero sería una posición de ArrayList
  */
+
 package utilidades;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
 public class Files {
 
-	public static ArrayList<String> exportarAList(File a) {
+	public static ArrayList<String> leerRutaFicheroDevolverArrayString(String filePath) {
 
-		ArrayList<String> lineas = new ArrayList<String>();
-		// int numeroLineas = calcularNumeroLineas(a);
+		File file = new File(filePath);
+		ArrayList<String> arrayString = new ArrayList<String>();
+
 		try {
-			BufferedReader lector = new BufferedReader(new FileReader(a));
+			BufferedReader lector = new BufferedReader(new FileReader(file));
 			String linea;
-
 			while ((linea = lector.readLine()) != null) {
-				lineas.add(linea);
+				arrayString.add(linea);
 			}
 			lector.close();
 		} catch (IOException e) {
-			System.out.println("Error al leer los datos");
+			System.out.println("Error al leer los dao");
 		}
-		return lineas;
+
+		return arrayString;
 	}
+
 }

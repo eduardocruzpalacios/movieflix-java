@@ -1,10 +1,11 @@
-/*@Author Andrei
- * Fecha 22 03 
- * Crear la classe con los setters getters y to string
- * Crear los metodos
- * Realizar la prueba de calidad
- *
+/*
+ * Fecha: 22/03/2021
+ * 
+ * @Author Andrei
+ * 
+ * @version 1.0
  */
+
 package model;
 
 import utilidades.Escritor;
@@ -17,27 +18,12 @@ public class Pelicula {
 	private Short categoria;
 
 	public Pelicula() {
-
 	}
 
 	public Pelicula(String titulo, short anyoEstreno, short categoria) {
-
 		this.titulo = titulo;
 		this.anyoEstreno = anyoEstreno;
 		this.categoria = categoria;
-
-	}
-
-	public static Pelicula crearYRellenarPelicula() {
-
-		Pelicula p = new Pelicula();
-
-		Escritor.str("vamos a añadir una nueva pelicula, voy a pedirte los datos");
-		p.setTitulo(Lector.str("dime el titulo"));
-		p.setAnyoEstreno((short)Lector.pedirInt("dime el año de estreno"));
-		p.setCategoria((short)Lector.pedirInt("dime que categoria es"));
-
-		return p;
 	}
 
 	public String getTitulo() {
@@ -68,6 +54,14 @@ public class Pelicula {
 	public String toString() {
 		return "Pelicula [titulo=" + titulo + ", anyoEstreno=" + anyoEstreno + ", categoria=" + categoria + "]";
 	}
-}
 
-	
+	public static Pelicula crear() {
+		Pelicula pelicula = new Pelicula();
+		Escritor.str("vamos a añadir una nueva pelicula, voy a pedirte los dao");
+		pelicula.setTitulo(Lector.str("dime el titulo"));
+		pelicula.setAnyoEstreno((short) Lector.pedirInt("dime el año de estreno"));
+		pelicula.setCategoria((short) Lector.pedirInt("dime que categoria es"));
+		return pelicula;
+	}
+
+}

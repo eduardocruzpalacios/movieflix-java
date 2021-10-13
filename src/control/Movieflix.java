@@ -1,30 +1,25 @@
 /*
-*Fecha: 22/03/2021
-*
-*@author Edu y María
-*
-*@version: 1.0
-*
-*Clase Movieflix
-*
-*Clase que se encarga de desplegar el menú, permite seleccionar las distintas opciones y ejecutarlas.
-*
-*/
+ * Fecha: 22/03/2021
+ *
+ * @author Edu y María
+ *
+ * @version: 1.0
+ */
 
 package control;
 
 import gui.Menu;
-import servicios.GestorPeliculas;
-import servicios.GestorUsuarios;
+import services.PeliculaServiceImpl;
+import services.UsuarioServiceImpl;
 import utilidades.Lector;
 
 public class Movieflix {
 
-	private GestorUsuarios gestorUsuarios = new GestorUsuarios();
-	private GestorPeliculas gestorPeliculas = new GestorPeliculas();
+	private UsuarioServiceImpl usuarioServiceImpl = new UsuarioServiceImpl();
+	private PeliculaServiceImpl peliculaServiceImpl = new PeliculaServiceImpl();
 
-	public void abrirMovieflix() {
-		gestorPeliculas.importarPeliculas();
+	public void ejecutar() {
+		peliculaServiceImpl.importarPeliculas();
 		gui.Ventana.presentacion();
 		boolean seguir = true;
 		int opcion = 0;
@@ -41,81 +36,66 @@ public class Movieflix {
 	}
 
 	public void seleccionarOpciones(int opcion) {
-
+		boolean seguir = true;
+		int opcion2 = 0;
 		switch (opcion) {
-
-		// Gestionar usuarios
 		case 1:
-			boolean seguir = true;
-			int opcionUser = 0;
 			do {
 				gui.Menu.usuarios();
-				opcionUser = Lector.pedirIntEntre(1, 5, "Elije una opción del menú");
-				if (opcionUser == 5) {
+				opcion2 = Lector.pedirIntEntre(1, 5, "Elije una opción del menú");
+				if (opcion2 == 5) {
 					seguir = false;
 				} else {
-					gestionarUsuarios(opcionUser);
+					gestionarUsuarios(opcion2);
 				}
 			} while (seguir);
 			break;
-
-		// Gestionar películas
 		case 2:
-			boolean seguir2 = true;
-			int opcionUser2 = 0;
 			do {
 				gui.Menu.peliculas();
-				opcionUser2 = Lector.pedirIntEntre(1, 9, "Elije una opción del menú");
-				if (opcionUser2 == 9) {
-					seguir2 = false;
+				opcion2 = Lector.pedirIntEntre(1, 9, "Elije una opción del menú");
+				if (opcion2 == 9) {
+					seguir = false;
 				} else {
-					gestionarPeliculas(opcionUser2);
+					gestionarPeliculas(opcion2);
 				}
-			} while (seguir2);
+			} while (seguir);
 			break;
 		}
-
 	}
 
-	// Switch para elegir opciones dentro de la gestión de usuarios
-	public void gestionarUsuarios(int opcionUser) {
-		switch (opcionUser) {
+	public void gestionarUsuarios(int opcion) {
+		switch (opcion) {
 		case 1:
-			gestorUsuarios.listarUsuarios();
+			usuarioServiceImpl.findAll();
 			break;
 		case 2:
-			gestorUsuarios.addUsuarios();
+			usuarioServiceImpl.add();
 			break;
 		case 3:
-			gestorUsuarios.eliminarUsuarios();
+			usuarioServiceImpl.delete();
 			break;
 		case 4:
-			gestorUsuarios.modificarUsuarios();
+			usuarioServiceImpl.update();
 			break;
 		}
 	}
 
-	// Switch para elegir opciones dentro de la gestión de usuarios
-	public void gestionarPeliculas(int opcionUser2) {
-		switch (opcionUser2) {
+	public void gestionarPeliculas(int opcion) {
+		switch (opcion) {
 		case 1:
-			gestorPeliculas.listarPeliculas();
+			peliculaServiceImpl.listarPeliculas();
 			break;
 		case 2:
-			gestorPeliculas.addPeliculas();
+			peliculaServiceImpl.addPeliculas();
 			break;
 		case 3:
-			gestorPeliculas.eliminarPeliculas();
+			peliculaServiceImpl.eliminarPeliculas();
 			break;
 		case 4:
-			gestorPeliculas.modificarPeliculas();
+			peliculaServiceImpl.modificarPeliculas();
 			break;
-		/*
-		 * case 5: gestorPeliculas.peliculasMasValoradas(); break; case 6:
-		 * gestorPeliculas.peliculasEncimaMedia(); break; case 7:
-		 * gestorPeliculas.peliculasPeorValoradas(); break; case 8:
-		 * gestorPeliculas.peliculasMasVistas(); break;
-		 */
 		}
 	}
+
 }

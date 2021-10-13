@@ -1,16 +1,9 @@
 /*
- * 
  * Fecha: 22/03/2021
  * 
  * @author Edu
  * 
  * @version 1.0
- * 
- *          Clase Menu
- * 
- *          Clase que establece los menús gráfico de la aplicación
- * 
- * 
  */
 
 package gui;
