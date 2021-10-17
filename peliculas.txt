@@ -1,81 +1,81 @@
-La vida es bella,1997,2
-Intocable,2011,4
-Regreso al futuro,1985,4
-El gran dictador,1940,4
-Luces de la ciudad,1931,4
-Forrest Gump,1994,4
-Casablanca,1942,2
-Amelia,2001,2
-El indomable Will Hunting,1997,2
-El Rey León,1994,5
-Coco,2017,5
-La princesa Mononoke,1997,5
-Up,2009,5
-Toy Story,1995,5
-Inside Out,2015,5
-Forrest Gump,1994,2
-El Club de los poetas muertos,1989,2
-El caballero oscuro,2008,6
-Origen,2010,6
-Sospechosos habituales,1995,6
-El apartamento,1960,2
-El secreto de tus ojos,2009,2
-Seven,1995,6
-El silencio de los corderos,1991,6
-Memento,2000,6
-El señor de los anillos: El retorno del rey,2003,3
-Los siete samuráis,1954,3
-Interstellar,2014,3
-La guerra de las galaxias,1997,3
-Gladiator,2000,3
-El caso Bourne,2002,1
-La noche de los cristales rotos,1991,1
-Arma letal,1987,1
-La jungla de cristal,1988,1
-El padrino,1972,1
-Ciudad de Dios,2002,1
-Uno de los nuestros,1990,1
-Pulp Fiction,1994,1
-Avengers: Infinity War,2018,3
-Jurassic World: Fallen Kingdom,2018,3
-Venom,2018,3
-Avatar,2009,3
-Deadpool,2016,4
-Un Lugar tranquilo,2018,6
-Lo imposible,2012,6
-Fargo,1996,1
-Shutter Island,2010,1
-El caballero oscuro,2008,6
-TED 2,2015,4
-Harakiri,1962,2
-Titanic,1997,2
-Zootropolis,2016,5
-Your name,2016,5
-Dejame salir,2017,6
-Multiple,2016,6
-Resacon en Las Vegas,2009,4
-The others,2001,6
-El sexto sentido,1999,6
-La pelicula de los simpson,2014,5
-Fast & furious 8,2017,3
-Harry Potter y el prisionero de azkaban,2004,3
-Shrek,2001,5
-Corpse Bride,2005,5
-Spirit,2002,5
-A Silent Voice,2016,5
-El Diario de Noa,2004,2
-Bajo la misma estrella,2014,2
-Con derecho a roce,2011,2
-Postdata: Te Quiero,2007,2
-Pretty Woman,1990,2
-Juego de Ladrones. El atraco perfecto,2018,1
-La isla siniestra,2010,1
-Ralph Rompe internet,2018,5
-Los increibles ,2004,5
-Los intocables de Eliot Ness,1987,1
-Bobby Z,2007,1
-Deadpool,2016,4
-Ocho apellidos vascos,2014,4
-Scary Movie,2000,4
-La Mascara: Cero a Heroe,1994,4
-Dos tontos muy tontos,1994,4
+La vida es bella,1997,2,1000,4.5
+Intocable,2011,4,2687,1.7
+Regreso al futuro,1985,4,46,5
+El gran dictador,1940,4,46,0.5
+Luces de la ciudad,1931,4,246,1.25
+Forrest Gump,1994,4,4674,3
+Casablanca,1942,2,46,4
+Amelia,2001,2,46797,3.41
+El indomable Will Hunting,1997,2,2474146,5
+El Rey León,1994,5,99946,5
+Coco,2017,5,46,5
+La princesa Mononoke,1997,5,646,1.97
+Up,2009,5,1000,4.5,2687,1.7
+Toy Story,1995,5,146,4.25
+Inside Out,2015,5,46,5
+Forrest Gump,1994,2,1000,4.5
+El Club de los poetas muertos,1989,2,646,2.84
+El caballero oscuro,2008,6,86546,4.12
+Origen,2010,6,46797,3.41
+Sospechosos habituales,1995,6,2687,1.7
+El apartamento,1960,2,46797,3.41
+El secreto de tus ojos,2009,2,1000,4.5
+Seven,1995,6,46797,3.41
+El silencio de los corderos,1991,6,2514,4.87
+Memento,2000,6,46797,3.41
+El señor de los anillos: El retorno del rey,2003,3,46,5
+Los siete samuráis,1954,3,1000,4.5
+Interstellar,2014,3,2687,1.7
+La guerra de las galaxias,1997,3,46,5
+Gladiator,2000,3,46,5
+El caso Bourne,2002,1,46797,3.41
+La noche de los cristales rotos,1991,1,46,5
+Arma letal,1987,1,46797,3.41
+La jungla de cristal,1988,1,46,5
+El padrino,1972,1,46797,3.41
+Ciudad de Dios,2002,1,46,5
+Uno de los nuestros,1990,1,46,5
+Pulp Fiction,1994,1,46797,3.41
+Avengers: Infinity War,2018,3,46,5
+Jurassic World: Fallen Kingdom,2018,3,46,5
+Venom,2018,3,1000,4.5
+Avatar,2009,3,2687,1.7
+Deadpool,2016,4,46797,3.41
+Un Lugar tranquilo,2018,6,46,1.6
+Lo imposible,2012,6,46,5
+Fargo,1996,1,1000,4.5
+Shutter Island,2010,1,46,5
+El caballero oscuro,2008,6,467,2.34
+TED 2,2015,4,46,5
+Harakiri,1962,2,46,5
+Titanic,1997,2,46,5
+Zootropolis,2016,5,46797,3.41
+Your name,2016,5,1000,4.5
+Dejame salir,2017,6,467,2.34
+Multiple,2016,6,1000,4.5
+Resacon en Las Vegas,2009,4,2687,1.7
+The others,2001,6,46,5
+El sexto sentido,1999,6,46797,3.41
+La pelicula de los simpson,2014,5,6000,4.34
+Fast & furious 8,2017,3,46,3
+Harry Potter y el prisionero de azkaban,2004,3,46,5
+Shrek,2001,5,1000,4.5
+Corpse Bride,2005,5,2687,1.7
+Spirit,2002,5,46,2.55
+A Silent Voice,2016,5,2687,1.7
+El Diario de Noa,2004,2,467,2.34
+Bajo la misma estrella,2014,2,46797,3.41
+Con derecho a roce,2011,2,467,2.34
+Postdata: Te Quiero,2007,2,46,4
+Pretty Woman,1990,2,46,5
+Juego de Ladrones. El atraco perfecto,2018,1,46,5
+La isla siniestra,2010,1,467,2.34
+Ralph Rompe internet,2018,5,46,3.41
+Los increibles,2004,5,46,4
+Los intocables de Eliot Ness,1987,1,46797,3.41
+Bobby Z,2007,1,1000,4.5
+Deadpool,2016,4,46,3.67
+Ocho apellidos vascos,2014,4,146,4
+Scary Movie,2000,4,467,2.34
+La Mascara: Cero a Heroe,1994,4,2687,1.7
+Dos tontos muy tontos,1994,4,1000,4.5

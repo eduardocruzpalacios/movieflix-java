@@ -16,14 +16,18 @@ public class Pelicula {
 	private String titulo;
 	private Short anyoEstreno;
 	private Short categoria;
+	private long visualizaciones;
+	private float valoracion;
 
 	public Pelicula() {
 	}
 
-	public Pelicula(String titulo, short anyoEstreno, short categoria) {
+	public Pelicula(String titulo, short anyoEstreno, short categoria, long visualizaciones, float valoracion) {
 		this.titulo = titulo;
 		this.anyoEstreno = anyoEstreno;
 		this.categoria = categoria;
+		this.visualizaciones = visualizaciones;
+		this.valoracion = valoracion;
 	}
 
 	public String getTitulo() {
@@ -34,25 +38,42 @@ public class Pelicula {
 		this.titulo = titulo;
 	}
 
-	public short getAnyoEstreno() {
+	public Short getAnyoEstreno() {
 		return anyoEstreno;
 	}
 
-	public void setAnyoEstreno(short anyoEstreno) {
+	public void setAnyoEstreno(Short anyoEstreno) {
 		this.anyoEstreno = anyoEstreno;
 	}
 
-	public short getCategoria() {
+	public Short getCategoria() {
 		return categoria;
 	}
 
-	public void setCategoria(short categoria) {
+	public void setCategoria(Short categoria) {
 		this.categoria = categoria;
+	}
+
+	public long getVisualizaciones() {
+		return visualizaciones;
+	}
+
+	public void setVisualizaciones(long visualizaciones) {
+		this.visualizaciones = visualizaciones;
+	}
+
+	public float getValoracion() {
+		return valoracion;
+	}
+
+	public void setValoracion(float valoracion) {
+		this.valoracion = valoracion;
 	}
 
 	@Override
 	public String toString() {
-		return "Pelicula [titulo=" + titulo + ", anyoEstreno=" + anyoEstreno + ", categoria=" + categoria + "]";
+		return "Pelicula [titulo=" + titulo + ", anyoEstreno=" + anyoEstreno + ", categoria=" + categoria
+				+ ", visualizaciones=" + visualizaciones + ", valoracion=" + valoracion + "]";
 	}
 
 	public static Pelicula crear() {
@@ -61,6 +82,8 @@ public class Pelicula {
 		pelicula.setTitulo(Lector.str("dime el titulo"));
 		pelicula.setAnyoEstreno((short) Lector.pedirInt("dime el año de estreno"));
 		pelicula.setCategoria((short) Lector.pedirInt("dime que categoria es"));
+		pelicula.setVisualizaciones(0);
+		pelicula.setValoracion(-1);
 		return pelicula;
 	}
 
