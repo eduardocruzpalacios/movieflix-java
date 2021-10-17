@@ -14,8 +14,8 @@ import utilidades.Lector;
 public class Pelicula {
 
 	private String titulo;
-	private Short anyoEstreno;
-	private Short categoria;
+	private short anyoEstreno;
+	private short categoria;
 	private long visualizaciones;
 	private float valoracion;
 
@@ -38,19 +38,19 @@ public class Pelicula {
 		this.titulo = titulo;
 	}
 
-	public Short getAnyoEstreno() {
+	public short getAnyoEstreno() {
 		return anyoEstreno;
 	}
 
-	public void setAnyoEstreno(Short anyoEstreno) {
+	public void setAnyoEstreno(short anyoEstreno) {
 		this.anyoEstreno = anyoEstreno;
 	}
 
-	public Short getCategoria() {
+	public short getCategoria() {
 		return categoria;
 	}
 
-	public void setCategoria(Short categoria) {
+	public void setCategoria(short categoria) {
 		this.categoria = categoria;
 	}
 
