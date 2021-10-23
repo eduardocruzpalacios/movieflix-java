@@ -39,4 +39,9 @@ public class PeliculaServiceImpl implements PeliculaService {
 		this.peliculaDao.importarPeliculas();
 	}
 
+	@Override
+	public void listarPeliculasPorCategoria() {
+		this.peliculaDao.listarPeliculasPorCategoria();
+	}
+
 }
