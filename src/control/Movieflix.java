@@ -53,8 +53,8 @@ public class Movieflix {
 		case 2:
 			do {
 				gui.Menu.peliculas();
-				opcion2 = Lector.pedirIntEntre(1, 9, "Elije una opción del menú");
-				if (opcion2 == 9) {
+				opcion2 = Lector.pedirIntEntre(1, 10, "Elije una opción del menú");
+				if (opcion2 == 10) {
 					seguir = false;
 				} else {
 					gestionarPeliculas(opcion2);
