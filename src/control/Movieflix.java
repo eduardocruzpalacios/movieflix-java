@@ -95,6 +95,8 @@ public class Movieflix {
 		case 4:
 			peliculaServiceImpl.modificarPeliculas();
 			break;
+		case 5:
+			peliculaServiceImpl.listarPeliculasPorCategoria();
 		}
 	}
 
