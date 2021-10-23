@@ -41,11 +41,12 @@ public class Menu {
 		Escritor.str("2. Añadir una película");
 		Escritor.str("3. Eliminar una película");
 		Escritor.str("4. Modificar una película");
-		Escritor.str("5. Mostrar las películas más valoradas");
-		Escritor.str("6. Mostrar las películas cuya valoración está por encima de la media");
-		Escritor.str("7. Mostrar las películas peor valoradas");
-		Escritor.str("8. Mostrar las películas más vistas");
-		Escritor.str("9. Volver al menú principal");
+		Escritor.str("5. Filtrar películas por categoría");
+		Escritor.str("6. Mostrar las películas más valoradas");
+		Escritor.str("7. Mostrar las películas cuya valoración está por encima de la media");
+		Escritor.str("8. Mostrar las películas peor valoradas");
+		Escritor.str("9. Mostrar las películas más vistas");
+		Escritor.str("10. Volver al menú principal");
 	}
 
 	public static void modificarPelicula() {
