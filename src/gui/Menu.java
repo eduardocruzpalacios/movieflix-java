@@ -56,4 +56,14 @@ public class Menu {
 		Escritor.str("3. Categoría");
 	}
 
+	public static void categorias() {
+		Escritor.str("\n********** CATEGORÍAS **********\n");
+		Escritor.str("1. Policiaca");
+		Escritor.str("2. Romántica");
+		Escritor.str("3. Aventuras");
+		Escritor.str("4. Comedia");
+		Escritor.str("5. Animación");
+		Escritor.str("6. Thriller");
+	}
+
 }
