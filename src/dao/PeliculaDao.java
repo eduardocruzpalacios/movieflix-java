@@ -14,8 +14,8 @@ import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import excepciones.ListadoVacioException;
-import excepciones.PeliculaExistenteException;
+import exceptions.ListadoVacioException;
+import exceptions.PeliculaExistenteException;
 import gui.Menu;
 import model.Pelicula;
 import utilidades.Colecciones;
@@ -40,7 +40,7 @@ public class PeliculaDao {
 		try {
 			if (peliculaDao.size() == 0) {
 				Escritor.str("El listado está vacío");
-				throw new excepciones.ListadoVacioException();
+				throw new exceptions.ListadoVacioException();
 			} else {
 				System.out.println("Listado de Peliculas");
 				peliculaDao.forEach(pelicula -> System.out.println(pelicula));
@@ -55,7 +55,7 @@ public class PeliculaDao {
 			Pelicula pelicula = Pelicula.crear();
 			for (int i = 0; i < peliculaDao.size(); i++) {
 				if (peliculaDao.get(i).getTitulo().equals(pelicula.getTitulo())) {
-					throw new excepciones.PeliculaExistenteException();
+					throw new exceptions.PeliculaExistenteException();
 				}
 			}
 			peliculaDao.add(pelicula);
@@ -116,7 +116,7 @@ public class PeliculaDao {
 		try {
 			if (peliculaDao.size() == 0) {
 				Escritor.str("El listado está vacío");
-				throw new excepciones.ListadoVacioException();
+				throw new exceptions.ListadoVacioException();
 			} else {
 				System.out.println("Listado de Peliculas");
 				peliculaDao.forEach(pelicula -> {

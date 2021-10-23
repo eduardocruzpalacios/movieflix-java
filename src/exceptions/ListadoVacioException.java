@@ -6,7 +6,7 @@
  * @version 1.0
  */
 
-package excepciones;
+package exceptions;
 
 public class ListadoVacioException extends Exception {
 
