@@ -20,4 +20,6 @@ public interface PeliculaService {
 
 	public void importarPeliculas();
 
+	public void listarPeliculasPorCategoria();
+
 }
