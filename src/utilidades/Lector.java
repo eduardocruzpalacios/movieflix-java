@@ -93,4 +93,17 @@ public class Lector {
 		return x;
 	}
 
+	public static short pedirShortEntre(int a, int b, String msg) {
+		boolean salir = false;
+		short x = 0;
+		while (!salir) {
+			Escritor.str(msg);
+			x = (short) Lector.pedirInt();
+			if (x >= a && x <= b) {
+				salir = true;
+			}
+		}
+		return x;
+	}
+
 }
