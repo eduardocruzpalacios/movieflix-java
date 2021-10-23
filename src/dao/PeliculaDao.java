@@ -110,4 +110,24 @@ public class PeliculaDao {
 		peliculaDao = arrayPeliculas;
 	}
 
+	public void listarPeliculasPorCategoria() {
+		Menu.categorias();
+		short opcion = Lector.pedirShortEntre(1, 6, "Elige una categoría");
+		try {
+			if (peliculaDao.size() == 0) {
+				Escritor.str("El listado está vacío");
+				throw new excepciones.ListadoVacioException();
+			} else {
+				System.out.println("Listado de Peliculas");
+				peliculaDao.forEach(pelicula -> {
+					if (pelicula.getCategoria() == opcion) {
+						System.out.println(pelicula);
+					}
+				});
+			}
+		} catch (ListadoVacioException e) {
+			logger.error(e.toString());
+		}
+	}
+
 }
