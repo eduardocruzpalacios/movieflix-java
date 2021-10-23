@@ -6,7 +6,7 @@
  * @version 1.0
  */
 
-package utilidades;
+package tools;
 
 public class Escritor {
 

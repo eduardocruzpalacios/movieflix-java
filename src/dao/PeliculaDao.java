@@ -18,10 +18,10 @@ import exceptions.ListadoVacioException;
 import exceptions.PeliculaExistenteException;
 import gui.Menu;
 import model.Pelicula;
-import utilidades.Colecciones;
-import utilidades.Escritor;
-import utilidades.Files;
-import utilidades.Lector;
+import tools.Colecciones;
+import tools.Escritor;
+import tools.Files;
+import tools.Lector;
 
 public class PeliculaDao {
 

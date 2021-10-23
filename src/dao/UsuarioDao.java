@@ -20,8 +20,8 @@ import exceptions.ListadoVacioException;
 import exceptions.UsuarioExistenteException;
 import gui.Menu;
 import model.Usuario;
-import utilidades.Escritor;
-import utilidades.Lector;
+import tools.Escritor;
+import tools.Lector;
 
 public class UsuarioDao {
 

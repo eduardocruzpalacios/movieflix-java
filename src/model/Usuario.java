@@ -10,8 +10,8 @@ package model;
 
 import java.time.LocalDate;
 
-import utilidades.Escritor;
-import utilidades.Lector;
+import tools.Escritor;
+import tools.Lector;
 
 public class Usuario {
 

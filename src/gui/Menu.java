@@ -8,7 +8,7 @@
 
 package gui;
 
-import utilidades.Escritor;
+import tools.Escritor;
 
 public class Menu {
 

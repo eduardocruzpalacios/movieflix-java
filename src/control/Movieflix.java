@@ -11,7 +11,7 @@ package control;
 import gui.Menu;
 import services.PeliculaServiceImpl;
 import services.UsuarioServiceImpl;
-import utilidades.Lector;
+import tools.Lector;
 
 public class Movieflix {
 
