@@ -15,6 +15,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Files {
 
@@ -37,12 +38,12 @@ public class Files {
 		return arrayString;
 	}
 
-	public static void LeerArrayStringGuardarEnFichero(ArrayList<String> arrayString, String filePath) {
+	public static void LeerListStringGuardarEnFichero(List<String> listString, String filePath) {
 
 		try {
 			BufferedWriter writer = new BufferedWriter(new FileWriter(filePath));
-			for (int i = 0; i < arrayString.size(); i++) {
-				writer.write(arrayString.get(i));
+			for (int i = 0; i < listString.size(); i++) {
+				writer.write(listString.get(i));
 				writer.newLine();
 			}
 			writer.close();

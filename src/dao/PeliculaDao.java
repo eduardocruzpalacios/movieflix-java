@@ -35,6 +35,7 @@ public class PeliculaDao {
 	}
 
 	private List<Pelicula> peliculaDao = new ArrayList<Pelicula>();
+	private String filePath = "peliculas.txt";
 
 	public void listarPeliculas() {
 		try {
@@ -105,7 +106,7 @@ public class PeliculaDao {
 	}
 
 	public void importarPeliculas() {
-		ArrayList<String> arrayString = Files.leerRutaFicheroDevolverArrayString("peliculas.txt");
+		ArrayList<String> arrayString = Files.leerRutaFicheroDevolverArrayString(filePath);
 		ArrayList<Pelicula> arrayPeliculas = Colecciones.leerArrayStringDevolverArrayPelicula(arrayString);
 		peliculaDao = arrayPeliculas;
 	}
@@ -128,6 +129,11 @@ public class PeliculaDao {
 		} catch (ListadoVacioException e) {
 			logger.error(e.toString());
 		}
+	}
+
+	public void guardarPeliculas() {
+		List<String> listString = Colecciones.leerListPeliculaDevolverListString(this.peliculaDao);
+		Files.LeerListStringGuardarEnFichero(listString, filePath);
 	}
 
 }
