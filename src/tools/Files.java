@@ -9,8 +9,10 @@
 package tools;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -33,6 +35,20 @@ public class Files {
 		}
 
 		return arrayString;
+	}
+
+	public static void LeerArrayStringGuardarEnFichero(ArrayList<String> arrayString, String filePath) {
+
+		try {
+			BufferedWriter writer = new BufferedWriter(new FileWriter(filePath));
+			for (int i = 0; i < arrayString.size(); i++) {
+				writer.write(arrayString.get(i));
+				writer.newLine();
+			}
+			writer.close();
+		} catch (IOException e) {
+			System.out.println(e);
+		}
 	}
 
 }
