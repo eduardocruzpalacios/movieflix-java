@@ -32,6 +32,7 @@ public class Movieflix {
 				seleccionarOpciones(opcion);
 			}
 		} while (seguir);
+		peliculaServiceImpl.guardarPeliculas();
 		gui.Ventana.salir();
 	}
 
