@@ -22,4 +22,6 @@ public interface PeliculaService {
 
 	public void listarPeliculasPorCategoria();
 
+	public void guardarPeliculas();
+
 }
