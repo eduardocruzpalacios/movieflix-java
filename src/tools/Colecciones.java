@@ -35,4 +35,18 @@ public class Colecciones {
 		return arrayPelicula;
 	}
 
+	public static ArrayList<String> leerArrayPeliculaDevolverArrayString(ArrayList<Pelicula> arrayPelicula) {
+		ArrayList<String> arrayString = new ArrayList<String>();
+		for (int i = 0; i < arrayPelicula.size(); i++) {
+			StringBuilder stringBuilder = new StringBuilder();
+			stringBuilder.append(arrayPelicula.get(i).getTitulo()).append(",");
+			stringBuilder.append(arrayPelicula.get(i).getAnyoEstreno()).append(",");
+			stringBuilder.append(arrayPelicula.get(i).getCategoria()).append(",");
+			stringBuilder.append(arrayPelicula.get(i).getVisualizaciones()).append(",");
+			stringBuilder.append(arrayPelicula.get(i).getValoracion());
+			arrayString.add(stringBuilder.toString());
+		}
+		return arrayString;
+	}
+
 }
