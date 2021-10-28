@@ -49,4 +49,9 @@ public class PeliculaServiceImpl implements PeliculaService {
 		this.peliculaDao.guardarPeliculas();
 	}
 
+	@Override
+	public void listarPeliculasMasValoradas() {
+		this.peliculaDao.listarPeliculasMasValoradas();
+	}
+
 }
