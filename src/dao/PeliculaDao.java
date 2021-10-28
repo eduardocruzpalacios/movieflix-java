@@ -138,32 +138,48 @@ public class PeliculaDao {
 
 	public void listarPeliculasMasValoradas() {
 
-		int indexMaxValoracion1 = 0;
-		int indexMaxValoracion2 = -1;
-		int indexMaxValoracion3 = -1;
-		int indexMaxValoracion4 = -1;
-		int indexMaxValoracion5 = -1;
+		int numeroMaximos = 5;
 
-		for (int i = 1; i < peliculaDao.size(); i++) {
-			if (peliculaDao.get(i).getValoracion() > peliculaDao.get(indexMaxValoracion1).getValoracion()) {
-				indexMaxValoracion1 = i;
-			} else if (peliculaDao.get(i).getValoracion() > peliculaDao.get(indexMaxValoracion2).getValoracion()) {
-				indexMaxValoracion2 = i;
-			} else if (peliculaDao.get(i).getValoracion() > peliculaDao.get(indexMaxValoracion3).getValoracion()) {
-				indexMaxValoracion3 = i;
-			} else if (peliculaDao.get(i).getValoracion() > peliculaDao.get(indexMaxValoracion4).getValoracion()) {
-				indexMaxValoracion4 = i;
-			} else if (peliculaDao.get(i).getValoracion() > peliculaDao.get(indexMaxValoracion5).getValoracion()) {
-				indexMaxValoracion5 = i;
+		int[] indicesMaximos = new int[numeroMaximos];
+
+		float valoracionMaxima;
+		float valoracionLimite = 5f;
+		int indiceAuxiliar = 0;
+
+		for (int i = 0; i < indicesMaximos.length; i++) {
+			valoracionMaxima = 0f;
+
+			for (int j = 0; j < peliculaDao.size(); j++) {
+
+				if (peliculaDao.get(j).getValoracion() >= valoracionMaxima
+						&& peliculaDao.get(j).getValoracion() <= valoracionLimite) {
+
+					int cuenta = 0;
+
+					for (int k = 0; k < indicesMaximos.length; k++) {
+
+						if (!peliculaDao.get(indicesMaximos[k]).getTitulo().equals(peliculaDao.get(j).getTitulo())) {
+							cuenta++;
+						}
+
+					}
+
+					if (cuenta == indicesMaximos.length) {
+						valoracionMaxima = peliculaDao.get(j).getValoracion();
+						indicesMaximos[i] = j;
+						indiceAuxiliar = j;
+					}
+
+				}
+
 			}
+			valoracionLimite = peliculaDao.get(indiceAuxiliar).getValoracion();
 		}
 
-		System.out.println("Listado de 5 peliculas más valoradas");
-		System.out.println(peliculaDao.get(indexMaxValoracion1));
-		System.out.println(peliculaDao.get(indexMaxValoracion2));
-		System.out.println(peliculaDao.get(indexMaxValoracion3));
-		System.out.println(peliculaDao.get(indexMaxValoracion4));
-		System.out.println(peliculaDao.get(indexMaxValoracion5));
-	}
+		System.out.println("Listado de " + numeroMaximos + " peliculas más valoradas");
+		for (int i = 0; i < indicesMaximos.length; i++) {
+			System.out.println(peliculaDao.get(indicesMaximos[i]));
+		}
 
+	}
 }
