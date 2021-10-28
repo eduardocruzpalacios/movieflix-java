@@ -98,6 +98,8 @@ public class Movieflix {
 			break;
 		case 5:
 			peliculaServiceImpl.listarPeliculasPorCategoria();
+		case 6:
+			peliculaServiceImpl.listarPeliculasMasValoradas();
 		}
 	}
 
