@@ -24,4 +24,6 @@ public interface PeliculaService {
 
 	public void guardarPeliculas();
 
+	public void listarPeliculasMasValoradas();
+
 }
