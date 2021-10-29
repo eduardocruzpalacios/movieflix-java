@@ -8,7 +8,11 @@
 
 package services;
 
+import java.util.List;
+
 import dao.PeliculaDao;
+import model.Pelicula;
+import tools.Escritor;
 
 public class PeliculaServiceImpl implements PeliculaService {
 
@@ -16,7 +20,13 @@ public class PeliculaServiceImpl implements PeliculaService {
 
 	@Override
 	public void listarPeliculas() {
-		this.peliculaDao.listarPeliculas();
+		List<Pelicula> peliculas = this.peliculaDao.getPeliculas();
+		if (peliculas != null) {
+			Escritor.str("Listado de Peliculas");
+			Escritor.listPelicula(peliculas);
+		} else {
+			Escritor.str("El listado está vacío");
+		}
 	}
 
 	@Override

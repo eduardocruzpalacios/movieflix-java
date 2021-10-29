@@ -37,17 +37,16 @@ public class PeliculaDao {
 	private List<Pelicula> peliculaDao = new ArrayList<Pelicula>();
 	private String filePath = "peliculas.txt";
 
-	public void listarPeliculas() {
+	public List<Pelicula> getPeliculas() {
 		try {
 			if (peliculaDao.size() == 0) {
-				Escritor.str("El listado está vacío");
 				throw new exceptions.ListadoVacioException();
 			} else {
-				System.out.println("Listado de Peliculas");
-				peliculaDao.forEach(pelicula -> System.out.println(pelicula));
+				return peliculaDao;
 			}
 		} catch (ListadoVacioException e) {
 			logger.error(e.toString());
+			return null;
 		}
 	}
 
