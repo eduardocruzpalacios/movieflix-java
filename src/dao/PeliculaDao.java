@@ -229,4 +229,19 @@ public class PeliculaDao {
 		}
 
 	}
+
+	public void listarPeliculasValoracionEncimaMedia() {
+		float sumatorio = 0f;
+		for (int i = 0; i < peliculaDao.size(); i++) {
+			sumatorio += peliculaDao.get(i).getValoracion();
+		}
+		float media = sumatorio / peliculaDao.size();
+		System.out.println("Listado de peliculas valoradas por encima de la media: " + media);
+		for (int i = 0; i < peliculaDao.size(); i++) {
+			if (peliculaDao.get(i).getValoracion() > media) {
+				System.out.println(peliculaDao.get(i));
+			}
+		}
+	}
+
 }
