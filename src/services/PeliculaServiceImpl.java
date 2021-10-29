@@ -64,4 +64,9 @@ public class PeliculaServiceImpl implements PeliculaService {
 		this.peliculaDao.listarPeliculasValoracionEncimaMedia();
 	}
 
+	@Override
+	public void listarPeliculasMasVistas() {
+		this.peliculaDao.listarPeliculasMasVistas();
+	}
+
 }

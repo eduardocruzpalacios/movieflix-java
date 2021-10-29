@@ -244,4 +244,46 @@ public class PeliculaDao {
 		}
 	}
 
+	public void listarPeliculasMasVistas() {
+
+		int numeroMaximos = 5;
+
+		int[] indicesMaximos = new int[numeroMaximos];
+
+		float visualizacionesMaximas;
+
+		for (int i = 0; i < indicesMaximos.length; i++) {
+			visualizacionesMaximas = 0f;
+
+			for (int j = 0; j < peliculaDao.size(); j++) {
+
+				if (peliculaDao.get(j).getVisualizaciones() >= visualizacionesMaximas) {
+
+					int cuenta = 0;
+
+					for (int k = 0; k < indicesMaximos.length; k++) {
+
+						if (!peliculaDao.get(indicesMaximos[k]).getTitulo().equals(peliculaDao.get(j).getTitulo())) {
+							cuenta++;
+						}
+
+					}
+
+					if (cuenta == indicesMaximos.length) {
+						visualizacionesMaximas = peliculaDao.get(j).getVisualizaciones();
+						indicesMaximos[i] = j;
+					}
+
+				}
+
+			}
+		}
+
+		System.out.println("Listado de " + numeroMaximos + " peliculas más vistas");
+		for (int i = 0; i < indicesMaximos.length; i++) {
+			System.out.println(peliculaDao.get(indicesMaximos[i]));
+		}
+
+	}
+
 }

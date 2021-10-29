@@ -30,4 +30,6 @@ public interface PeliculaService {
 
 	public void listarPeliculasValoracionEncimaMedia();
 
+	public void listarPeliculasMasVistas();
+
 }

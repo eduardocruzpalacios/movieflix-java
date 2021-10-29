@@ -108,6 +108,9 @@ public class Movieflix {
 		case 8:
 			peliculaServiceImpl.listarPeliculasMenosValoradas();
 			break;
+		case 9:
+			peliculaServiceImpl.listarPeliculasMasVistas();
+			break;
 		}
 
 	}
