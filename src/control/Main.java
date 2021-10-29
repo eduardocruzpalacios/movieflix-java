@@ -1,9 +1,9 @@
 /*
- * Fecha: 16/03/2021
- * 
- * @author Andrei y Maria
- * 
- * @version 1.0
+ * Fecha: 29/10/2021
+ *
+ * @author Edu
+ *
+ * @version: 2.0
  */
 
 package control;

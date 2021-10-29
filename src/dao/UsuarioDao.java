@@ -1,9 +1,9 @@
 /*
- * Fecha: 17/03/2021 y 18/03/2021
- * 
- * @author Miguel, Raúl y Edu
- * 
- * @version 1.0
+ * Fecha: 29/10/2021
+ *
+ * @author Edu
+ *
+ * @version: 2.0
  */
 
 package dao;
