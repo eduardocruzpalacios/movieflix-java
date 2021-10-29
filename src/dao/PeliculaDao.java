@@ -182,4 +182,51 @@ public class PeliculaDao {
 		}
 
 	}
+
+	public void listarPeliculasMenosValoradas() {
+
+		int numeroMinimos = 5;
+
+		int[] indicesMinimos = new int[numeroMinimos];
+
+		float valoracionMinima;
+		float valoracionLimite = 0f;
+		int indiceAuxiliar = 0;
+
+		for (int i = 0; i < indicesMinimos.length; i++) {
+			valoracionMinima = 5f;
+
+			for (int j = 0; j < peliculaDao.size(); j++) {
+
+				if (peliculaDao.get(j).getValoracion() <= valoracionMinima
+						&& peliculaDao.get(j).getValoracion() >= valoracionLimite) {
+
+					int cuenta = 0;
+
+					for (int k = 0; k < indicesMinimos.length; k++) {
+
+						if (!peliculaDao.get(indicesMinimos[k]).getTitulo().equals(peliculaDao.get(j).getTitulo())) {
+							cuenta++;
+						}
+
+					}
+
+					if (cuenta == indicesMinimos.length) {
+						valoracionMinima = peliculaDao.get(j).getValoracion();
+						indicesMinimos[i] = j;
+						indiceAuxiliar = j;
+					}
+
+				}
+
+			}
+			valoracionLimite = peliculaDao.get(indiceAuxiliar).getValoracion();
+		}
+
+		System.out.println("Listado de " + numeroMinimos + " peliculas menos valoradas");
+		for (int i = 0; i < indicesMinimos.length; i++) {
+			System.out.println(peliculaDao.get(indicesMinimos[i]));
+		}
+
+	}
 }

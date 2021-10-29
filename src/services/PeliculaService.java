@@ -26,4 +26,6 @@ public interface PeliculaService {
 
 	public void listarPeliculasMasValoradas();
 
+	public void listarPeliculasMenosValoradas();
+
 }

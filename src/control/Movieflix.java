@@ -98,9 +98,14 @@ public class Movieflix {
 			break;
 		case 5:
 			peliculaServiceImpl.listarPeliculasPorCategoria();
+			break;
 		case 6:
 			peliculaServiceImpl.listarPeliculasMasValoradas();
+			break;
+		case 8:
+			peliculaServiceImpl.listarPeliculasMenosValoradas();
+			break;
 		}
-	}
 
+	}
 }
