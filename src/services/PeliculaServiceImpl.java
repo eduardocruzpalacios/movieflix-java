@@ -17,6 +17,7 @@ import dao.PeliculaDao;
 import exceptions.ListadoVacioException;
 import exceptions.PeliculaExistenteException;
 import exceptions.PeliculaNoExistenteException;
+import gui.Menu;
 import model.Pelicula;
 import tools.Escritor;
 import tools.Lector;
@@ -97,7 +98,14 @@ public class PeliculaServiceImpl implements PeliculaService {
 
 	@Override
 	public void listarPeliculasPorCategoria() {
-		this.peliculaDao.listarPeliculasPorCategoria();
+		Menu.categorias();
+		short categoria = Lector.pedirShortEntre(1, 6, "Elige una categoría");
+		try {
+			List<Pelicula> peliculasCategorizadasList = this.peliculaDao.listarPeliculasPorCategoria(categoria);
+			Escritor.listPelicula(peliculasCategorizadasList);
+		} catch (ListadoVacioException e) {
+			logger.error(e.toString());
+		}
 	}
 
 	@Override

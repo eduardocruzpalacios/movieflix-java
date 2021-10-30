@@ -14,12 +14,9 @@ import java.util.List;
 import exceptions.ListadoVacioException;
 import exceptions.PeliculaExistenteException;
 import exceptions.PeliculaNoExistenteException;
-import gui.Menu;
 import model.Pelicula;
 import tools.Colecciones;
-import tools.Escritor;
 import tools.Files;
-import tools.Lector;
 
 public class PeliculaDao {
 
@@ -78,24 +75,17 @@ public class PeliculaDao {
 		peliculaDao = arrayPeliculas;
 	}
 
-	public void listarPeliculasPorCategoria() {
-		Menu.categorias();
-		short opcion = Lector.pedirShortEntre(1, 6, "Elige una categoría");
-		try {
-			if (peliculaDao.size() == 0) {
-				Escritor.str("El listado está vacío");
-				throw new exceptions.ListadoVacioException();
-			} else {
-				System.out.println("Listado de Peliculas");
-				peliculaDao.forEach(pelicula -> {
-					if (pelicula.getCategoria() == opcion) {
-						System.out.println(pelicula);
-					}
-				});
-			}
-		} catch (ListadoVacioException e) {
-			logger.error(e.toString());
+	public List<Pelicula> listarPeliculasPorCategoria(short categoria) throws ListadoVacioException {
+		if (peliculaDao.size() == 0) {
+			throw new ListadoVacioException();
 		}
+		List<Pelicula> peliculasCategoria = new ArrayList<Pelicula>();
+		for (int i = 0; i < peliculaDao.size(); i++) {
+			if (peliculaDao.get(i).getCategoria() == categoria) {
+				peliculasCategoria.add(peliculaDao.get(i));
+			}
+		}
+		return peliculasCategoria;
 	}
 
 	public void guardarPeliculas() {
