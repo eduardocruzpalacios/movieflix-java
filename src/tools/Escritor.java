@@ -8,10 +8,18 @@
 
 package tools;
 
+import java.util.List;
+
+import model.Pelicula;
+
 public class Escritor {
 
 	public static void str(String msg) {
 		System.out.println(msg);
+	}
+
+	public static void listPelicula(List<Pelicula> listPelicula) {
+		listPelicula.forEach(pelicula -> System.out.println(pelicula));
 	}
 
 }
