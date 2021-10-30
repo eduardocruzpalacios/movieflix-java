@@ -29,19 +29,14 @@ public class PeliculaDao {
 		return peliculaDao;
 	}
 
-	public void addPelicula() {
-		try {
-			Pelicula pelicula = Pelicula.crear();
-			for (int i = 0; i < peliculaDao.size(); i++) {
-				if (peliculaDao.get(i).getTitulo().equals(pelicula.getTitulo())) {
-					throw new exceptions.PeliculaExistenteException();
-				}
+	public boolean addPelicula(Pelicula pelicula) throws PeliculaExistenteException {
+		for (int i = 0; i < peliculaDao.size(); i++) {
+			if (peliculaDao.get(i).getTitulo().toLowerCase().equals(pelicula.getTitulo().toLowerCase())) {
+				throw new PeliculaExistenteException();
 			}
-			peliculaDao.add(pelicula);
-			Escritor.str("Película creada correctamente");
-		} catch (PeliculaExistenteException e) {
-			logger.error(e.toString());
 		}
+		peliculaDao.add(pelicula);
+		return true;
 	}
 
 	public void eliminarPelicula() {

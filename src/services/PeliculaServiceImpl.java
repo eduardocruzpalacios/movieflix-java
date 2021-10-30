@@ -14,21 +14,14 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import dao.PeliculaDao;
-import dao.UsuarioDao;
 import exceptions.ListadoVacioException;
+import exceptions.PeliculaExistenteException;
 import model.Pelicula;
 import tools.Escritor;
 
 public class PeliculaServiceImpl implements PeliculaService {
 
-	private static Logger logger;
-	static {
-		try {
-			logger = LogManager.getLogger(UsuarioDao.class);
-		} catch (Throwable e) {
-			System.out.println("Logger Don't work");
-		}
-	}
+	private static Logger logger = LogManager.getLogger();
 
 	private PeliculaDao peliculaDao = new PeliculaDao();
 
@@ -40,13 +33,19 @@ public class PeliculaServiceImpl implements PeliculaService {
 			Escritor.listPelicula(peliculas);
 		} catch (ListadoVacioException e) {
 			logger.error(e.toString());
-			Escritor.str("El listado está vacío");
 		}
 	}
 
 	@Override
 	public void addPeliculas() {
-		this.peliculaDao.addPelicula();
+		Pelicula pelicula = Pelicula.crear();
+		try {
+			this.peliculaDao.addPelicula(pelicula);
+			Escritor.str("Película creada correctamente");
+		} catch (PeliculaExistenteException e) {
+			logger.error(e.toString());
+			Escritor.str("Película ya existente");
+		}
 	}
 
 	@Override
