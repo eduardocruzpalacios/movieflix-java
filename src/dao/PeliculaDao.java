@@ -140,9 +140,9 @@ public class PeliculaDao {
 
 	}
 
-	public void listarPeliculasMenosValoradas() {
+	public void listarPeliculasMenosValoradas(int cuantas) {
 
-		int numeroMinimos = 5;
+		int numeroMinimos = cuantas;
 
 		int[] indicesMinimos = new int[numeroMinimos];
 
