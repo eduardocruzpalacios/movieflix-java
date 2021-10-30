@@ -93,9 +93,9 @@ public class PeliculaDao {
 		Files.LeerListStringGuardarEnFichero(listString, filePath);
 	}
 
-	public void listarPeliculasMasValoradas() {
+	public void listarPeliculasMasValoradas(int cuantas) {
 
-		int numeroMaximos = 5;
+		int numeroMaximos = cuantas;
 
 		int[] indicesMaximos = new int[numeroMaximos];
 

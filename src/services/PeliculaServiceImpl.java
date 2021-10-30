@@ -115,7 +115,14 @@ public class PeliculaServiceImpl implements PeliculaService {
 
 	@Override
 	public void listarPeliculasMasValoradas() {
-		this.peliculaDao.listarPeliculasMasValoradas();
+		try {
+			int limiteSuperior = this.peliculaDao.getPeliculas().size();
+			String mensaje = "Hay " + limiteSuperior + " películas, ¿cuántas de las más valoradas quieres ver?";
+			int cuantas = Lector.pedirIntEntre(0, limiteSuperior, mensaje);
+			this.peliculaDao.listarPeliculasMasValoradas(cuantas);
+		} catch (ListadoVacioException e) {
+			logger.error(e.toString());
+		}
 	}
 
 	@Override
