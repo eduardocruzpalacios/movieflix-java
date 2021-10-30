@@ -16,8 +16,10 @@ import org.apache.logging.log4j.Logger;
 import dao.PeliculaDao;
 import exceptions.ListadoVacioException;
 import exceptions.PeliculaExistenteException;
+import exceptions.PeliculaNoExistenteException;
 import model.Pelicula;
 import tools.Escritor;
+import tools.Lector;
 
 public class PeliculaServiceImpl implements PeliculaService {
 
@@ -44,13 +46,18 @@ public class PeliculaServiceImpl implements PeliculaService {
 			Escritor.str("Película creada correctamente");
 		} catch (PeliculaExistenteException e) {
 			logger.error(e.toString());
-			Escritor.str("Película ya existente");
 		}
 	}
 
 	@Override
 	public void eliminarPeliculas() {
-		this.peliculaDao.eliminarPelicula();
+		String tituloPelicula = Lector.str("Dime el título de la película a borrar");
+		try {
+			this.peliculaDao.eliminarPelicula(tituloPelicula);
+			Escritor.str("Película eliminada correctamente");
+		} catch (PeliculaNoExistenteException e) {
+			logger.error(e.toString());
+		}
 	}
 
 	@Override

@@ -13,6 +13,7 @@ import java.util.List;
 
 import exceptions.ListadoVacioException;
 import exceptions.PeliculaExistenteException;
+import exceptions.PeliculaNoExistenteException;
 import gui.Menu;
 import model.Pelicula;
 import tools.Colecciones;
@@ -26,6 +27,9 @@ public class PeliculaDao {
 	private String filePath = "peliculas.txt";
 
 	public List<Pelicula> getPeliculas() throws ListadoVacioException {
+		if (peliculaDao.size() == 0) {
+			throw new ListadoVacioException();
+		}
 		return peliculaDao;
 	}
 
@@ -39,13 +43,14 @@ public class PeliculaDao {
 		return true;
 	}
 
-	public void eliminarPelicula() {
-		String tituloPelicula = Lector.str("Dime el título de la película a borrar");
+	public boolean eliminarPelicula(String tituloPelicula) throws PeliculaNoExistenteException {
 		for (int i = 0; i < peliculaDao.size(); i++) {
-			if (tituloPelicula.equals(peliculaDao.get(i).getTitulo())) {
+			if (tituloPelicula.toLowerCase().equals(peliculaDao.get(i).getTitulo().toLowerCase())) {
 				peliculaDao.remove(peliculaDao.get(i));
+				return true;
 			}
 		}
+		throw new PeliculaNoExistenteException();
 	}
 
 	public void modificarPelicula() {
