@@ -62,7 +62,32 @@ public class PeliculaServiceImpl implements PeliculaService {
 
 	@Override
 	public void modificarPeliculas() {
-		this.peliculaDao.modificarPelicula();
+		String tituloPelicula = Lector.str("Dime el título de la película a modificar");
+		try {
+			Pelicula pelicula = this.peliculaDao.getPelicula(tituloPelicula);
+			boolean cambiarTitulo = Lector.preguntarSiNo("¿Quieres cambiar el título? Escribe si o no", "si", "no");
+			if (cambiarTitulo) {
+				pelicula.setTitulo(Lector.str("¿Cual es el nuevo título?"));
+			}
+			boolean cambiarAnyoEstreno = Lector.preguntarSiNo("¿Quieres cambiar el año de estreno? Escribe si o no",
+					"si", "no");
+			if (cambiarAnyoEstreno) {
+				pelicula.setAnyoEstreno((short) Lector.pedirInt("¿Cual es el nuevo año de estreno?"));
+			}
+			boolean cambiarCategoria = Lector.preguntarSiNo("¿Quieres cambiar la categoría? Escribe si o no", "si",
+					"no");
+			if (cambiarCategoria) {
+				pelicula.setCategoria((short) Lector.pedirIntEntre(1, 6, "¿Cual es la nueva categoría?"));
+			}
+			this.peliculaDao.modificarPelicula(pelicula);
+			if (cambiarTitulo || cambiarAnyoEstreno || cambiarCategoria) {
+				Escritor.str("Película modificada correctamente");
+			} else {
+				Escritor.str("no se modificó ningún dato");
+			}
+		} catch (PeliculaNoExistenteException e) {
+			logger.error(e.toString());
+		}
 	}
 
 	@Override

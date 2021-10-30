@@ -106,4 +106,9 @@ public class Lector {
 		return x;
 	}
 
+	public static boolean preguntarSiNo(String pregunta, String respuestaSi, String respuestaNo) {
+		String respuesta = Lector.str(pregunta);
+		return respuesta.equals(respuestaSi) ? true : false;
+	}
+
 }

@@ -53,34 +53,23 @@ public class PeliculaDao {
 		throw new PeliculaNoExistenteException();
 	}
 
-	public void modificarPelicula() {
-		String tituloPelicula = Lector.str("Dime el título de la película a modificar");
-		Menu.modificarPelicula();
-		int opcion = Lector.pedirIntEntre(1, 3);
-		switch (opcion) {
-		case 1:
-			for (int i = 0; i < peliculaDao.size(); i++) {
-				if (tituloPelicula.equals(peliculaDao.get(i).getTitulo())) {
-					peliculaDao.get(i).setTitulo(Lector.str("¿Cual es el nuevo título?"));
-				}
+	public Pelicula getPelicula(String tituloPelicula) throws PeliculaNoExistenteException {
+		for (int i = 0; i < peliculaDao.size(); i++) {
+			if (tituloPelicula.toLowerCase().equals(peliculaDao.get(i).getTitulo().toLowerCase())) {
+				return peliculaDao.get(i);
 			}
-			break;
-		case 2:
-			for (int i = 0; i < peliculaDao.size(); i++) {
-				if (tituloPelicula.equals(peliculaDao.get(i).getTitulo())) {
-					peliculaDao.get(i).setAnyoEstreno((short) Lector.pedirInt("¿Cual es el nuevo año de estreno?"));
-				}
-			}
-			break;
-		case 3:
-			for (int i = 0; i < peliculaDao.size(); i++) {
-				if (tituloPelicula.equals(peliculaDao.get(i).getTitulo())) {
-					peliculaDao.get(i).setCategoria((short) Lector.pedirInt("Digame la nueva categoría"));
-				}
-			}
-			break;
 		}
-		Escritor.str("Esta película ha sido modificada");
+		throw new PeliculaNoExistenteException();
+	}
+
+	public void modificarPelicula(Pelicula pelicula) {
+		for (int i = 0; i < peliculaDao.size(); i++) {
+			if (pelicula.getTitulo().toLowerCase().equals(peliculaDao.get(i).getTitulo().toLowerCase())) {
+				peliculaDao.get(i).setTitulo(pelicula.getTitulo());
+				peliculaDao.get(i).setAnyoEstreno(pelicula.getAnyoEstreno());
+				peliculaDao.get(i).setCategoria(pelicula.getCategoria());
+			}
+		}
 	}
 
 	public void importarPeliculas() {

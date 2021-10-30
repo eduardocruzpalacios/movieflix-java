@@ -65,7 +65,7 @@ Spirit,2002,5,46,2.55
 A Silent Voice,2016,5,2687,1.7
 El Diario de Noa,2004,2,467,2.34
 Bajo la misma estrella,2014,2,46797,3.41
-Con derecho a roce,2011,2,467,2.34
+Con derecho a roce,1400,2,467,2.34
 Postdata: Te Quiero,2007,2,46,4.0
 Pretty Woman,1990,2,46,5.0
 Juego de Ladrones. El atraco perfecto,2018,1,46,5.0
@@ -79,4 +79,3 @@ Ocho apellidos vascos,2014,4,146,4.0
 Scary Movie,2000,4,467,2.34
 La Mascara: Cero a Heroe,1994,4,2687,1.7
 Dos tontos muy tontos,1994,4,1000,4.5
-prueba,2021,1,0,-1.0
