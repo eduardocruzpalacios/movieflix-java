@@ -32,8 +32,6 @@ Movies management application built with Java 11.
  - filter and print those whose value is above average
  - filter and print the most watched
 
-Saving and loading operations work with a .txt file
-
 ## Data Structure
 |data|structure|
 |----------------|-------------------------------|
