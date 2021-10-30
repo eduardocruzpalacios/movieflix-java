@@ -39,7 +39,7 @@ Saving and loading operations work with a .txt file
 |----------------|-------------------------------|
 |Usuario|String nombre, LocalDate fechaNacimiento, String ciudadResidencia|
 |UsuarioDao|HashMap<String, Usuario>|
-|Pelicula|String titulo, short anyoEstreno, short categoria, long visualizaciones, float valoracion;|
+|Pelicula|String titulo, short anyoEstreno, short categoria, long visualizaciones, float valoracion|
 |PeliculaDao|List<Pelicula>|
 
 ## Libs
