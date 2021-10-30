@@ -80,8 +80,8 @@ public class PeliculaServiceImpl implements PeliculaService {
 			if (cambiarCategoria) {
 				pelicula.setCategoria((short) Lector.pedirIntEntre(1, 6, "¿Cual es la nueva categoría?"));
 			}
-			this.peliculaDao.modificarPelicula(pelicula);
 			if (cambiarTitulo || cambiarAnyoEstreno || cambiarCategoria) {
+				this.peliculaDao.modificarPelicula(pelicula);
 				Escritor.str("Película modificada correctamente");
 			} else {
 				Escritor.str("no se modificó ningún dato");
@@ -119,7 +119,10 @@ public class PeliculaServiceImpl implements PeliculaService {
 			int limiteSuperior = this.peliculaDao.getPeliculas().size();
 			String mensaje = "Hay " + limiteSuperior + " películas, ¿cuántas de las más valoradas quieres ver?";
 			int cuantas = Lector.pedirIntEntre(0, limiteSuperior, mensaje);
-			this.peliculaDao.listarPeliculasMasValoradas(cuantas);
+			List<Pelicula> peliculasMasValoradas = this.peliculaDao.getPeliculasMasValoradas(cuantas);
+			mensaje = "Listado de " + cuantas + " peliculas más valoradas";
+			Escritor.str(mensaje);
+			Escritor.listPelicula(peliculasMasValoradas);
 		} catch (ListadoVacioException e) {
 			logger.error(e.toString());
 		}
@@ -131,7 +134,10 @@ public class PeliculaServiceImpl implements PeliculaService {
 			int limiteSuperior = this.peliculaDao.getPeliculas().size();
 			String mensaje = "Hay " + limiteSuperior + " películas, ¿cuántas de las menos valoradas quieres ver?";
 			int cuantas = Lector.pedirIntEntre(0, limiteSuperior, mensaje);
-			this.peliculaDao.listarPeliculasMenosValoradas(cuantas);
+			List<Pelicula> peliculasMenosValoradas = this.peliculaDao.getPeliculasMenosValoradas(cuantas);
+			mensaje = "Listado de " + cuantas + " peliculas menos valoradas";
+			Escritor.str(mensaje);
+			Escritor.listPelicula(peliculasMenosValoradas);
 		} catch (ListadoVacioException e) {
 			logger.error(e.toString());
 		}
@@ -150,7 +156,17 @@ public class PeliculaServiceImpl implements PeliculaService {
 
 	@Override
 	public void listarPeliculasMasVistas() {
-		this.peliculaDao.listarPeliculasMasVistas();
+		try {
+			int limiteSuperior = this.peliculaDao.getPeliculas().size();
+			String mensaje = "Hay " + limiteSuperior + " películas, ¿cuántas de las más vistas quieres ver?";
+			int cuantas = Lector.pedirIntEntre(0, limiteSuperior, mensaje);
+			List<Pelicula> peliculasMasVistas = this.peliculaDao.getPeliculasMasVistas(cuantas);
+			mensaje = "Listado de " + cuantas + " peliculas más vistas";
+			Escritor.str(mensaje);
+			Escritor.listPelicula(peliculasMasVistas);
+		} catch (ListadoVacioException e) {
+			logger.error(e.toString());
+		}
 	}
 
 }

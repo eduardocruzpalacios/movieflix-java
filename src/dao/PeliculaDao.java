@@ -93,7 +93,7 @@ public class PeliculaDao {
 		Files.LeerListStringGuardarEnFichero(listString, filePath);
 	}
 
-	public void listarPeliculasMasValoradas(int cuantas) {
+	public List<Pelicula> getPeliculasMasValoradas(int cuantas) {
 
 		int numeroMaximos = cuantas;
 
@@ -133,14 +133,15 @@ public class PeliculaDao {
 			valoracionLimite = peliculaDao.get(indiceAuxiliar).getValoracion();
 		}
 
-		System.out.println("Listado de " + numeroMaximos + " peliculas más valoradas");
+		List<Pelicula> peliculasMasValoradas = new ArrayList<Pelicula>();
 		for (int i = 0; i < indicesMaximos.length; i++) {
-			System.out.println(peliculaDao.get(indicesMaximos[i]));
+			peliculasMasValoradas.add(peliculaDao.get(indicesMaximos[i]));
 		}
+		return peliculasMasValoradas;
 
 	}
 
-	public void listarPeliculasMenosValoradas(int cuantas) {
+	public List<Pelicula> getPeliculasMenosValoradas(int cuantas) {
 
 		int numeroMinimos = cuantas;
 
@@ -180,10 +181,11 @@ public class PeliculaDao {
 			valoracionLimite = peliculaDao.get(indiceAuxiliar).getValoracion();
 		}
 
-		System.out.println("Listado de " + numeroMinimos + " peliculas menos valoradas");
+		List<Pelicula> peliculasMenosValoradas = new ArrayList<Pelicula>();
 		for (int i = 0; i < indicesMinimos.length; i++) {
-			System.out.println(peliculaDao.get(indicesMinimos[i]));
+			peliculasMenosValoradas.add(peliculaDao.get(indicesMinimos[i]));
 		}
+		return peliculasMenosValoradas;
 
 	}
 
@@ -205,9 +207,9 @@ public class PeliculaDao {
 		return peliculasValoracionEncimaMedia;
 	}
 
-	public void listarPeliculasMasVistas() {
+	public List<Pelicula> getPeliculasMasVistas(int cuantas) {
 
-		int numeroMaximos = 5;
+		int numeroMaximos = cuantas;
 
 		int[] indicesMaximos = new int[numeroMaximos];
 
@@ -240,10 +242,11 @@ public class PeliculaDao {
 			}
 		}
 
-		System.out.println("Listado de " + numeroMaximos + " peliculas más vistas");
+		List<Pelicula> peliculasMasVistas = new ArrayList<Pelicula>();
 		for (int i = 0; i < indicesMaximos.length; i++) {
-			System.out.println(peliculaDao.get(indicesMaximos[i]));
+			peliculasMasVistas.add(peliculaDao.get(indicesMaximos[i]));
 		}
+		return peliculasMasVistas;
 
 	}
 
