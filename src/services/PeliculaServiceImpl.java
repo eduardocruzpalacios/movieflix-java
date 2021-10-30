@@ -101,7 +101,7 @@ public class PeliculaServiceImpl implements PeliculaService {
 		Menu.categorias();
 		short categoria = Lector.pedirShortEntre(1, 6, "Elige una categoría");
 		try {
-			List<Pelicula> peliculasCategorizadasList = this.peliculaDao.listarPeliculasPorCategoria(categoria);
+			List<Pelicula> peliculasCategorizadasList = this.peliculaDao.getPeliculasPorCategoria(categoria);
 			Escritor.listPelicula(peliculasCategorizadasList);
 		} catch (ListadoVacioException e) {
 			logger.error(e.toString());
@@ -139,7 +139,13 @@ public class PeliculaServiceImpl implements PeliculaService {
 
 	@Override
 	public void listarPeliculasValoracionEncimaMedia() {
-		this.peliculaDao.listarPeliculasValoracionEncimaMedia();
+		try {
+			List<Pelicula> peliculasValoracionEncimaMedia = this.peliculaDao.getPeliculasValoracionEncimaMedia();
+			Escritor.str("Listado de peliculas cuya valoración está por encima de la media");
+			Escritor.listPelicula(peliculasValoracionEncimaMedia);
+		} catch (ListadoVacioException e) {
+			logger.error(e.toString());
+		}
 	}
 
 	@Override

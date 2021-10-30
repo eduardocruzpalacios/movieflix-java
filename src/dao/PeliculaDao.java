@@ -75,7 +75,7 @@ public class PeliculaDao {
 		peliculaDao = arrayPeliculas;
 	}
 
-	public List<Pelicula> listarPeliculasPorCategoria(short categoria) throws ListadoVacioException {
+	public List<Pelicula> getPeliculasPorCategoria(short categoria) throws ListadoVacioException {
 		if (peliculaDao.size() == 0) {
 			throw new ListadoVacioException();
 		}
@@ -187,18 +187,22 @@ public class PeliculaDao {
 
 	}
 
-	public void listarPeliculasValoracionEncimaMedia() {
+	public List<Pelicula> getPeliculasValoracionEncimaMedia() throws ListadoVacioException {
+		if (peliculaDao.size() == 0) {
+			throw new ListadoVacioException();
+		}
 		float sumatorio = 0f;
 		for (int i = 0; i < peliculaDao.size(); i++) {
 			sumatorio += peliculaDao.get(i).getValoracion();
 		}
 		float media = sumatorio / peliculaDao.size();
-		System.out.println("Listado de peliculas valoradas por encima de la media: " + media);
+		List<Pelicula> peliculasValoracionEncimaMedia = new ArrayList<Pelicula>();
 		for (int i = 0; i < peliculaDao.size(); i++) {
 			if (peliculaDao.get(i).getValoracion() > media) {
-				System.out.println(peliculaDao.get(i));
+				peliculasValoracionEncimaMedia.add(peliculaDao.get(i));
 			}
 		}
+		return peliculasValoracionEncimaMedia;
 	}
 
 	public void listarPeliculasMasVistas() {
