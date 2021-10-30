@@ -11,9 +11,6 @@ package dao;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import exceptions.ListadoVacioException;
 import exceptions.PeliculaExistenteException;
 import gui.Menu;
@@ -25,29 +22,11 @@ import tools.Lector;
 
 public class PeliculaDao {
 
-	private static Logger logger;
-	static {
-		try {
-			logger = LogManager.getLogger(UsuarioDao.class);
-		} catch (Throwable e) {
-			System.out.println("Logger Don't work");
-		}
-	}
-
 	private List<Pelicula> peliculaDao = new ArrayList<Pelicula>();
 	private String filePath = "peliculas.txt";
 
-	public List<Pelicula> getPeliculas() {
-		try {
-			if (peliculaDao.size() == 0) {
-				throw new exceptions.ListadoVacioException();
-			} else {
-				return peliculaDao;
-			}
-		} catch (ListadoVacioException e) {
-			logger.error(e.toString());
-			return null;
-		}
+	public List<Pelicula> getPeliculas() throws ListadoVacioException {
+		return peliculaDao;
 	}
 
 	public void addPelicula() {

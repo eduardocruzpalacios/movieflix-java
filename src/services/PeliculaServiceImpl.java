@@ -10,21 +10,36 @@ package services;
 
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import dao.PeliculaDao;
+import dao.UsuarioDao;
+import exceptions.ListadoVacioException;
 import model.Pelicula;
 import tools.Escritor;
 
 public class PeliculaServiceImpl implements PeliculaService {
 
+	private static Logger logger;
+	static {
+		try {
+			logger = LogManager.getLogger(UsuarioDao.class);
+		} catch (Throwable e) {
+			System.out.println("Logger Don't work");
+		}
+	}
+
 	private PeliculaDao peliculaDao = new PeliculaDao();
 
 	@Override
 	public void listarPeliculas() {
-		List<Pelicula> peliculas = this.peliculaDao.getPeliculas();
-		if (peliculas != null) {
+		try {
+			List<Pelicula> peliculas = this.peliculaDao.getPeliculas();
 			Escritor.str("Listado de Peliculas");
 			Escritor.listPelicula(peliculas);
-		} else {
+		} catch (ListadoVacioException e) {
+			logger.error(e.toString());
 			Escritor.str("El listado está vacío");
 		}
 	}
