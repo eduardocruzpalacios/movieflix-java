@@ -15,7 +15,7 @@ public class DatoFormulario {
 	static Scanner sn = new Scanner(System.in, "ISO-8859-1");
 
 	@SuppressWarnings("resource")
-	public static String str(String msg) {
+	public static String string(String msg) {
 		MostrarDato.string(msg);
 		return new Scanner(System.in).nextLine();
 	}
@@ -107,7 +107,7 @@ public class DatoFormulario {
 	}
 
 	public static boolean preguntarSiNo(String pregunta, String respuestaSi, String respuestaNo) {
-		String respuesta = DatoFormulario.str(pregunta);
+		String respuesta = DatoFormulario.string(pregunta);
 		return respuesta.equals(respuestaSi) ? true : false;
 	}
 

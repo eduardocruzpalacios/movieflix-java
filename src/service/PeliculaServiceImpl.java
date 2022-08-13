@@ -53,7 +53,7 @@ public class PeliculaServiceImpl implements PeliculaService {
 
 	@Override
 	public void eliminarPeliculas() {
-		String tituloPelicula = DatoFormulario.str("Dime el título de la película a borrar");
+		String tituloPelicula = DatoFormulario.string("Dime el título de la película a borrar");
 		try {
 			this.peliculaDao.eliminarPelicula(tituloPelicula);
 			MostrarDato.string("Película eliminada correctamente");
@@ -64,12 +64,12 @@ public class PeliculaServiceImpl implements PeliculaService {
 
 	@Override
 	public void modificarPeliculas() {
-		String tituloPelicula = DatoFormulario.str("Dime el título de la película a modificar");
+		String tituloPelicula = DatoFormulario.string("Dime el título de la película a modificar");
 		try {
 			Pelicula pelicula = this.peliculaDao.getPelicula(tituloPelicula);
 			boolean cambiarTitulo = DatoFormulario.preguntarSiNo("¿Quieres cambiar el título? Escribe si o no", "si", "no");
 			if (cambiarTitulo) {
-				pelicula.setTitulo(DatoFormulario.str("¿Cual es el nuevo título?"));
+				pelicula.setTitulo(DatoFormulario.string("¿Cual es el nuevo título?"));
 			}
 			boolean cambiarAnyoEstreno = DatoFormulario.preguntarSiNo("¿Quieres cambiar el año de estreno? Escribe si o no",
 					"si", "no");

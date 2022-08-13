@@ -72,20 +72,20 @@ public class UsuarioDao {
 	}
 
 	public void eliminarUsuario() {
-		String nombreUsuario = DatoFormulario.str("dime el nombre de usuario a borrar");
+		String nombreUsuario = DatoFormulario.string("dime el nombre de usuario a borrar");
 		usuarioDao.remove(nombreUsuario);
 	}
 
 	public void modificarUsuario() {
-		String nombreUsuario = DatoFormulario.str("Dame el nombre del usuario");
+		String nombreUsuario = DatoFormulario.string("Dame el nombre del usuario");
 		Menu.modificarUsuario();
 		int opcion = DatoFormulario.pedirIntEntre(1, 3);
 		switch (opcion) {
 		case 1:
-			usuarioDao.get(nombreUsuario).setNombre(DatoFormulario.str("¿Cual es el nuevo nombre?"));
+			usuarioDao.get(nombreUsuario).setNombre(DatoFormulario.string("¿Cual es el nuevo nombre?"));
 			break;
 		case 2:
-			usuarioDao.get(nombreUsuario).setCiudadResidencia(DatoFormulario.str("¿Cual es la nueva ciudad?"));
+			usuarioDao.get(nombreUsuario).setCiudadResidencia(DatoFormulario.string("¿Cual es la nueva ciudad?"));
 			break;
 
 		case 3:
