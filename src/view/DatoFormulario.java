@@ -42,17 +42,17 @@ public class DatoFormulario {
 		return entero;
 	}
 
-	public static int enteroEntre(int a, int b) {
+	public static int enteroEntre(int numero1, int numero2) {
 		boolean salir = false;
-		int x = 0;
+		int entero = 0;
 		while (!salir) {
-			MostrarDato.string("Dame un entero entre " + a + " y " + b);
-			x = DatoFormulario.entero();
-			if (x >= a && x <= b) {
+			MostrarDato.string("Dame un entero entre " + numero1 + " y " + numero2);
+			entero = DatoFormulario.entero();
+			if (entero >= numero1 && entero <= numero2) {
 				salir = true;
 			}
 		}
-		return x;
+		return entero;
 	}
 
 	public static int enteroEntre(int a, int b, String msg) {
