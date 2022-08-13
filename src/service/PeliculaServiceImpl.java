@@ -100,7 +100,7 @@ public class PeliculaServiceImpl implements PeliculaService {
 	@Override
 	public void listarPeliculasPorCategoria() {
 		Menu.categorias();
-		short categoria = DatoFormulario.pedirShortEntre(1, 6, "Elige una categoría");
+		short categoria = DatoFormulario.shortEntre(1, 6, "Elige una categoría");
 		try {
 			List<Pelicula> peliculasCategorizadasList = this.peliculaDao.getPeliculasPorCategoria(categoria);
 			MostrarDato.peliculas(peliculasCategorizadasList);

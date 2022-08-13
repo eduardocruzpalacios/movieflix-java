@@ -93,7 +93,7 @@ public class DatoFormulario {
 		return x;
 	}
 
-	public static short pedirShortEntre(int a, int b, String msg) {
+	public static short shortEntre(int a, int b, String msg) {
 		boolean salir = false;
 		short x = 0;
 		while (!salir) {
