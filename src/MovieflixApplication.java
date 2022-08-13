@@ -7,7 +7,7 @@
  */
 import controller.Movieflix;
 
-public class Main {
+public class MovieflixApplication {
 
 	public static void main(String[] args) {
 		new Movieflix().ejecutar();
