@@ -39,12 +39,13 @@ public class Coleccion {
 	public static List<String> listPeliculaToListString(List<Pelicula> listPelicula) {
 		List<String> listString = new ArrayList<String>();
 		for (int i = 0; i < listPelicula.size(); i++) {
-			StringBuilder stringBuilder = new StringBuilder();
-			stringBuilder.append(listPelicula.get(i).getTitulo()).append(",");
-			stringBuilder.append(listPelicula.get(i).getAnyoEstreno()).append(",");
-			stringBuilder.append(listPelicula.get(i).getCategoria()).append(",");
-			stringBuilder.append(listPelicula.get(i).getVisualizaciones()).append(",");
-			stringBuilder.append(listPelicula.get(i).getValoracion());
+			String titulo = listPelicula.get(i).getTitulo();
+			short anyoEstreno = listPelicula.get(i).getAnyoEstreno();
+			short categoria = listPelicula.get(i).getCategoria();
+			long visualizaciones = listPelicula.get(i).getVisualizaciones();
+			float valoracion = listPelicula.get(i).getValoracion();
+			StringBuilder stringBuilder = new StringBuilder().append(titulo).append(",").append(anyoEstreno).append(",")
+					.append(categoria).append(",").append(visualizaciones).append(",").append(valoracion);
 			listString.add(stringBuilder.toString());
 		}
 		return listString;
