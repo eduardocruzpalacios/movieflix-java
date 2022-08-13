@@ -17,7 +17,8 @@ public class DatoFormulario {
 	public static String string(String msg) {
 		MostrarDato.string(msg);
 		scanner = new Scanner(System.in, "ISO-8859-1");
-		return scanner.nextLine();
+		String string = scanner.nextLine();
+		return string;
 	}
 
 	public static int entero() {
