@@ -1,7 +1,6 @@
 package view;
 
 import model.Pelicula;
-import utility.Lector;
 
 public class PeliculaFormulario {
 

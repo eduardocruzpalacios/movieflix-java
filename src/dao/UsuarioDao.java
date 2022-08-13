@@ -19,7 +19,7 @@ import org.apache.logging.log4j.Logger;
 import exception.ListadoVacioException;
 import exception.UsuarioExistenteException;
 import model.Usuario;
-import utility.Lector;
+import view.Lector;
 import view.Menu;
 import view.MostrarDato;
 import view.UsuarioFormulario;

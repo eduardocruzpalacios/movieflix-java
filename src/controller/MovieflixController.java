@@ -10,7 +10,7 @@ package controller;
 
 import service.PeliculaServiceImpl;
 import service.UsuarioServiceImpl;
-import utility.Lector;
+import view.Lector;
 import view.Menu;
 
 public class MovieflixController {

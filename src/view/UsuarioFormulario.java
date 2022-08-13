@@ -3,7 +3,6 @@ package view;
 import java.time.LocalDate;
 
 import model.Usuario;
-import utility.Lector;
 
 public class UsuarioFormulario {
 

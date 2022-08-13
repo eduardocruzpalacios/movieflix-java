@@ -6,11 +6,9 @@
  * @version: 2.0
  */
 
-package utility;
+package view;
 
 import java.util.Scanner;
-
-import view.MostrarDato;
 
 public class Lector {
 

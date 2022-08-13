@@ -18,7 +18,7 @@ import exception.ListadoVacioException;
 import exception.PeliculaExistenteException;
 import exception.PeliculaNoExistenteException;
 import model.Pelicula;
-import utility.Lector;
+import view.Lector;
 import view.Menu;
 import view.MostrarDato;
 import view.PeliculaFormulario;
