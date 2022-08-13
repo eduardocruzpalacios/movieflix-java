@@ -41,7 +41,7 @@ public class DatoFormulario {
 		boolean salir = false;
 		int x = 0;
 		while (!salir) {
-			System.out.println("Dame un entero entre " + a + " y " + b);
+			MostrarDato.string("Dame un entero entre " + a + " y " + b);
 			x = DatoFormulario.entero();
 			if (x >= a && x <= b) {
 				salir = true;
