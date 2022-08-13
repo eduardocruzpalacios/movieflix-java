@@ -38,7 +38,8 @@ public class DatoFormulario {
 			MostrarDato.string(msg);
 			scanner.next();
 		}
-		return scanner.nextInt();
+		int entero = scanner.nextInt();
+		return entero;
 	}
 
 	public static int enteroEntre(int a, int b) {
