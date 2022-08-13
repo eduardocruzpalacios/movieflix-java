@@ -19,7 +19,7 @@ import java.util.List;
 
 public class Fichero {
 
-	public static ArrayList<String> leerRutaFicheroDevolverArrayString(String filePath) {
+	public static ArrayList<String> leerFicheroDevolverArrayString(String filePath) {
 		File file = new File(filePath);
 		ArrayList<String> arrayString = new ArrayList<String>();
 		try {
