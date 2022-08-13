@@ -27,7 +27,8 @@ public class DatoFormulario {
 			MostrarDato.string("debes introducir un entero, vuelve a intentarlo");
 			scanner.next();
 		}
-		return scanner.nextInt();
+		int entero = scanner.nextInt();
+		return entero;
 	}
 
 	public static int entero(String msg) {
