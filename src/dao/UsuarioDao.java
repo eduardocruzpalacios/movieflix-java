@@ -19,7 +19,7 @@ import org.apache.logging.log4j.Logger;
 import exception.ListadoVacioException;
 import exception.UsuarioExistenteException;
 import model.Usuario;
-import view.Lector;
+import view.DatoFormulario;
 import view.Menu;
 import view.MostrarDato;
 import view.UsuarioFormulario;
@@ -72,26 +72,26 @@ public class UsuarioDao {
 	}
 
 	public void eliminarUsuario() {
-		String nombreUsuario = Lector.str("dime el nombre de usuario a borrar");
+		String nombreUsuario = DatoFormulario.str("dime el nombre de usuario a borrar");
 		usuarioDao.remove(nombreUsuario);
 	}
 
 	public void modificarUsuario() {
-		String nombreUsuario = Lector.str("Dame el nombre del usuario");
+		String nombreUsuario = DatoFormulario.str("Dame el nombre del usuario");
 		Menu.modificarUsuario();
-		int opcion = Lector.pedirIntEntre(1, 3);
+		int opcion = DatoFormulario.pedirIntEntre(1, 3);
 		switch (opcion) {
 		case 1:
-			usuarioDao.get(nombreUsuario).setNombre(Lector.str("¿Cual es el nuevo nombre?"));
+			usuarioDao.get(nombreUsuario).setNombre(DatoFormulario.str("¿Cual es el nuevo nombre?"));
 			break;
 		case 2:
-			usuarioDao.get(nombreUsuario).setCiudadResidencia(Lector.str("¿Cual es la nueva ciudad?"));
+			usuarioDao.get(nombreUsuario).setCiudadResidencia(DatoFormulario.str("¿Cual es la nueva ciudad?"));
 			break;
 
 		case 3:
-			int year = Lector.pedirInt("dame nuevo año de nacimiento");
-			int mes = Lector.pedirInt("dame nuevo mes de nacimiento");
-			int dia = Lector.pedirInt("dame nuevo día de nacimiento");
+			int year = DatoFormulario.pedirInt("dame nuevo año de nacimiento");
+			int mes = DatoFormulario.pedirInt("dame nuevo mes de nacimiento");
+			int dia = DatoFormulario.pedirInt("dame nuevo día de nacimiento");
 			usuarioDao.get(nombreUsuario).setFechaNacimiento(LocalDate.of(year, mes, dia));
 			break;
 		}

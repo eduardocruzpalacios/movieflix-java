@@ -18,7 +18,7 @@ import exception.ListadoVacioException;
 import exception.PeliculaExistenteException;
 import exception.PeliculaNoExistenteException;
 import model.Pelicula;
-import view.Lector;
+import view.DatoFormulario;
 import view.Menu;
 import view.MostrarDato;
 import view.PeliculaFormulario;
@@ -53,7 +53,7 @@ public class PeliculaServiceImpl implements PeliculaService {
 
 	@Override
 	public void eliminarPeliculas() {
-		String tituloPelicula = Lector.str("Dime el título de la película a borrar");
+		String tituloPelicula = DatoFormulario.str("Dime el título de la película a borrar");
 		try {
 			this.peliculaDao.eliminarPelicula(tituloPelicula);
 			MostrarDato.string("Película eliminada correctamente");
@@ -64,22 +64,22 @@ public class PeliculaServiceImpl implements PeliculaService {
 
 	@Override
 	public void modificarPeliculas() {
-		String tituloPelicula = Lector.str("Dime el título de la película a modificar");
+		String tituloPelicula = DatoFormulario.str("Dime el título de la película a modificar");
 		try {
 			Pelicula pelicula = this.peliculaDao.getPelicula(tituloPelicula);
-			boolean cambiarTitulo = Lector.preguntarSiNo("¿Quieres cambiar el título? Escribe si o no", "si", "no");
+			boolean cambiarTitulo = DatoFormulario.preguntarSiNo("¿Quieres cambiar el título? Escribe si o no", "si", "no");
 			if (cambiarTitulo) {
-				pelicula.setTitulo(Lector.str("¿Cual es el nuevo título?"));
+				pelicula.setTitulo(DatoFormulario.str("¿Cual es el nuevo título?"));
 			}
-			boolean cambiarAnyoEstreno = Lector.preguntarSiNo("¿Quieres cambiar el año de estreno? Escribe si o no",
+			boolean cambiarAnyoEstreno = DatoFormulario.preguntarSiNo("¿Quieres cambiar el año de estreno? Escribe si o no",
 					"si", "no");
 			if (cambiarAnyoEstreno) {
-				pelicula.setAnyoEstreno((short) Lector.pedirInt("¿Cual es el nuevo año de estreno?"));
+				pelicula.setAnyoEstreno((short) DatoFormulario.pedirInt("¿Cual es el nuevo año de estreno?"));
 			}
-			boolean cambiarCategoria = Lector.preguntarSiNo("¿Quieres cambiar la categoría? Escribe si o no", "si",
+			boolean cambiarCategoria = DatoFormulario.preguntarSiNo("¿Quieres cambiar la categoría? Escribe si o no", "si",
 					"no");
 			if (cambiarCategoria) {
-				pelicula.setCategoria((short) Lector.pedirIntEntre(1, 6, "¿Cual es la nueva categoría?"));
+				pelicula.setCategoria((short) DatoFormulario.pedirIntEntre(1, 6, "¿Cual es la nueva categoría?"));
 			}
 			if (cambiarTitulo || cambiarAnyoEstreno || cambiarCategoria) {
 				this.peliculaDao.modificarPelicula(pelicula);
@@ -100,7 +100,7 @@ public class PeliculaServiceImpl implements PeliculaService {
 	@Override
 	public void listarPeliculasPorCategoria() {
 		Menu.categorias();
-		short categoria = Lector.pedirShortEntre(1, 6, "Elige una categoría");
+		short categoria = DatoFormulario.pedirShortEntre(1, 6, "Elige una categoría");
 		try {
 			List<Pelicula> peliculasCategorizadasList = this.peliculaDao.getPeliculasPorCategoria(categoria);
 			MostrarDato.peliculas(peliculasCategorizadasList);
@@ -119,7 +119,7 @@ public class PeliculaServiceImpl implements PeliculaService {
 		try {
 			int limiteSuperior = this.peliculaDao.getPeliculas().size();
 			String mensaje = "Hay " + limiteSuperior + " películas, ¿cuántas de las más valoradas quieres ver?";
-			int cuantas = Lector.pedirIntEntre(0, limiteSuperior, mensaje);
+			int cuantas = DatoFormulario.pedirIntEntre(0, limiteSuperior, mensaje);
 			List<Pelicula> peliculasMasValoradas = this.peliculaDao.getPeliculasMasValoradas(cuantas);
 			mensaje = "Listado de " + cuantas + " peliculas más valoradas";
 			MostrarDato.string(mensaje);
@@ -134,7 +134,7 @@ public class PeliculaServiceImpl implements PeliculaService {
 		try {
 			int limiteSuperior = this.peliculaDao.getPeliculas().size();
 			String mensaje = "Hay " + limiteSuperior + " películas, ¿cuántas de las menos valoradas quieres ver?";
-			int cuantas = Lector.pedirIntEntre(0, limiteSuperior, mensaje);
+			int cuantas = DatoFormulario.pedirIntEntre(0, limiteSuperior, mensaje);
 			List<Pelicula> peliculasMenosValoradas = this.peliculaDao.getPeliculasMenosValoradas(cuantas);
 			mensaje = "Listado de " + cuantas + " peliculas menos valoradas";
 			MostrarDato.string(mensaje);
@@ -160,7 +160,7 @@ public class PeliculaServiceImpl implements PeliculaService {
 		try {
 			int limiteSuperior = this.peliculaDao.getPeliculas().size();
 			String mensaje = "Hay " + limiteSuperior + " películas, ¿cuántas de las más vistas quieres ver?";
-			int cuantas = Lector.pedirIntEntre(0, limiteSuperior, mensaje);
+			int cuantas = DatoFormulario.pedirIntEntre(0, limiteSuperior, mensaje);
 			List<Pelicula> peliculasMasVistas = this.peliculaDao.getPeliculasMasVistas(cuantas);
 			mensaje = "Listado de " + cuantas + " peliculas más vistas";
 			MostrarDato.string(mensaje);

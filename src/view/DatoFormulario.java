@@ -10,7 +10,7 @@ package view;
 
 import java.util.Scanner;
 
-public class Lector {
+public class DatoFormulario {
 
 	static Scanner sn = new Scanner(System.in, "ISO-8859-1");
 
@@ -59,7 +59,7 @@ public class Lector {
 		int x = 0;
 		while (!salir) {
 			System.out.println("Dame un entero entre " + a + " y " + b);
-			x = Lector.pedirInt();
+			x = DatoFormulario.pedirInt();
 			if (x >= a && x <= b) {
 				salir = true;
 			}
@@ -72,7 +72,7 @@ public class Lector {
 		int x = 0;
 		while (!salir) {
 			MostrarDato.string(msg);
-			x = Lector.pedirInt();
+			x = DatoFormulario.pedirInt();
 			if (x >= a && x <= b) {
 				salir = true;
 			}
@@ -85,7 +85,7 @@ public class Lector {
 		double x = 0;
 		while (!salir) {
 			System.out.println("Dame un número entre " + a + " y " + b);
-			x = Lector.pedirDouble();
+			x = DatoFormulario.pedirDouble();
 			if (x >= a && x <= b) {
 				salir = true;
 			}
@@ -98,7 +98,7 @@ public class Lector {
 		short x = 0;
 		while (!salir) {
 			MostrarDato.string(msg);
-			x = (short) Lector.pedirInt();
+			x = (short) DatoFormulario.pedirInt();
 			if (x >= a && x <= b) {
 				salir = true;
 			}
@@ -107,7 +107,7 @@ public class Lector {
 	}
 
 	public static boolean preguntarSiNo(String pregunta, String respuestaSi, String respuestaNo) {
-		String respuesta = Lector.str(pregunta);
+		String respuesta = DatoFormulario.str(pregunta);
 		return respuesta.equals(respuestaSi) ? true : false;
 	}
 
