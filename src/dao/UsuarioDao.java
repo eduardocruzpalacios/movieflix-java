@@ -19,8 +19,8 @@ import org.apache.logging.log4j.Logger;
 import exceptions.ListadoVacioException;
 import exceptions.UsuarioExistenteException;
 import model.Usuario;
-import tools.Escritor;
-import tools.Lector;
+import utility.Escritor;
+import utility.Lector;
 import view.Menu;
 
 public class UsuarioDao {

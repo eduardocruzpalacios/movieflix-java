@@ -10,7 +10,7 @@ package control;
 
 import services.PeliculaServiceImpl;
 import services.UsuarioServiceImpl;
-import tools.Lector;
+import utility.Lector;
 import view.Menu;
 
 public class Movieflix {

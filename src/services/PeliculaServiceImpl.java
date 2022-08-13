@@ -18,8 +18,8 @@ import exceptions.ListadoVacioException;
 import exceptions.PeliculaExistenteException;
 import exceptions.PeliculaNoExistenteException;
 import model.Pelicula;
-import tools.Escritor;
-import tools.Lector;
+import utility.Escritor;
+import utility.Lector;
 import view.Menu;
 
 public class PeliculaServiceImpl implements PeliculaService {

@@ -8,7 +8,7 @@
 
 package view;
 
-import tools.Escritor;
+import utility.Escritor;
 
 public class Menu {
 

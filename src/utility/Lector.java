@@ -6,7 +6,7 @@
  * @version: 2.0
  */
 
-package tools;
+package utility;
 
 import java.util.Scanner;
 
