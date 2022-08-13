@@ -16,11 +16,9 @@ import model.Pelicula;
 public class Coleccion {
 
 	public static ArrayList<Pelicula> arrayStringToArrayPelicula(ArrayList<String> arrayString) {
-
 		String linea;
 		String[] partes = new String[5];
 		ArrayList<Pelicula> arrayPelicula = new ArrayList<Pelicula>();
-
 		for (int i = 0; i < arrayString.size(); i++) {
 			linea = arrayString.get(i);
 			partes = linea.split(",");
@@ -32,7 +30,6 @@ public class Coleccion {
 			Pelicula pelicula = new Pelicula(titulo, anyoEstreno, categoria, visualizaciones, valoracion);
 			arrayPelicula.add(pelicula);
 		}
-
 		return arrayPelicula;
 	}
 
