@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 public class DatoFormulario {
 
-	static Scanner sn = new Scanner(System.in, "ISO-8859-1");
+	static Scanner scanner = new Scanner(System.in, "ISO-8859-1");
 
 	@SuppressWarnings("resource")
 	public static String string(String msg) {
@@ -21,20 +21,20 @@ public class DatoFormulario {
 	}
 
 	public static int entero() {
-		while (sn.hasNextInt() == false) {
+		while (scanner.hasNextInt() == false) {
 			MostrarDato.string("debes introducir un entero, vuelve a intentarlo");
-			sn.next();
+			scanner.next();
 		}
-		return sn.nextInt();
+		return scanner.nextInt();
 	}
 
 	public static int entero(String msg) {
 		MostrarDato.string(msg);
-		while (sn.hasNextInt() == false) {
+		while (scanner.hasNextInt() == false) {
 			MostrarDato.string(msg);
-			sn.next();
+			scanner.next();
 		}
-		return sn.nextInt();
+		return scanner.nextInt();
 	}
 
 	public static int enteroEntre(int a, int b) {
