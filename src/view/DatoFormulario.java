@@ -83,4 +83,8 @@ public class DatoFormulario {
 		return respuestaUsuario.equals(respuestaCorrecta) ? true : false;
 	}
 
+	public static void cerrarScanner() {
+		scanner.close();
+	}
+
 }
