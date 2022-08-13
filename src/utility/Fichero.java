@@ -30,7 +30,7 @@ public class Fichero {
 			}
 			lector.close();
 		} catch (IOException e) {
-			System.out.println("Error al leer los dao");
+			Log.error(e);
 		}
 		return arrayString;
 	}
@@ -44,7 +44,7 @@ public class Fichero {
 			}
 			writer.close();
 		} catch (IOException e) {
-			System.out.println(e);
+			Log.error(e);
 		}
 	}
 
