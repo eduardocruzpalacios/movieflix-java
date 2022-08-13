@@ -21,16 +21,6 @@ public class DatoFormulario {
 		return string;
 	}
 
-	public static int entero() {
-		scanner = new Scanner(System.in, "ISO-8859-1");
-		while (scanner.hasNextInt() == false) {
-			MostrarDato.string("debes introducir un entero, vuelve a intentarlo");
-			scanner.next();
-		}
-		int entero = scanner.nextInt();
-		return entero;
-	}
-
 	public static int entero(String mensajeAlUsuario) {
 		scanner = new Scanner(System.in, "ISO-8859-1");
 		MostrarDato.string(mensajeAlUsuario);
@@ -54,8 +44,7 @@ public class DatoFormulario {
 		}
 		int entero = 0;
 		while (!salir) {
-			MostrarDato.string(mensajeAlUsuario + numero1 + " y " + numero2);
-			entero = DatoFormulario.entero();
+			entero = DatoFormulario.entero(mensajeAlUsuario);
 			if (entero >= numero1 && entero <= numero2) {
 				salir = true;
 			}
