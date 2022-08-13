@@ -10,22 +10,18 @@ package service;
 
 import java.util.List;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import dao.PeliculaDao;
 import exception.ListadoVacioException;
 import exception.PeliculaExistenteException;
 import exception.PeliculaNoExistenteException;
 import model.Pelicula;
+import utility.Log;
 import view.DatoFormulario;
 import view.Menu;
 import view.MostrarDato;
 import view.PeliculaFormulario;
 
 public class PeliculaServiceImpl implements PeliculaService {
-
-	private static Logger logger = LogManager.getLogger();
 
 	private PeliculaDao peliculaDao = new PeliculaDao();
 
@@ -36,7 +32,7 @@ public class PeliculaServiceImpl implements PeliculaService {
 			MostrarDato.string("Listado de Peliculas");
 			MostrarDato.peliculas(peliculas);
 		} catch (ListadoVacioException e) {
-			logger.error(e.toString());
+			Log.error(e);
 		}
 	}
 
@@ -47,7 +43,7 @@ public class PeliculaServiceImpl implements PeliculaService {
 			this.peliculaDao.addPelicula(pelicula);
 			MostrarDato.string("Película creada correctamente");
 		} catch (PeliculaExistenteException e) {
-			logger.error(e.toString());
+			Log.error(e);
 		}
 	}
 
@@ -58,7 +54,7 @@ public class PeliculaServiceImpl implements PeliculaService {
 			this.peliculaDao.eliminarPelicula(tituloPelicula);
 			MostrarDato.string("Película eliminada correctamente");
 		} catch (PeliculaNoExistenteException e) {
-			logger.error(e.toString());
+			Log.error(e);
 		}
 	}
 
@@ -86,7 +82,7 @@ public class PeliculaServiceImpl implements PeliculaService {
 				MostrarDato.string("no se modificó ningún dato");
 			}
 		} catch (PeliculaNoExistenteException e) {
-			logger.error(e.toString());
+			Log.error(e);
 		}
 	}
 
@@ -103,7 +99,7 @@ public class PeliculaServiceImpl implements PeliculaService {
 			List<Pelicula> peliculasCategorizadasList = this.peliculaDao.getPeliculasPorCategoria(categoria);
 			MostrarDato.peliculas(peliculasCategorizadasList);
 		} catch (ListadoVacioException e) {
-			logger.error(e.toString());
+			Log.error(e);
 		}
 	}
 
@@ -123,7 +119,7 @@ public class PeliculaServiceImpl implements PeliculaService {
 			MostrarDato.string(mensaje);
 			MostrarDato.peliculas(peliculasMasValoradas);
 		} catch (ListadoVacioException e) {
-			logger.error(e.toString());
+			Log.error(e);
 		}
 	}
 
@@ -138,7 +134,7 @@ public class PeliculaServiceImpl implements PeliculaService {
 			MostrarDato.string(mensaje);
 			MostrarDato.peliculas(peliculasMenosValoradas);
 		} catch (ListadoVacioException e) {
-			logger.error(e.toString());
+			Log.error(e);
 		}
 	}
 
@@ -149,7 +145,7 @@ public class PeliculaServiceImpl implements PeliculaService {
 			MostrarDato.string("Listado de peliculas cuya valoración está por encima de la media");
 			MostrarDato.peliculas(peliculasValoracionEncimaMedia);
 		} catch (ListadoVacioException e) {
-			logger.error(e.toString());
+			Log.error(e);
 		}
 	}
 
@@ -164,7 +160,7 @@ public class PeliculaServiceImpl implements PeliculaService {
 			MostrarDato.string(mensaje);
 			MostrarDato.peliculas(peliculasMasVistas);
 		} catch (ListadoVacioException e) {
-			logger.error(e.toString());
+			Log.error(e);
 		}
 	}
 
