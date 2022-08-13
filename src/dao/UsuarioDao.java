@@ -20,8 +20,9 @@ import exception.ListadoVacioException;
 import exception.UsuarioExistenteException;
 import model.Usuario;
 import utility.Lector;
-import view.MostrarDato;
 import view.Menu;
+import view.MostrarDato;
+import view.UsuarioFormulario;
 
 public class UsuarioDao {
 
@@ -57,7 +58,7 @@ public class UsuarioDao {
 
 	public void addUsuario() {
 		try {
-			Usuario usuario = Usuario.crear();
+			Usuario usuario = UsuarioFormulario.crear();
 			if (usuarioDao.containsKey(usuario.getNombre())) {
 				MostrarDato.string("Ese usuario ya existía");
 				throw new exception.UsuarioExistenteException();
