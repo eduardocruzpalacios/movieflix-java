@@ -14,8 +14,8 @@ public class DatoFormulario {
 
 	static Scanner scanner;
 
-	public static String string(String msg) {
-		MostrarDato.string(msg);
+	public static String string(String mensajeAlUsuario) {
+		MostrarDato.string(mensajeAlUsuario);
 		scanner = new Scanner(System.in, "ISO-8859-1");
 		String string = scanner.nextLine();
 		return string;
@@ -31,18 +31,18 @@ public class DatoFormulario {
 		return entero;
 	}
 
-	public static int entero(String msg) {
+	public static int entero(String mensajeAlUsuario) {
 		scanner = new Scanner(System.in, "ISO-8859-1");
-		MostrarDato.string(msg);
+		MostrarDato.string(mensajeAlUsuario);
 		while (scanner.hasNextInt() == false) {
-			MostrarDato.string(msg);
+			MostrarDato.string(mensajeAlUsuario);
 			scanner.next();
 		}
 		int entero = scanner.nextInt();
 		return entero;
 	}
 
-	public static int enteroEntre(int numero1, int numero2, String mensaje) {
+	public static int enteroEntre(int numero1, int numero2, String mensajeAlUsuario) {
 		boolean salir = false;
 		if (numero1 == numero2) {
 			return numero1;
@@ -54,7 +54,7 @@ public class DatoFormulario {
 		}
 		int entero = 0;
 		while (!salir) {
-			MostrarDato.string(mensaje + numero1 + " y " + numero2);
+			MostrarDato.string(mensajeAlUsuario + numero1 + " y " + numero2);
 			entero = DatoFormulario.entero();
 			if (entero >= numero1 && entero <= numero2) {
 				salir = true;
@@ -63,17 +63,10 @@ public class DatoFormulario {
 		return entero;
 	}
 
-	public static short shortEntre(int a, int b, String msg) {
-		boolean salir = false;
-		short x = 0;
-		while (!salir) {
-			MostrarDato.string(msg);
-			x = (short) DatoFormulario.entero();
-			if (x >= a && x <= b) {
-				salir = true;
-			}
-		}
-		return x;
+	public static short shortEntre(int numero1, int numero2, String mensajeAlUsuario) {
+		int entero = enteroEntre(numero1, numero2, mensajeAlUsuario);
+		short corto = (short) entero;
+		return corto;
 	}
 
 	public static boolean booleanPreguntando(String pregunta, String respuestaCorrecta) {
