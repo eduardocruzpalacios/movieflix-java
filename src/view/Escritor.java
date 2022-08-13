@@ -6,7 +6,7 @@
  * @version: 2.0
  */
 
-package utility;
+package view;
 
 import java.util.List;
 

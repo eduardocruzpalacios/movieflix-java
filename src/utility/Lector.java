@@ -10,6 +10,8 @@ package utility;
 
 import java.util.Scanner;
 
+import view.Escritor;
+
 public class Lector {
 
 	static Scanner sn = new Scanner(System.in, "ISO-8859-1");

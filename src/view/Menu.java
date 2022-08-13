@@ -8,8 +8,6 @@
 
 package view;
 
-import utility.Escritor;
-
 public class Menu {
 
 	public static void principal() {

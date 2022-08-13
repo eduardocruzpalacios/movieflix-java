@@ -8,8 +8,6 @@
 
 package view;
 
-import utility.Escritor;
-
 public class Ventana {
 
 	public static void presentacion() {

@@ -8,8 +8,8 @@
 
 package model;
 
-import utility.Escritor;
 import utility.Lector;
+import view.Escritor;
 
 public class Pelicula {
 
