@@ -33,6 +33,7 @@ public class MovieflixController {
 			}
 		} while (seguir);
 		peliculaServiceImpl.guardarPeliculas();
+		DatoFormulario.cerrarScanner();
 		view.Ventana.salir();
 	}
 
