@@ -20,9 +20,18 @@ public class DatoFormulario {
 		return new Scanner(System.in).nextLine();
 	}
 
-	public static int pedirInt() {
+	public static int entero() {
 		while (sn.hasNextInt() == false) {
 			MostrarDato.string("debes introducir un entero, vuelve a intentarlo");
+			sn.next();
+		}
+		return sn.nextInt();
+	}
+
+	public static int entero(String msg) {
+		MostrarDato.string(msg);
+		while (sn.hasNextInt() == false) {
+			MostrarDato.string(msg);
 			sn.next();
 		}
 		return sn.nextInt();
@@ -34,15 +43,6 @@ public class DatoFormulario {
 			sn.next();
 		}
 		return sn.nextDouble();
-	}
-
-	public static int pedirInt(String msg) {
-		MostrarDato.string(msg);
-		while (sn.hasNextInt() == false) {
-			MostrarDato.string(msg);
-			sn.next();
-		}
-		return sn.nextInt();
 	}
 
 	public static double pedirDouble(String msg) {
@@ -59,7 +59,7 @@ public class DatoFormulario {
 		int x = 0;
 		while (!salir) {
 			System.out.println("Dame un entero entre " + a + " y " + b);
-			x = DatoFormulario.pedirInt();
+			x = DatoFormulario.entero();
 			if (x >= a && x <= b) {
 				salir = true;
 			}
@@ -72,7 +72,7 @@ public class DatoFormulario {
 		int x = 0;
 		while (!salir) {
 			MostrarDato.string(msg);
-			x = DatoFormulario.pedirInt();
+			x = DatoFormulario.entero();
 			if (x >= a && x <= b) {
 				salir = true;
 			}
@@ -98,7 +98,7 @@ public class DatoFormulario {
 		short x = 0;
 		while (!salir) {
 			MostrarDato.string(msg);
-			x = (short) DatoFormulario.pedirInt();
+			x = (short) DatoFormulario.entero();
 			if (x >= a && x <= b) {
 				salir = true;
 			}

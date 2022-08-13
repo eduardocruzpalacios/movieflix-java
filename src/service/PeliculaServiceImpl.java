@@ -74,7 +74,7 @@ public class PeliculaServiceImpl implements PeliculaService {
 			boolean cambiarAnyoEstreno = DatoFormulario.preguntarSiNo("¿Quieres cambiar el año de estreno? Escribe si o no",
 					"si", "no");
 			if (cambiarAnyoEstreno) {
-				pelicula.setAnyoEstreno((short) DatoFormulario.pedirInt("¿Cual es el nuevo año de estreno?"));
+				pelicula.setAnyoEstreno((short) DatoFormulario.entero("¿Cual es el nuevo año de estreno?"));
 			}
 			boolean cambiarCategoria = DatoFormulario.preguntarSiNo("¿Quieres cambiar la categoría? Escribe si o no", "si",
 					"no");

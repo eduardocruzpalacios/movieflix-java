@@ -89,9 +89,9 @@ public class UsuarioDao {
 			break;
 
 		case 3:
-			int year = DatoFormulario.pedirInt("dame nuevo año de nacimiento");
-			int mes = DatoFormulario.pedirInt("dame nuevo mes de nacimiento");
-			int dia = DatoFormulario.pedirInt("dame nuevo día de nacimiento");
+			int year = DatoFormulario.entero("dame nuevo año de nacimiento");
+			int mes = DatoFormulario.entero("dame nuevo mes de nacimiento");
+			int dia = DatoFormulario.entero("dame nuevo día de nacimiento");
 			usuarioDao.get(nombreUsuario).setFechaNacimiento(LocalDate.of(year, mes, dia));
 			break;
 		}
