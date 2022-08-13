@@ -11,9 +11,9 @@ package dao;
 import java.util.ArrayList;
 import java.util.List;
 
-import exceptions.ListadoVacioException;
-import exceptions.PeliculaExistenteException;
-import exceptions.PeliculaNoExistenteException;
+import exception.ListadoVacioException;
+import exception.PeliculaExistenteException;
+import exception.PeliculaNoExistenteException;
 import model.Pelicula;
 import utility.Colecciones;
 import utility.Files;

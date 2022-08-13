@@ -6,7 +6,7 @@
  * @version: 2.0
  */
 
-package exceptions;
+package exception;
 
 public class PeliculaNoExistenteException extends Exception {
 

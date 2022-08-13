@@ -14,9 +14,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import dao.PeliculaDao;
-import exceptions.ListadoVacioException;
-import exceptions.PeliculaExistenteException;
-import exceptions.PeliculaNoExistenteException;
+import exception.ListadoVacioException;
+import exception.PeliculaExistenteException;
+import exception.PeliculaNoExistenteException;
 import model.Pelicula;
 import utility.Escritor;
 import utility.Lector;
