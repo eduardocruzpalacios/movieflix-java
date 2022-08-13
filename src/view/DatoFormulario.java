@@ -80,7 +80,7 @@ public class DatoFormulario {
 		return x;
 	}
 
-	public static double pedirDoubleEntre(int a, int b) {
+	public static double doubleEntre(int a, int b) {
 		boolean salir = false;
 		double x = 0;
 		while (!salir) {
