@@ -12,7 +12,7 @@ import java.util.List;
 
 import model.Pelicula;
 
-public class Escritor {
+public class MostrarDato {
 
 	public static void string(String string) {
 		System.out.println(string);

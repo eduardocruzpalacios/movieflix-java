@@ -9,7 +9,7 @@
 package model;
 
 import utility.Lector;
-import view.Escritor;
+import view.MostrarDato;
 
 public class Pelicula {
 
@@ -78,7 +78,7 @@ public class Pelicula {
 
 	public static Pelicula crear() {
 		Pelicula pelicula = new Pelicula();
-		Escritor.string("vamos a añadir una nueva pelicula, voy a pedirte los dao");
+		MostrarDato.string("vamos a añadir una nueva pelicula, voy a pedirte los dao");
 		pelicula.setTitulo(Lector.str("dime el titulo"));
 		pelicula.setAnyoEstreno((short) Lector.pedirInt("dime el año de estreno"));
 		pelicula.setCategoria((short) Lector.pedirIntEntre(1, 6, "dime que categoria es"));

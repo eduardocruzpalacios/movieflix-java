@@ -20,7 +20,7 @@ import exception.ListadoVacioException;
 import exception.UsuarioExistenteException;
 import model.Usuario;
 import utility.Lector;
-import view.Escritor;
+import view.MostrarDato;
 import view.Menu;
 
 public class UsuarioDao {
@@ -40,7 +40,7 @@ public class UsuarioDao {
 	public void listarUsuarios() {
 		try {
 			if (usuarioDao.size() == 0) {
-				Escritor.string("El listado está vacío");
+				MostrarDato.string("El listado está vacío");
 				throw new exception.ListadoVacioException();
 			}
 			String key;
@@ -59,11 +59,11 @@ public class UsuarioDao {
 		try {
 			Usuario usuario = Usuario.crear();
 			if (usuarioDao.containsKey(usuario.getNombre())) {
-				Escritor.string("Ese usuario ya existía");
+				MostrarDato.string("Ese usuario ya existía");
 				throw new exception.UsuarioExistenteException();
 			} else {
 				usuarioDao.put(usuario.getNombre(), usuario);
-				Escritor.string("Usuario creado correctamente");
+				MostrarDato.string("Usuario creado correctamente");
 			}
 		} catch (UsuarioExistenteException e) {
 			logger.error(e.toString());
@@ -94,7 +94,7 @@ public class UsuarioDao {
 			usuarioDao.get(nombreUsuario).setFechaNacimiento(LocalDate.of(year, mes, dia));
 			break;
 		}
-		Escritor.string("Este usuario ha sido modificado");
+		MostrarDato.string("Este usuario ha sido modificado");
 	}
 
 }
