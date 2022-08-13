@@ -13,7 +13,7 @@ import java.util.List;
 
 import model.Pelicula;
 
-public class Colecciones {
+public class Coleccion {
 
 	public static ArrayList<Pelicula> leerArrayStringDevolverArrayPelicula(ArrayList<String> arrayString) {
 
