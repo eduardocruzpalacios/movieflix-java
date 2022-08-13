@@ -106,9 +106,9 @@ public class DatoFormulario {
 		return x;
 	}
 
-	public static boolean booleanPreguntando(String pregunta, String respuestaSi) {
-		String respuesta = DatoFormulario.string(pregunta);
-		return respuesta.equals(respuestaSi) ? true : false;
+	public static boolean booleanPreguntando(String pregunta, String respuestaCorrecta) {
+		String respuestaUsuario = DatoFormulario.string(pregunta);
+		return respuestaUsuario.equals(respuestaCorrecta) ? true : false;
 	}
 
 }
