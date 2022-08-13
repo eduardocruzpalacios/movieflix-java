@@ -65,15 +65,18 @@ public class PeliculaServiceImpl implements PeliculaService {
 			Pelicula pelicula = this.peliculaDao.getPelicula(tituloPelicula);
 			boolean cambiarTitulo = DatoFormulario.booleanPreguntando("¿Quieres cambiar el título?", "si");
 			if (cambiarTitulo) {
-				pelicula.setTitulo(DatoFormulario.string("¿Cual es el nuevo título?"));
+				String titulo = DatoFormulario.string("¿Cual es el nuevo título?");
+				pelicula.setTitulo(titulo);
 			}
 			boolean cambiarAnyoEstreno = DatoFormulario.booleanPreguntando("¿Quieres cambiar el año de estreno?", "si");
 			if (cambiarAnyoEstreno) {
-				pelicula.setAnyoEstreno((short) DatoFormulario.entero("¿Cual es el nuevo año de estreno?"));
+				short anyoEstreno = (short) DatoFormulario.entero("¿Cual es el nuevo año de estreno?");
+				pelicula.setAnyoEstreno(anyoEstreno);
 			}
 			boolean cambiarCategoria = DatoFormulario.booleanPreguntando("¿Quieres cambiar la categoría?", "si");
 			if (cambiarCategoria) {
-				pelicula.setCategoria((short) DatoFormulario.enteroEntre(1, 6, "¿Cual es la nueva categoría?"));
+				short categoria = (short) DatoFormulario.enteroEntre(1, 6, "¿Cual es la nueva categoría?");
+				pelicula.setCategoria(categoria);
 			}
 			if (cambiarTitulo || cambiarAnyoEstreno || cambiarCategoria) {
 				this.peliculaDao.modificarPelicula(pelicula);
