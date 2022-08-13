@@ -20,10 +20,8 @@ import java.util.List;
 public class Fichero {
 
 	public static ArrayList<String> leerRutaFicheroDevolverArrayString(String filePath) {
-
 		File file = new File(filePath);
 		ArrayList<String> arrayString = new ArrayList<String>();
-
 		try {
 			BufferedReader lector = new BufferedReader(new FileReader(file));
 			String linea;
@@ -34,12 +32,10 @@ public class Fichero {
 		} catch (IOException e) {
 			System.out.println("Error al leer los dao");
 		}
-
 		return arrayString;
 	}
 
 	public static void LeerListStringGuardarEnFichero(List<String> listString, String filePath) {
-
 		try {
 			BufferedWriter writer = new BufferedWriter(new FileWriter(filePath));
 			for (int i = 0; i < listString.size(); i++) {

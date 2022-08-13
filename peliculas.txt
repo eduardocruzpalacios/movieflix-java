@@ -79,4 +79,3 @@ Ocho apellidos vascos,2014,4,146,4.0
 Scary Movie,2000,4,467,2.34
 La Mascara: Cero a Heroe,1994,4,2687,1.7
 Dos tontos muy tontos,1994,4,1000,4.5
-ff,199,4,0,-1.0
