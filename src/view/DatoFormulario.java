@@ -37,23 +37,6 @@ public class DatoFormulario {
 		return sn.nextInt();
 	}
 
-	public static double doble() {
-		while (sn.hasNextDouble() == false) {
-			MostrarDato.string("debes introducir un número, vuelve a intentarlo");
-			sn.next();
-		}
-		return sn.nextDouble();
-	}
-
-	public static double doble(String msg) {
-		MostrarDato.string(msg);
-		while (sn.hasNextDouble() == false) {
-			MostrarDato.string(msg);
-			sn.next();
-		}
-		return sn.nextDouble();
-	}
-
 	public static int enteroEntre(int a, int b) {
 		boolean salir = false;
 		int x = 0;
@@ -73,19 +56,6 @@ public class DatoFormulario {
 		while (!salir) {
 			MostrarDato.string(msg);
 			x = DatoFormulario.entero();
-			if (x >= a && x <= b) {
-				salir = true;
-			}
-		}
-		return x;
-	}
-
-	public static double doubleEntre(int a, int b) {
-		boolean salir = false;
-		double x = 0;
-		while (!salir) {
-			System.out.println("Dame un número entre " + a + " y " + b);
-			x = DatoFormulario.doble();
 			if (x >= a && x <= b) {
 				salir = true;
 			}
