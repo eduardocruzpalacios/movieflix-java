@@ -8,10 +8,10 @@
 
 package control;
 
-import gui.Menu;
 import services.PeliculaServiceImpl;
 import services.UsuarioServiceImpl;
 import tools.Lector;
+import view.Menu;
 
 public class Movieflix {
 
@@ -20,7 +20,7 @@ public class Movieflix {
 
 	public void ejecutar() {
 		peliculaServiceImpl.importarPeliculas();
-		gui.Ventana.presentacion();
+		view.Ventana.presentacion();
 		boolean seguir = true;
 		int opcion = 0;
 		do {
@@ -33,7 +33,7 @@ public class Movieflix {
 			}
 		} while (seguir);
 		peliculaServiceImpl.guardarPeliculas();
-		gui.Ventana.salir();
+		view.Ventana.salir();
 	}
 
 	public void seleccionarOpciones(int opcion) {
@@ -42,7 +42,7 @@ public class Movieflix {
 		switch (opcion) {
 		case 1:
 			do {
-				gui.Menu.usuarios();
+				view.Menu.usuarios();
 				opcion2 = Lector.pedirIntEntre(1, 5, "Elije una opción del menú");
 				if (opcion2 == 5) {
 					seguir = false;
@@ -53,7 +53,7 @@ public class Movieflix {
 			break;
 		case 2:
 			do {
-				gui.Menu.peliculas();
+				view.Menu.peliculas();
 				opcion2 = Lector.pedirIntEntre(1, 10, "Elije una opción del menú");
 				if (opcion2 == 10) {
 					seguir = false;

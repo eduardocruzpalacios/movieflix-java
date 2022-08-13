@@ -17,10 +17,10 @@ import dao.PeliculaDao;
 import exceptions.ListadoVacioException;
 import exceptions.PeliculaExistenteException;
 import exceptions.PeliculaNoExistenteException;
-import gui.Menu;
 import model.Pelicula;
 import tools.Escritor;
 import tools.Lector;
+import view.Menu;
 
 public class PeliculaServiceImpl implements PeliculaService {
 

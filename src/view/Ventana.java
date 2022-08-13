@@ -6,7 +6,7 @@
  * @version 1.0
  */
 
-package gui;
+package view;
 
 import tools.Escritor;
 
