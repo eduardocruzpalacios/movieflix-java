@@ -71,7 +71,7 @@ public class PeliculaDao {
 
 	public void importarPeliculas() {
 		ArrayList<String> arrayString = Fichero.leerRutaFicheroDevolverArrayString(filePath);
-		ArrayList<Pelicula> arrayPeliculas = Coleccion.leerArrayStringDevolverArrayPelicula(arrayString);
+		ArrayList<Pelicula> arrayPeliculas = Coleccion.arrayStringToArrayPelicula(arrayString);
 		peliculaDao = arrayPeliculas;
 	}
 
