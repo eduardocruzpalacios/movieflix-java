@@ -54,7 +54,7 @@ public class DatoFormulario {
 		return sn.nextDouble();
 	}
 
-	public static int pedirIntEntre(int a, int b) {
+	public static int enteroEntre(int a, int b) {
 		boolean salir = false;
 		int x = 0;
 		while (!salir) {

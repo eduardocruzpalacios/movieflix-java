@@ -79,7 +79,7 @@ public class UsuarioDao {
 	public void modificarUsuario() {
 		String nombreUsuario = DatoFormulario.string("Dame el nombre del usuario");
 		Menu.modificarUsuario();
-		int opcion = DatoFormulario.pedirIntEntre(1, 3);
+		int opcion = DatoFormulario.enteroEntre(1, 3);
 		switch (opcion) {
 		case 1:
 			usuarioDao.get(nombreUsuario).setNombre(DatoFormulario.string("¿Cual es el nuevo nombre?"));
