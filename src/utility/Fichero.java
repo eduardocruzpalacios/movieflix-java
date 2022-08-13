@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Files {
+public class Fichero {
 
 	public static ArrayList<String> leerRutaFicheroDevolverArrayString(String filePath) {
 

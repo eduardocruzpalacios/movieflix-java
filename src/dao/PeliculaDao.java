@@ -16,7 +16,7 @@ import exception.PeliculaExistenteException;
 import exception.PeliculaNoExistenteException;
 import model.Pelicula;
 import utility.Colecciones;
-import utility.Files;
+import utility.Fichero;
 
 public class PeliculaDao {
 
@@ -70,7 +70,7 @@ public class PeliculaDao {
 	}
 
 	public void importarPeliculas() {
-		ArrayList<String> arrayString = Files.leerRutaFicheroDevolverArrayString(filePath);
+		ArrayList<String> arrayString = Fichero.leerRutaFicheroDevolverArrayString(filePath);
 		ArrayList<Pelicula> arrayPeliculas = Colecciones.leerArrayStringDevolverArrayPelicula(arrayString);
 		peliculaDao = arrayPeliculas;
 	}
@@ -90,7 +90,7 @@ public class PeliculaDao {
 
 	public void guardarPeliculas() {
 		List<String> listString = Colecciones.leerListPeliculaDevolverListString(this.peliculaDao);
-		Files.LeerListStringGuardarEnFichero(listString, filePath);
+		Fichero.LeerListStringGuardarEnFichero(listString, filePath);
 	}
 
 	public List<Pelicula> getPeliculasMasValoradas(int cuantas) {
