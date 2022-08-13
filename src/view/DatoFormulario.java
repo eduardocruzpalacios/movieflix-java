@@ -12,15 +12,16 @@ import java.util.Scanner;
 
 public class DatoFormulario {
 
-	static Scanner scanner = new Scanner(System.in, "ISO-8859-1");
+	static Scanner scanner;
 
-	@SuppressWarnings("resource")
 	public static String string(String msg) {
 		MostrarDato.string(msg);
-		return new Scanner(System.in).nextLine();
+		scanner = new Scanner(System.in, "ISO-8859-1");
+		return scanner.nextLine();
 	}
 
 	public static int entero() {
+		scanner = new Scanner(System.in, "ISO-8859-1");
 		while (scanner.hasNextInt() == false) {
 			MostrarDato.string("debes introducir un entero, vuelve a intentarlo");
 			scanner.next();
@@ -29,6 +30,7 @@ public class DatoFormulario {
 	}
 
 	public static int entero(String msg) {
+		scanner = new Scanner(System.in, "ISO-8859-1");
 		MostrarDato.string(msg);
 		while (scanner.hasNextInt() == false) {
 			MostrarDato.string(msg);
