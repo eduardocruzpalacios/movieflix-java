@@ -18,13 +18,13 @@ public class Lector {
 
 	@SuppressWarnings("resource")
 	public static String str(String msg) {
-		Escritor.str(msg);
+		Escritor.string(msg);
 		return new Scanner(System.in).nextLine();
 	}
 
 	public static int pedirInt() {
 		while (sn.hasNextInt() == false) {
-			Escritor.str("debes introducir un entero, vuelve a intentarlo");
+			Escritor.string("debes introducir un entero, vuelve a intentarlo");
 			sn.next();
 		}
 		return sn.nextInt();
@@ -32,25 +32,25 @@ public class Lector {
 
 	public static double pedirDouble() {
 		while (sn.hasNextDouble() == false) {
-			Escritor.str("debes introducir un número, vuelve a intentarlo");
+			Escritor.string("debes introducir un número, vuelve a intentarlo");
 			sn.next();
 		}
 		return sn.nextDouble();
 	}
 
 	public static int pedirInt(String msg) {
-		Escritor.str(msg);
+		Escritor.string(msg);
 		while (sn.hasNextInt() == false) {
-			Escritor.str(msg);
+			Escritor.string(msg);
 			sn.next();
 		}
 		return sn.nextInt();
 	}
 
 	public static double pedirDouble(String msg) {
-		Escritor.str(msg);
+		Escritor.string(msg);
 		while (sn.hasNextDouble() == false) {
-			Escritor.str(msg);
+			Escritor.string(msg);
 			sn.next();
 		}
 		return sn.nextDouble();
@@ -73,7 +73,7 @@ public class Lector {
 		boolean salir = false;
 		int x = 0;
 		while (!salir) {
-			Escritor.str(msg);
+			Escritor.string(msg);
 			x = Lector.pedirInt();
 			if (x >= a && x <= b) {
 				salir = true;
@@ -99,7 +99,7 @@ public class Lector {
 		boolean salir = false;
 		short x = 0;
 		while (!salir) {
-			Escritor.str(msg);
+			Escritor.string(msg);
 			x = (short) Lector.pedirInt();
 			if (x >= a && x <= b) {
 				salir = true;

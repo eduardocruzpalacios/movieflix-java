@@ -32,7 +32,7 @@ public class PeliculaServiceImpl implements PeliculaService {
 	public void listarPeliculas() {
 		try {
 			List<Pelicula> peliculas = this.peliculaDao.getPeliculas();
-			Escritor.str("Listado de Peliculas");
+			Escritor.string("Listado de Peliculas");
 			Escritor.listPelicula(peliculas);
 		} catch (ListadoVacioException e) {
 			logger.error(e.toString());
@@ -44,7 +44,7 @@ public class PeliculaServiceImpl implements PeliculaService {
 		Pelicula pelicula = Pelicula.crear();
 		try {
 			this.peliculaDao.addPelicula(pelicula);
-			Escritor.str("Película creada correctamente");
+			Escritor.string("Película creada correctamente");
 		} catch (PeliculaExistenteException e) {
 			logger.error(e.toString());
 		}
@@ -55,7 +55,7 @@ public class PeliculaServiceImpl implements PeliculaService {
 		String tituloPelicula = Lector.str("Dime el título de la película a borrar");
 		try {
 			this.peliculaDao.eliminarPelicula(tituloPelicula);
-			Escritor.str("Película eliminada correctamente");
+			Escritor.string("Película eliminada correctamente");
 		} catch (PeliculaNoExistenteException e) {
 			logger.error(e.toString());
 		}
@@ -82,9 +82,9 @@ public class PeliculaServiceImpl implements PeliculaService {
 			}
 			if (cambiarTitulo || cambiarAnyoEstreno || cambiarCategoria) {
 				this.peliculaDao.modificarPelicula(pelicula);
-				Escritor.str("Película modificada correctamente");
+				Escritor.string("Película modificada correctamente");
 			} else {
-				Escritor.str("no se modificó ningún dato");
+				Escritor.string("no se modificó ningún dato");
 			}
 		} catch (PeliculaNoExistenteException e) {
 			logger.error(e.toString());
@@ -121,7 +121,7 @@ public class PeliculaServiceImpl implements PeliculaService {
 			int cuantas = Lector.pedirIntEntre(0, limiteSuperior, mensaje);
 			List<Pelicula> peliculasMasValoradas = this.peliculaDao.getPeliculasMasValoradas(cuantas);
 			mensaje = "Listado de " + cuantas + " peliculas más valoradas";
-			Escritor.str(mensaje);
+			Escritor.string(mensaje);
 			Escritor.listPelicula(peliculasMasValoradas);
 		} catch (ListadoVacioException e) {
 			logger.error(e.toString());
@@ -136,7 +136,7 @@ public class PeliculaServiceImpl implements PeliculaService {
 			int cuantas = Lector.pedirIntEntre(0, limiteSuperior, mensaje);
 			List<Pelicula> peliculasMenosValoradas = this.peliculaDao.getPeliculasMenosValoradas(cuantas);
 			mensaje = "Listado de " + cuantas + " peliculas menos valoradas";
-			Escritor.str(mensaje);
+			Escritor.string(mensaje);
 			Escritor.listPelicula(peliculasMenosValoradas);
 		} catch (ListadoVacioException e) {
 			logger.error(e.toString());
@@ -147,7 +147,7 @@ public class PeliculaServiceImpl implements PeliculaService {
 	public void listarPeliculasValoracionEncimaMedia() {
 		try {
 			List<Pelicula> peliculasValoracionEncimaMedia = this.peliculaDao.getPeliculasValoracionEncimaMedia();
-			Escritor.str("Listado de peliculas cuya valoración está por encima de la media");
+			Escritor.string("Listado de peliculas cuya valoración está por encima de la media");
 			Escritor.listPelicula(peliculasValoracionEncimaMedia);
 		} catch (ListadoVacioException e) {
 			logger.error(e.toString());
@@ -162,7 +162,7 @@ public class PeliculaServiceImpl implements PeliculaService {
 			int cuantas = Lector.pedirIntEntre(0, limiteSuperior, mensaje);
 			List<Pelicula> peliculasMasVistas = this.peliculaDao.getPeliculasMasVistas(cuantas);
 			mensaje = "Listado de " + cuantas + " peliculas más vistas";
-			Escritor.str(mensaje);
+			Escritor.string(mensaje);
 			Escritor.listPelicula(peliculasMasVistas);
 		} catch (ListadoVacioException e) {
 			logger.error(e.toString());

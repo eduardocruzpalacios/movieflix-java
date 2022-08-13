@@ -60,7 +60,7 @@ public class Usuario {
 
 	public static Usuario crear() {
 		Usuario usuario = new Usuario();
-		Escritor.str("vamos a crear un nuevo usuario, voy a pedirte sus datos");
+		Escritor.string("vamos a crear un nuevo usuario, voy a pedirte sus datos");
 		usuario.setNombre(Lector.str("dame nombre"));
 		int year = Lector.pedirInt("dame año de nacimiento");
 		int mes = Lector.pedirInt("dame mes de nacimiento");

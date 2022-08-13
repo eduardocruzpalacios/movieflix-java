@@ -40,7 +40,7 @@ public class UsuarioDao {
 	public void listarUsuarios() {
 		try {
 			if (usuarioDao.size() == 0) {
-				Escritor.str("El listado está vacío");
+				Escritor.string("El listado está vacío");
 				throw new exception.ListadoVacioException();
 			}
 			String key;
@@ -59,11 +59,11 @@ public class UsuarioDao {
 		try {
 			Usuario usuario = Usuario.crear();
 			if (usuarioDao.containsKey(usuario.getNombre())) {
-				Escritor.str("Ese usuario ya existía");
+				Escritor.string("Ese usuario ya existía");
 				throw new exception.UsuarioExistenteException();
 			} else {
 				usuarioDao.put(usuario.getNombre(), usuario);
-				Escritor.str("Usuario creado correctamente");
+				Escritor.string("Usuario creado correctamente");
 			}
 		} catch (UsuarioExistenteException e) {
 			logger.error(e.toString());
@@ -94,7 +94,7 @@ public class UsuarioDao {
 			usuarioDao.get(nombreUsuario).setFechaNacimiento(LocalDate.of(year, mes, dia));
 			break;
 		}
-		Escritor.str("Este usuario ha sido modificado");
+		Escritor.string("Este usuario ha sido modificado");
 	}
 
 }

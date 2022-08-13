@@ -11,21 +11,21 @@ package view;
 public class Ventana {
 
 	public static void presentacion() {
-		Escritor.str("");
-		Escritor.str("***************************************************");
-		Escritor.str("*                                                 *");
-		Escritor.str("*                    movieFlix                    *");
-		Escritor.str("*                                                 *");
-		Escritor.str("***************************************************");
+		Escritor.string("");
+		Escritor.string("***************************************************");
+		Escritor.string("*                                                 *");
+		Escritor.string("*                    movieFlix                    *");
+		Escritor.string("*                                                 *");
+		Escritor.string("***************************************************");
 	}
 
 	public static void salir() {
-		Escritor.str("");
-		Escritor.str("**************************************************");
-		Escritor.str("*                                                *");
-		Escritor.str("*          ¡HASTA LUEGO, VUELVE PRONTO!          *");
-		Escritor.str("*                                                *");
-		Escritor.str("**************************************************");
+		Escritor.string("");
+		Escritor.string("**************************************************");
+		Escritor.string("*                                                *");
+		Escritor.string("*          ¡HASTA LUEGO, VUELVE PRONTO!          *");
+		Escritor.string("*                                                *");
+		Escritor.string("**************************************************");
 	}
 
 }
