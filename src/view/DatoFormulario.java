@@ -67,7 +67,7 @@ public class DatoFormulario {
 		return x;
 	}
 
-	public static int pedirIntEntre(int a, int b, String msg) {
+	public static int enteroEntre(int a, int b, String msg) {
 		boolean salir = false;
 		int x = 0;
 		while (!salir) {

@@ -79,7 +79,7 @@ public class PeliculaServiceImpl implements PeliculaService {
 			boolean cambiarCategoria = DatoFormulario.preguntarSiNo("¿Quieres cambiar la categoría? Escribe si o no", "si",
 					"no");
 			if (cambiarCategoria) {
-				pelicula.setCategoria((short) DatoFormulario.pedirIntEntre(1, 6, "¿Cual es la nueva categoría?"));
+				pelicula.setCategoria((short) DatoFormulario.enteroEntre(1, 6, "¿Cual es la nueva categoría?"));
 			}
 			if (cambiarTitulo || cambiarAnyoEstreno || cambiarCategoria) {
 				this.peliculaDao.modificarPelicula(pelicula);
@@ -119,7 +119,7 @@ public class PeliculaServiceImpl implements PeliculaService {
 		try {
 			int limiteSuperior = this.peliculaDao.getPeliculas().size();
 			String mensaje = "Hay " + limiteSuperior + " películas, ¿cuántas de las más valoradas quieres ver?";
-			int cuantas = DatoFormulario.pedirIntEntre(0, limiteSuperior, mensaje);
+			int cuantas = DatoFormulario.enteroEntre(0, limiteSuperior, mensaje);
 			List<Pelicula> peliculasMasValoradas = this.peliculaDao.getPeliculasMasValoradas(cuantas);
 			mensaje = "Listado de " + cuantas + " peliculas más valoradas";
 			MostrarDato.string(mensaje);
@@ -134,7 +134,7 @@ public class PeliculaServiceImpl implements PeliculaService {
 		try {
 			int limiteSuperior = this.peliculaDao.getPeliculas().size();
 			String mensaje = "Hay " + limiteSuperior + " películas, ¿cuántas de las menos valoradas quieres ver?";
-			int cuantas = DatoFormulario.pedirIntEntre(0, limiteSuperior, mensaje);
+			int cuantas = DatoFormulario.enteroEntre(0, limiteSuperior, mensaje);
 			List<Pelicula> peliculasMenosValoradas = this.peliculaDao.getPeliculasMenosValoradas(cuantas);
 			mensaje = "Listado de " + cuantas + " peliculas menos valoradas";
 			MostrarDato.string(mensaje);
@@ -160,7 +160,7 @@ public class PeliculaServiceImpl implements PeliculaService {
 		try {
 			int limiteSuperior = this.peliculaDao.getPeliculas().size();
 			String mensaje = "Hay " + limiteSuperior + " películas, ¿cuántas de las más vistas quieres ver?";
-			int cuantas = DatoFormulario.pedirIntEntre(0, limiteSuperior, mensaje);
+			int cuantas = DatoFormulario.enteroEntre(0, limiteSuperior, mensaje);
 			List<Pelicula> peliculasMasVistas = this.peliculaDao.getPeliculasMasVistas(cuantas);
 			mensaje = "Listado de " + cuantas + " peliculas más vistas";
 			MostrarDato.string(mensaje);

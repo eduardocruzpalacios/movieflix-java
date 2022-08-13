@@ -25,7 +25,7 @@ public class MovieflixController {
 		int opcion = 0;
 		do {
 			Menu.principal();
-			opcion = DatoFormulario.pedirIntEntre(1, 3, "Elije una opción del menú");
+			opcion = DatoFormulario.enteroEntre(1, 3, "Elije una opción del menú");
 			if (opcion == 3) {
 				seguir = false;
 			} else {
@@ -43,7 +43,7 @@ public class MovieflixController {
 		case 1:
 			do {
 				view.Menu.usuarios();
-				opcion2 = DatoFormulario.pedirIntEntre(1, 5, "Elije una opción del menú");
+				opcion2 = DatoFormulario.enteroEntre(1, 5, "Elije una opción del menú");
 				if (opcion2 == 5) {
 					seguir = false;
 				} else {
@@ -54,7 +54,7 @@ public class MovieflixController {
 		case 2:
 			do {
 				view.Menu.peliculas();
-				opcion2 = DatoFormulario.pedirIntEntre(1, 10, "Elije una opción del menú");
+				opcion2 = DatoFormulario.enteroEntre(1, 10, "Elije una opción del menú");
 				if (opcion2 == 10) {
 					seguir = false;
 				} else {
