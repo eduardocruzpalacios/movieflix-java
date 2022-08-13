@@ -11,8 +11,4 @@ public class Log {
 		logger.error(e);
 	}
 
-	public static void info(String information) {
-		logger.info(information);
-	}
-
 }
