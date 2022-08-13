@@ -22,21 +22,21 @@ public class Coleccion {
 		ArrayList<Pelicula> arrayPelicula = new ArrayList<Pelicula>();
 
 		for (int i = 0; i < arrayString.size(); i++) {
-			Pelicula pelicula = new Pelicula();
 			linea = arrayString.get(i);
 			partes = linea.split(",");
-			pelicula.setTitulo(partes[0]);
-			pelicula.setAnyoEstreno(Short.parseShort(partes[1]));
-			pelicula.setCategoria(Short.parseShort(partes[2]));
-			pelicula.setVisualizaciones(Long.parseLong(partes[3]));
-			pelicula.setValoracion(Float.parseFloat(partes[4]));
+			String titulo = partes[0];
+			short anyoEstreno = Short.parseShort(partes[1]);
+			short categoria = Short.parseShort(partes[2]);
+			long visualizaciones = Long.parseLong(partes[3]);
+			float valoracion = Float.parseFloat(partes[4]);
+			Pelicula pelicula = new Pelicula(titulo, anyoEstreno, categoria, visualizaciones, valoracion);
 			arrayPelicula.add(pelicula);
 		}
 
 		return arrayPelicula;
 	}
 
-	public static List<String> leerListPeliculaDevolverListString(List<Pelicula> listPelicula) {
+	public static List<String> listPeliculaToListString(List<Pelicula> listPelicula) {
 		List<String> listString = new ArrayList<String>();
 		for (int i = 0; i < listPelicula.size(); i++) {
 			StringBuilder stringBuilder = new StringBuilder();

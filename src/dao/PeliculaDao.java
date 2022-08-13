@@ -89,7 +89,7 @@ public class PeliculaDao {
 	}
 
 	public void guardarPeliculas() {
-		List<String> listString = Coleccion.leerListPeliculaDevolverListString(this.peliculaDao);
+		List<String> listString = Coleccion.listPeliculaToListString(this.peliculaDao);
 		Fichero.LeerListStringGuardarEnFichero(listString, filePath);
 	}
 
