@@ -12,10 +12,4 @@ public interface UsuarioService {
 
 	public void findAll();
 
-	public void add();
-
-	public void delete();
-
-	public void update();
-
 }

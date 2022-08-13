@@ -43,8 +43,8 @@ public class MovieflixController {
 		case 1:
 			do {
 				view.Menu.usuarios();
-				opcion2 = DatoFormulario.enteroEntre(1, 5, "Elije una opción del menú");
-				if (opcion2 == 5) {
+				opcion2 = DatoFormulario.enteroEntre(1, 2, "Elije una opción del menú");
+				if (opcion2 == 2) {
 					seguir = false;
 				} else {
 					gestionarUsuarios(opcion2);
@@ -69,15 +69,6 @@ public class MovieflixController {
 		switch (opcion) {
 		case 1:
 			usuarioServiceImpl.findAll();
-			break;
-		case 2:
-			usuarioServiceImpl.add();
-			break;
-		case 3:
-			usuarioServiceImpl.delete();
-			break;
-		case 4:
-			usuarioServiceImpl.update();
 			break;
 		}
 	}

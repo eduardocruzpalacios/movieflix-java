@@ -20,17 +20,7 @@ public class Menu {
 	public static void usuarios() {
 		MostrarDato.string("\n********** GESTIÓN DE USUARIOS **********\n");
 		MostrarDato.string("1. Listar todos los usuarios");
-		MostrarDato.string("2. Añadir un usuario");
-		MostrarDato.string("3. Eliminar un usuario");
-		MostrarDato.string("4. Modificar un usuario");
-		MostrarDato.string("5. Volver al menú principal");
-	}
-
-	public static void modificarUsuario() {
-		MostrarDato.string("\n********** MODIFICAR USUARIO **********\n");
-		MostrarDato.string("1. Nombre");
-		MostrarDato.string("2. Ciudad de residencia");
-		MostrarDato.string("3. Fecha de nacimiento");
+		MostrarDato.string("2. Volver al menú principal");
 	}
 
 	public static void peliculas() {

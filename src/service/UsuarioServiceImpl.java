@@ -8,7 +8,11 @@
 
 package service;
 
+import java.util.Map;
+
 import dao.UsuarioDao;
+import model.Usuario;
+import view.MostrarDato;
 
 public class UsuarioServiceImpl implements UsuarioService {
 
@@ -16,22 +20,9 @@ public class UsuarioServiceImpl implements UsuarioService {
 
 	@Override
 	public void findAll() {
-		this.usuarioDao.listarUsuarios();
-	}
+		Map<String, Usuario> usuarios = this.usuarioDao.getAll();
+		MostrarDato.usuarios(usuarios);
 
-	@Override
-	public void add() {
-		this.usuarioDao.addUsuario();
-	}
-
-	@Override
-	public void delete() {
-		this.usuarioDao.eliminarUsuario();
-	}
-
-	@Override
-	public void update() {
-		this.usuarioDao.modificarUsuario();
 	}
 
 }
