@@ -45,7 +45,7 @@ public class DatoFormulario {
 		return sn.nextDouble();
 	}
 
-	public static double flotante(String msg) {
+	public static double doble(String msg) {
 		MostrarDato.string(msg);
 		while (sn.hasNextDouble() == false) {
 			MostrarDato.string(msg);
