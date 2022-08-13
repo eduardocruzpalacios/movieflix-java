@@ -37,7 +37,7 @@ public class DatoFormulario {
 		return sn.nextInt();
 	}
 
-	public static double flotante() {
+	public static double doble() {
 		while (sn.hasNextDouble() == false) {
 			MostrarDato.string("debes introducir un número, vuelve a intentarlo");
 			sn.next();
@@ -85,7 +85,7 @@ public class DatoFormulario {
 		double x = 0;
 		while (!salir) {
 			System.out.println("Dame un número entre " + a + " y " + b);
-			x = DatoFormulario.flotante();
+			x = DatoFormulario.doble();
 			if (x >= a && x <= b) {
 				salir = true;
 			}
