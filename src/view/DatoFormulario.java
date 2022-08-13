@@ -42,7 +42,7 @@ public class DatoFormulario {
 		return entero;
 	}
 
-	public static int enteroEntre(int numero1, int numero2) {
+	public static int enteroEntre(int numero1, int numero2, String mensaje) {
 		boolean salir = false;
 		if (numero1 == numero2) {
 			return numero1;
@@ -54,26 +54,13 @@ public class DatoFormulario {
 		}
 		int entero = 0;
 		while (!salir) {
-			MostrarDato.string("Dame un entero entre " + numero1 + " y " + numero2);
+			MostrarDato.string(mensaje + numero1 + " y " + numero2);
 			entero = DatoFormulario.entero();
 			if (entero >= numero1 && entero <= numero2) {
 				salir = true;
 			}
 		}
 		return entero;
-	}
-
-	public static int enteroEntre(int a, int b, String msg) {
-		boolean salir = false;
-		int x = 0;
-		while (!salir) {
-			MostrarDato.string(msg);
-			x = DatoFormulario.entero();
-			if (x >= a && x <= b) {
-				salir = true;
-			}
-		}
-		return x;
 	}
 
 	public static short shortEntre(int a, int b, String msg) {
