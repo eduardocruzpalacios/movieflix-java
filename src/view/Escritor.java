@@ -18,8 +18,8 @@ public class Escritor {
 		System.out.println(string);
 	}
 
-	public static void listPelicula(List<Pelicula> listPelicula) {
-		listPelicula.forEach(pelicula -> System.out.println(pelicula));
+	public static void peliculas(List<Pelicula> peliculas) {
+		peliculas.forEach(pelicula -> System.out.println(pelicula));
 	}
 
 }
