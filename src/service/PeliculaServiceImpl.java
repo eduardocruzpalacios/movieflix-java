@@ -6,7 +6,7 @@
  * @version: 2.0
  */
 
-package services;
+package service;
 
 import java.util.List;
 

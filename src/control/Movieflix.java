@@ -8,8 +8,8 @@
 
 package control;
 
-import services.PeliculaServiceImpl;
-import services.UsuarioServiceImpl;
+import service.PeliculaServiceImpl;
+import service.UsuarioServiceImpl;
 import utility.Lector;
 import view.Menu;
 
