@@ -19,8 +19,9 @@ import exception.PeliculaExistenteException;
 import exception.PeliculaNoExistenteException;
 import model.Pelicula;
 import utility.Lector;
-import view.MostrarDato;
 import view.Menu;
+import view.MostrarDato;
+import view.PeliculaFormulario;
 
 public class PeliculaServiceImpl implements PeliculaService {
 
@@ -41,7 +42,7 @@ public class PeliculaServiceImpl implements PeliculaService {
 
 	@Override
 	public void addPeliculas() {
-		Pelicula pelicula = Pelicula.crear();
+		Pelicula pelicula = PeliculaFormulario.crear();
 		try {
 			this.peliculaDao.addPelicula(pelicula);
 			MostrarDato.string("Película creada correctamente");
