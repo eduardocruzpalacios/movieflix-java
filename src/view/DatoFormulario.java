@@ -44,6 +44,14 @@ public class DatoFormulario {
 
 	public static int enteroEntre(int numero1, int numero2) {
 		boolean salir = false;
+		if (numero1 == numero2) {
+			return numero1;
+		}
+		if (numero1 > numero2) {
+			int auxiliar = numero1;
+			numero1 = numero2;
+			numero2 = auxiliar;
+		}
 		int entero = 0;
 		while (!salir) {
 			MostrarDato.string("Dame un entero entre " + numero1 + " y " + numero2);
