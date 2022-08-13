@@ -16,8 +16,8 @@ public class PeliculaExistenteException extends Exception {
 		super();
 	}
 
-	public PeliculaExistenteException(String msg) {
-		super(msg);
+	public PeliculaExistenteException(String message) {
+		super(message);
 	}
 
 	@Override

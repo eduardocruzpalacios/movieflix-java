@@ -16,8 +16,8 @@ public class ListadoVacioException extends Exception {
 		super();
 	}
 
-	public ListadoVacioException(String msg) {
-		super(msg);
+	public ListadoVacioException(String message) {
+		super(message);
 	}
 
 	@Override
