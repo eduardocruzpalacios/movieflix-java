@@ -106,7 +106,7 @@ public class DatoFormulario {
 		return x;
 	}
 
-	public static boolean booleanPreguntando(String pregunta, String respuestaSi, String respuestaNo) {
+	public static boolean booleanPreguntando(String pregunta, String respuestaSi) {
 		String respuesta = DatoFormulario.string(pregunta);
 		return respuesta.equals(respuestaSi) ? true : false;
 	}
