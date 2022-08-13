@@ -12,6 +12,7 @@ import service.PeliculaServiceImpl;
 import service.UsuarioServiceImpl;
 import view.DatoFormulario;
 import view.Menu;
+import view.Ventana;
 
 public class MovieflixController {
 
@@ -20,7 +21,7 @@ public class MovieflixController {
 
 	public void ejecutar() {
 		peliculaServiceImpl.importarPeliculas();
-		view.Ventana.presentacion();
+		Ventana.presentacion();
 		boolean seguir = true;
 		int opcion = 0;
 		do {
@@ -29,36 +30,35 @@ public class MovieflixController {
 			if (opcion == 3) {
 				seguir = false;
 			} else {
-				seleccionarOpciones(opcion);
+				seleccionarGestion(opcion);
 			}
 		} while (seguir);
 		peliculaServiceImpl.guardarPeliculas();
-		view.Ventana.salir();
+		Ventana.salir();
 	}
 
-	public void seleccionarOpciones(int opcion) {
+	public void seleccionarGestion(int opcion) {
 		boolean seguir = true;
-		int opcion2 = 0;
 		switch (opcion) {
 		case 1:
 			do {
-				view.Menu.usuarios();
-				opcion2 = DatoFormulario.enteroEntre(1, 2, "Elije una opción del menú");
-				if (opcion2 == 2) {
+				Menu.usuarios();
+				int opcionGestionUsuarios = DatoFormulario.enteroEntre(1, 2, "Elije una opción del menú");
+				if (opcionGestionUsuarios == 2) {
 					seguir = false;
 				} else {
-					gestionarUsuarios(opcion2);
+					gestionarUsuarios(opcionGestionUsuarios);
 				}
 			} while (seguir);
 			break;
 		case 2:
 			do {
 				view.Menu.peliculas();
-				opcion2 = DatoFormulario.enteroEntre(1, 10, "Elije una opción del menú");
-				if (opcion2 == 10) {
+				int opcionGestionPeliculas = DatoFormulario.enteroEntre(1, 10, "Elije una opción del menú");
+				if (opcionGestionPeliculas == 10) {
 					seguir = false;
 				} else {
-					gestionarPeliculas(opcion2);
+					gestionarPeliculas(opcionGestionPeliculas);
 				}
 			} while (seguir);
 			break;
