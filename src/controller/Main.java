@@ -6,7 +6,7 @@
  * @version: 2.0
  */
 
-package control;
+package controller;
 
 public class Main {
 
