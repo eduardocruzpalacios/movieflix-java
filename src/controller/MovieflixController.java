@@ -13,7 +13,7 @@ import service.UsuarioServiceImpl;
 import utility.Lector;
 import view.Menu;
 
-public class Movieflix {
+public class MovieflixController {
 
 	private UsuarioServiceImpl usuarioServiceImpl = new UsuarioServiceImpl();
 	private PeliculaServiceImpl peliculaServiceImpl = new PeliculaServiceImpl();
