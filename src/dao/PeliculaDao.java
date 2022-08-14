@@ -94,7 +94,6 @@ public class PeliculaDao {
 	}
 
 	public List<Pelicula> getPeliculasMasValoradas(int cuantas) {
-
 		int[] indicesMaximos = new int[cuantas];
 
 		float valoracionMaxima;
