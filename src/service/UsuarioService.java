@@ -6,16 +6,10 @@
  * @version: 2.0
  */
 
-package services;
+package service;
 
 public interface UsuarioService {
 
 	public void findAll();
-
-	public void add();
-
-	public void delete();
-
-	public void update();
 
 }

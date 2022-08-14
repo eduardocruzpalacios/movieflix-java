@@ -6,59 +6,59 @@
  * @version: 2.0
  */
 
-package control;
+package controller;
 
-import gui.Menu;
-import services.PeliculaServiceImpl;
-import services.UsuarioServiceImpl;
-import tools.Lector;
+import service.PeliculaServiceImpl;
+import service.UsuarioServiceImpl;
+import view.DatoFormulario;
+import view.Menu;
+import view.Ventana;
 
-public class Movieflix {
+public class MovieflixController {
 
 	private UsuarioServiceImpl usuarioServiceImpl = new UsuarioServiceImpl();
 	private PeliculaServiceImpl peliculaServiceImpl = new PeliculaServiceImpl();
 
 	public void ejecutar() {
 		peliculaServiceImpl.importarPeliculas();
-		gui.Ventana.presentacion();
+		Ventana.presentacion();
 		boolean seguir = true;
 		int opcion = 0;
 		do {
 			Menu.principal();
-			opcion = Lector.pedirIntEntre(1, 3, "Elije una opción del menú");
+			opcion = DatoFormulario.enteroEntre(1, 3, "Elije una opción del menú");
 			if (opcion == 3) {
 				seguir = false;
 			} else {
-				seleccionarOpciones(opcion);
+				seleccionarGestion(opcion);
 			}
 		} while (seguir);
 		peliculaServiceImpl.guardarPeliculas();
-		gui.Ventana.salir();
+		Ventana.salir();
 	}
 
-	public void seleccionarOpciones(int opcion) {
+	public void seleccionarGestion(int opcion) {
 		boolean seguir = true;
-		int opcion2 = 0;
 		switch (opcion) {
 		case 1:
 			do {
-				gui.Menu.usuarios();
-				opcion2 = Lector.pedirIntEntre(1, 5, "Elije una opción del menú");
-				if (opcion2 == 5) {
+				Menu.usuarios();
+				int opcionGestionUsuarios = DatoFormulario.enteroEntre(1, 2, "Elije una opción del menú");
+				if (opcionGestionUsuarios == 2) {
 					seguir = false;
 				} else {
-					gestionarUsuarios(opcion2);
+					gestionarUsuarios(opcionGestionUsuarios);
 				}
 			} while (seguir);
 			break;
 		case 2:
 			do {
-				gui.Menu.peliculas();
-				opcion2 = Lector.pedirIntEntre(1, 10, "Elije una opción del menú");
-				if (opcion2 == 10) {
+				view.Menu.peliculas();
+				int opcionGestionPeliculas = DatoFormulario.enteroEntre(1, 10, "Elije una opción del menú");
+				if (opcionGestionPeliculas == 10) {
 					seguir = false;
 				} else {
-					gestionarPeliculas(opcion2);
+					gestionarPeliculas(opcionGestionPeliculas);
 				}
 			} while (seguir);
 			break;
@@ -69,15 +69,6 @@ public class Movieflix {
 		switch (opcion) {
 		case 1:
 			usuarioServiceImpl.findAll();
-			break;
-		case 2:
-			usuarioServiceImpl.add();
-			break;
-		case 3:
-			usuarioServiceImpl.delete();
-			break;
-		case 4:
-			usuarioServiceImpl.update();
 			break;
 		}
 	}

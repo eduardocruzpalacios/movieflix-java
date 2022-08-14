@@ -6,7 +6,7 @@
  * @version: 2.0
  */
 
-package tools;
+package utility;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -17,13 +17,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Files {
+public class Fichero {
 
-	public static ArrayList<String> leerRutaFicheroDevolverArrayString(String filePath) {
-
-		File file = new File(filePath);
+	public static ArrayList<String> leerFicheroDevolverArrayString(String rutaFichero) {
+		File file = new File(rutaFichero);
 		ArrayList<String> arrayString = new ArrayList<String>();
-
 		try {
 			BufferedReader lector = new BufferedReader(new FileReader(file));
 			String linea;
@@ -32,23 +30,21 @@ public class Files {
 			}
 			lector.close();
 		} catch (IOException e) {
-			System.out.println("Error al leer los dao");
+			Log.error(e);
 		}
-
 		return arrayString;
 	}
 
-	public static void LeerListStringGuardarEnFichero(List<String> listString, String filePath) {
-
+	public static void LeerListStringGuardarEnFichero(List<String> listString, String rutaFichero) {
 		try {
-			BufferedWriter writer = new BufferedWriter(new FileWriter(filePath));
+			BufferedWriter writer = new BufferedWriter(new FileWriter(rutaFichero));
 			for (int i = 0; i < listString.size(); i++) {
 				writer.write(listString.get(i));
 				writer.newLine();
 			}
 			writer.close();
 		} catch (IOException e) {
-			System.out.println(e);
+			Log.error(e);
 		}
 	}
 
