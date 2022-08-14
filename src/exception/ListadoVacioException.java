@@ -6,7 +6,7 @@
  * @version: 2.0
  */
 
-package exceptions;
+package exception;
 
 public class ListadoVacioException extends Exception {
 
@@ -16,8 +16,8 @@ public class ListadoVacioException extends Exception {
 		super();
 	}
 
-	public ListadoVacioException(String msg) {
-		super(msg);
+	public ListadoVacioException(String message) {
+		super(message);
 	}
 
 	@Override

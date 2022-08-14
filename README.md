@@ -1,23 +1,22 @@
 # MovieFlix
-Movies management application built with Java 11.
+Movies management console application built with JDK 11.0.12.
+
+Note: code is written in Spanish language.
 
 ## Architecture
 |package|purpose|
 |----------------|-------------------------------|
 |model|model for objects (attributes, constructors, getters, setters & .toString()) and create() method|
-|dao|guarantees the data persistence|
-|services|interfaces with business-logic-oriented methods along with the classes implementing them|
-|control|flow of the application and the execution class|
-|gui|graphics|
-|tools|static methods for frequently needs|
+|dao|methods to communicate with data source and perform the tasks demanded by the business logic|
+|service|interfaces with business-logic-oriented methods along with the classes implementing them|
+|controller|the flow of the application|
+|view|information showed to the users and requested from them|
+|utility|methods for frequently needs|
 |exceptions|personalized exceptions|
 
 ## Functions
 ### Map of users
- - Create one
  - Read and print all
- - Delete one
- - Update one
 
 ### List of movies
  - import all from a .txt file when loading the application

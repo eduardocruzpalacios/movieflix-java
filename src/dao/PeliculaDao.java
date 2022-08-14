@@ -11,12 +11,12 @@ package dao;
 import java.util.ArrayList;
 import java.util.List;
 
-import exceptions.ListadoVacioException;
-import exceptions.PeliculaExistenteException;
-import exceptions.PeliculaNoExistenteException;
+import exception.ListadoVacioException;
+import exception.PeliculaExistenteException;
+import exception.PeliculaNoExistenteException;
 import model.Pelicula;
-import tools.Colecciones;
-import tools.Files;
+import utility.Coleccion;
+import utility.Fichero;
 
 public class PeliculaDao {
 
@@ -70,8 +70,8 @@ public class PeliculaDao {
 	}
 
 	public void importarPeliculas() {
-		ArrayList<String> arrayString = Files.leerRutaFicheroDevolverArrayString(filePath);
-		ArrayList<Pelicula> arrayPeliculas = Colecciones.leerArrayStringDevolverArrayPelicula(arrayString);
+		ArrayList<String> arrayString = Fichero.leerFicheroDevolverArrayString(filePath);
+		ArrayList<Pelicula> arrayPeliculas = Coleccion.arrayStringToArrayPelicula(arrayString);
 		peliculaDao = arrayPeliculas;
 	}
 
@@ -89,15 +89,12 @@ public class PeliculaDao {
 	}
 
 	public void guardarPeliculas() {
-		List<String> listString = Colecciones.leerListPeliculaDevolverListString(this.peliculaDao);
-		Files.LeerListStringGuardarEnFichero(listString, filePath);
+		List<String> listString = Coleccion.listPeliculaToListString(this.peliculaDao);
+		Fichero.LeerListStringGuardarEnFichero(listString, filePath);
 	}
 
 	public List<Pelicula> getPeliculasMasValoradas(int cuantas) {
-
-		int numeroMaximos = cuantas;
-
-		int[] indicesMaximos = new int[numeroMaximos];
+		int[] indicesMaximos = new int[cuantas];
 
 		float valoracionMaxima;
 		float valoracionLimite = 5f;
@@ -142,10 +139,7 @@ public class PeliculaDao {
 	}
 
 	public List<Pelicula> getPeliculasMenosValoradas(int cuantas) {
-
-		int numeroMinimos = cuantas;
-
-		int[] indicesMinimos = new int[numeroMinimos];
+		int[] indicesMinimos = new int[cuantas];
 
 		float valoracionMinima;
 		float valoracionLimite = 0f;
@@ -208,10 +202,7 @@ public class PeliculaDao {
 	}
 
 	public List<Pelicula> getPeliculasMasVistas(int cuantas) {
-
-		int numeroMaximos = cuantas;
-
-		int[] indicesMaximos = new int[numeroMaximos];
+		int[] indicesMaximos = new int[cuantas];
 
 		float visualizacionesMaximas;
 

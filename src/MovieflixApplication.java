@@ -5,13 +5,12 @@
  *
  * @version: 2.0
  */
+import controller.MovieflixController;
 
-package control;
-
-public class Main {
+public class MovieflixApplication {
 
 	public static void main(String[] args) {
-		new Movieflix().ejecutar();
+		new MovieflixController().ejecutar();
 	}
 
 }

@@ -6,7 +6,7 @@
  * @version: 2.0
  */
 
-package exceptions;
+package exception;
 
 public class PeliculaExistenteException extends Exception {
 
@@ -16,8 +16,8 @@ public class PeliculaExistenteException extends Exception {
 		super();
 	}
 
-	public PeliculaExistenteException(String msg) {
-		super(msg);
+	public PeliculaExistenteException(String message) {
+		super(message);
 	}
 
 	@Override
