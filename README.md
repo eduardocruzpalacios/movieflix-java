@@ -37,7 +37,11 @@ Note: code is written in Spanish language.
 |Usuario|String nombre, LocalDate fechaNacimiento, String ciudadResidencia|
 |UsuarioDao|HashMap<String, Usuario>|
 |Pelicula|String titulo, short anyoEstreno, short categoria, long visualizaciones, float valoracion|
-|PeliculaDao|List<Pelicula>|
+|PeliculaDao|List\<Pelicula\>|
+
+## Testing
+- Unit tests are made with JUnit 5
+- Only model classes are tested
 
 ## Libs
  - Log4j-api-2.7.jar
