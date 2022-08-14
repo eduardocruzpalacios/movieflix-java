@@ -21,4 +21,23 @@ public class PeliculaFormulario {
 		return pelicula;
 	}
 
+	public static Pelicula modificar(Pelicula pelicula) {
+		boolean cambiarTitulo = DatoFormulario.booleanPreguntando("¿Quieres cambiar el título?", "si");
+		if (cambiarTitulo) {
+			String titulo = DatoFormulario.string("¿Cual es el nuevo título?");
+			pelicula.setTitulo(titulo);
+		}
+		boolean cambiarAnyoEstreno = DatoFormulario.booleanPreguntando("¿Quieres cambiar el año de estreno?", "si");
+		if (cambiarAnyoEstreno) {
+			short anyoEstreno = (short) DatoFormulario.entero("¿Cual es el nuevo año de estreno?");
+			pelicula.setAnyoEstreno(anyoEstreno);
+		}
+		boolean cambiarCategoria = DatoFormulario.booleanPreguntando("¿Quieres cambiar la categoría?", "si");
+		if (cambiarCategoria) {
+			short categoria = (short) DatoFormulario.enteroEntre(1, 6, "¿Cual es la nueva categoría?");
+			pelicula.setCategoria(categoria);
+		}
+		return pelicula;
+	}
+
 }
