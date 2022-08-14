@@ -95,9 +95,7 @@ public class PeliculaDao {
 
 	public List<Pelicula> getPeliculasMasValoradas(int cuantas) {
 
-		int numeroMaximos = cuantas;
-
-		int[] indicesMaximos = new int[numeroMaximos];
+		int[] indicesMaximos = new int[cuantas];
 
 		float valoracionMaxima;
 		float valoracionLimite = 5f;
@@ -142,10 +140,7 @@ public class PeliculaDao {
 	}
 
 	public List<Pelicula> getPeliculasMenosValoradas(int cuantas) {
-
-		int numeroMinimos = cuantas;
-
-		int[] indicesMinimos = new int[numeroMinimos];
+		int[] indicesMinimos = new int[cuantas];
 
 		float valoracionMinima;
 		float valoracionLimite = 0f;
