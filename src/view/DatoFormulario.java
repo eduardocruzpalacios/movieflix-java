@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 public class DatoFormulario {
 
-	static Scanner scanner;
+	private static Scanner scanner;
 
 	public static String string(String mensajeAlUsuario) {
 		MostrarDato.string(mensajeAlUsuario);
