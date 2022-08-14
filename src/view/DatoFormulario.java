@@ -29,7 +29,7 @@ public class DatoFormulario {
 			scanner.next();
 		}
 		int entero = scanner.nextInt();
-		return enter;
+		return entero;
 	}
 
 	public static int enteroEntre(int numero1, int numero2, String mensajeAlUsuario) {
