@@ -22,7 +22,6 @@ public class UsuarioServiceImpl implements UsuarioService {
 	public void findAll() {
 		Map<String, Usuario> usuarios = this.usuarioDao.getAll();
 		MostrarDato.usuarios(usuarios);
-
 	}
 
 }
