@@ -19,8 +19,8 @@ import java.util.List;
 
 public class Fichero {
 
-	public static ArrayList<String> leerFicheroDevolverArrayString(String filePath) {
-		File file = new File(filePath);
+	public static ArrayList<String> leerFicheroDevolverArrayString(String rutaFichero) {
+		File file = new File(rutaFichero);
 		ArrayList<String> arrayString = new ArrayList<String>();
 		try {
 			BufferedReader lector = new BufferedReader(new FileReader(file));
@@ -35,9 +35,9 @@ public class Fichero {
 		return arrayString;
 	}
 
-	public static void LeerListStringGuardarEnFichero(List<String> listString, String filePath) {
+	public static void LeerListStringGuardarEnFichero(List<String> listString, String rutaFichero) {
 		try {
-			BufferedWriter writer = new BufferedWriter(new FileWriter(filePath));
+			BufferedWriter writer = new BufferedWriter(new FileWriter(rutaFichero));
 			for (int i = 0; i < listString.size(); i++) {
 				writer.write(listString.get(i));
 				writer.newLine();
