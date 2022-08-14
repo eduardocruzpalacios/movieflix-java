@@ -203,10 +203,7 @@ public class PeliculaDao {
 	}
 
 	public List<Pelicula> getPeliculasMasVistas(int cuantas) {
-
-		int numeroMaximos = cuantas;
-
-		int[] indicesMaximos = new int[numeroMaximos];
+		int[] indicesMaximos = new int[cuantas];
 
 		float visualizacionesMaximas;
 
