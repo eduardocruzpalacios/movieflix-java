@@ -32,7 +32,7 @@ Note: code is written in Spanish language.
  - Filter the most watched and print them
 
 ## Data Source
-A .txt file
+A .txt file.
 
 ## Data Structure
 |data|structure|
