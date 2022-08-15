@@ -31,6 +31,9 @@ Note: code is written in Spanish language.
  - filter and print those whose value is above average
  - filter and print the most watched
 
+## Data Source
+A .txt file
+
 ## Data Structure
 |data|structure|
 |----------------|-------------------------------|
