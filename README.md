@@ -12,24 +12,24 @@ Note: code is written in Spanish language.
 |controller|the flow of the application|
 |view|information showed to the users and requested from them|
 |utility|methods for frequently needs|
-|exceptions|personalized exceptions|
+|exception|personalized exceptions|
 
 ## Functions
 ### Map of users
  - Read and print all
 
 ### List of movies
- - import all from a .txt file when loading the application
- - export all to a .txt file when closing the application
+ - Import all from a .txt file when starting the application
+ - Export all to a .txt file when exiting the application
  - Create one
  - Read and print all
  - Delete one
  - Update one
- - filter and print by category
- - filter and print the most valued
- - filter and print the least valued
- - filter and print those whose value is above average
- - filter and print the most watched
+ - Filter by category and print them
+ - Filter the most valued and print them
+ - Filter the least valued and them
+ - Filter those whose value is above average and print them
+ - Filter the most watched and print them
 
 ## Data Source
 A .txt file
