@@ -15,12 +15,12 @@ Note: code is written in Spanish language.
 |exception|personalized exceptions|
 
 ## Functions
-### Map of users
+### Users
  - Read and print all
 
-### List of movies
- - Import all from a .txt file when starting the application
- - Export all to a .txt file when exiting the application
+### Movies
+ - Import all when starting the application
+ - Export all when exiting the application
  - Create one
  - Read and print all
  - Delete one
